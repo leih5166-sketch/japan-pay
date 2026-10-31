@@ -234,12 +234,7 @@
   "start": "https://www.taxfreeshops.jp/zhtw/tieup/2",
   "page": "https://www.taxfreeshops.jp/zhtw/tieup/{id}"
  },
- "flyasia": [
-  {
-   "name": "FlyAsia：日本優惠券懶人包",
-   "url": "https://www.flyasia.co/2026/japan-coupon/"
-  }
- ],
+ "flyasia": [],
  "static_coupons": {
   "mitsuioutlet": [
    {
@@ -550,6 +545,45 @@
     "t": "外國旅客購物優惠",
     "d": "步步日本整理的 Zoff 外國旅客優惠。",
     "url": "https://www.bubu-jp.com/archives/45382"
+   }
+  ],
+  "jdf": [
+   {
+    "t": "免稅再 5% OFF",
+    "d": "成田機場 JAPAN DUTY FREE，化妝品、菸酒等適用，多數土產不適用。",
+    "url": "https://livejapan.com/public/operation/coupon/japandutyfree/zh-tw.html"
+   }
+  ],
+  "aoyama": [
+   {
+    "t": "最高 20% OFF",
+    "d": "FlyAsia 整理的洋服の青山優惠券。",
+    "until": "2027-06-30",
+    "url": "https://go.flyasia.co/aoyama/blog"
+   }
+  ],
+  "jungle": [
+   {
+    "t": "最高 15% OFF",
+    "d": "秋葉原等地的 JUNGLE 玩具、模型店。",
+    "until": "2026-12-31",
+    "url": "https://go.flyasia.co/jungle/blog"
+   }
+  ],
+  "parismiki": [
+   {
+    "t": "再 3% OFF",
+    "d": "FlyAsia 整理的 Paris Miki 眼鏡優惠券。",
+    "until": "2026-12-31",
+    "url": "https://go.flyasia.co/parismiki/blog"
+   }
+  ],
+  "ohga": [
+   {
+    "t": "免稅＋折 ¥500",
+    "d": "九州（福岡天神等）的大賀藥局。",
+    "until": "2028-12-31",
+    "url": "https://go.flyasia.co/ohga-pharmacy/blog"
    }
   ]
  }
