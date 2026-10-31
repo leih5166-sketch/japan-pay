@@ -1,13 +1,65 @@
 {
- "at": "2026-10-31T04:07:37.193Z",
+ "at": "2026-10-31T07:56:48.734Z",
  "log": [
   {
    "level": "ok",
    "msg": "這就是人生：日本信用卡回饋比較：解析 29 列刷卡回饋"
   },
   {
+   "level": "info",
+   "msg": "TAXFREESHOPS 第 22 頁（JAPAN & GLOBAL eSIM）不在店家清單中，略過"
+  },
+  {
+   "level": "ok",
+   "msg": "TAXFREESHOPS.JP（官方合作優惠券）：解析 21 家合作店的優惠券"
+  },
+  {
+   "level": "ok",
+   "msg": "daikoku 的優惠券圖片已從網頁中還原（138 KB）"
+  },
+  {
+   "level": "ok",
+   "msg": "卡優新聞網：日本優惠券整理：解析 18 家店的優惠券"
+  },
+  {
+   "level": "error",
+   "msg": "FlyAsia：日本優惠券懶人包 失敗：HTTP 403"
+  },
+  {
+   "level": "change",
+   "msg": "donki 優惠券已更新"
+  },
+  {
    "level": "change",
    "msg": "biccamera 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "jins 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "sundrug 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "keio 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "edion 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "daimaru 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "matsuzakaya 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "lotte 優惠券已更新"
   },
   {
    "level": "change",
@@ -19,7 +71,7 @@
   },
   {
    "level": "change",
-   "msg": "edion 優惠券已更新"
+   "msg": "alpen 優惠券已更新"
   },
   {
    "level": "change",
@@ -27,35 +79,51 @@
   },
   {
    "level": "change",
-   "msg": "anaduty 優惠券已更新"
+   "msg": "kintetsu 優惠券已更新"
   },
   {
    "level": "change",
-   "msg": "sapporodrug 優惠券已更新"
-  },
-  {
-   "level": "ok",
-   "msg": "daikoku 的優惠券圖片已從網頁中還原（138 KB）"
+   "msg": "victoria 優惠券已更新"
   },
   {
    "level": "change",
-   "msg": "daikoku 優惠券已更新"
+   "msg": "jrrentacar 優惠券已更新"
   },
   {
    "level": "change",
-   "msg": "sundrug 優惠券已更新"
+   "msg": "ysroad 優惠券已更新"
   },
   {
    "level": "change",
-   "msg": "matsukiyo 優惠券已更新"
+   "msg": "seibu 優惠券已更新"
   },
   {
    "level": "change",
-   "msg": "keio 優惠券已更新"
+   "msg": "sogo 優惠券已更新"
   },
   {
-   "level": "ok",
-   "msg": "卡優新聞網：日本優惠券整理：解析 12 家店的優惠券"
+   "level": "change",
+   "msg": "kokumin 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "trial 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "golfpartner 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "welcia 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "snowpeak 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "laox 優惠券已更新"
   },
   {
    "level": "warn",

@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-31T04:07:37.193Z",
- "note": "本次更新 11 項",
+ "updated_at": "2026-10-31T07:56:48.734Z",
+ "note": "部分來源暫時無法更新（1 項），已沿用前次資料",
  "payments": [
   {
    "id": "uniopen",
@@ -621,20 +621,28 @@
  "coupons": {
   "biccamera": [
    {
-    "t": "最高免稅 10% + 折扣 7%",
-    "d": "日本清酒3%、藥妝品及化妝品5%和電器用品7%。使用方式：消費滿5千日圓，結帳時出示以下優惠券掃碼+護照即可免消費稅",
-    "until": "2027-04-30",
-    "url": "https://imgcloud.cardu.com.tw/201910/20261022/Cardu_6ad979fcb4c61.jpg",
-    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+    "t": "10% 免稅 + 高達 7% 折扣",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/2",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/2"
+   },
+   {
+    "until": "2026-12-31",
+    "source": null,
+    "t": "【玉山 Mastercard】單筆滿 ¥30,000 送 ¥2,000",
+    "d": "需先註冊與啟用玉山指定 Mastercard 專屬優惠。",
+    "url": "https://event.esunbank.com.tw/credit/travel/jp_koa.html",
+    "static": true
    }
   ],
   "donki": [
    {
-    "t": "含稅滿 ¥11,000 折 5%、含稅滿 ¥33,000 折 7%",
-    "d": "2026/11/1 起的新門檻。需連網開啟官方優惠頁出示，截圖無效；菸酒、遊戲主機等不適用。",
+    "t": "免稅＋折扣優惠券（詳見頁面）",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
     "until": null,
-    "url": "https://japanportal.donki-global.com/coupon/?ptcd=0099000503",
-    "source": "https://livejapan.com/public/operation/coupon/donki/zh-tw.html"
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/1",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/1"
    }
   ],
   "matsukiyo": [
@@ -648,20 +656,20 @@
   ],
   "edion": [
    {
-    "t": "免消費稅8%-10%",
-    "d": "再依照商品不同另外享有5%-7%額外折扣。使用方式：消費滿5千日圓，結帳時出示以下優惠券+護照即可",
-    "until": "2026-10-31",
-    "url": "https://imgcloud.cardu.com.tw/201910/20260323/Cardu_69c0b75f699db.jpg",
-    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+    "t": "10% 免稅 + 高達 7% 折扣",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/6",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/6"
    }
   ],
   "yamada": [
    {
-    "t": "免稅10%後",
-    "d": "最高可再優惠7%！詳細使用條件與內容以下圖山田電機優惠券內容為準。使用方式：手機提示優惠券即可使用",
-    "until": "2026-12-31",
-    "url": "https://imgcloud.cardu.com.tw/201910/20260323/Cardu_69c0b8052818c.jpg",
-    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+    "t": "免稅＋折扣優惠券（詳見頁面）",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/12",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/12"
    }
   ],
   "joshin": [
@@ -684,20 +692,20 @@
   ],
   "cosmos": [
    {
-    "t": "滿&yen;10,000~29,999(未稅)：退稅8~10%+5%折扣 = 最優85折 起",
-    "d": "1. 滿&yen;10,000~29,999(未稅)：退稅8~10%+5%折扣 = 最優85折；2. 滿&yen;30,000~49,999(未稅)：退稅8~10%+7\b%折扣 = 最優83折；3. 滿&yen;50,000以上(未稅)：退稅8~10%+9%折扣 = 最優81折 *優惠券僅適用於以下五間分店 : 歌舞伎町一丁目店、広尾駅店、心斎橋南店、道頓堀店、天神大丸前店。使用方式：結帳前出示以下優惠券",
-    "until": "2026-12-31",
-    "url": "https://imgcloud.cardu.com.tw/201910/20260323/Cardu_69c0b6b466015.jpg",
-    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+    "t": "10% 免稅 + 高達 9% 折扣",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/10",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/10"
    }
   ],
   "tsuruha": [
    {
-    "t": "滿&yen;10,000~29,999：退稅10%+3\b%折扣 起",
-    "d": "1. 滿&yen;10,000~29,999：退稅10%+3\b%折扣；2. 滿&yen;30,000~49,999：退稅10%+5\b%折扣；3. 滿&yen;50,000以上：退稅10%+7%折扣。使用方式：結帳前出示以下優惠券",
-    "until": "2027-12-31",
-    "url": "https://imgcloud.cardu.com.tw/201910/20260323/Cardu_69c0b378dd641.jpg",
-    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+    "t": "10% 免稅 + 高達 7% 折扣",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/9",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/9"
    }
   ],
   "sugi": [
@@ -721,11 +729,11 @@
   "tobu": [],
   "keio": [
    {
-    "t": "出示優惠券可以享5%折扣",
-    "d": "部分商品無法使用。使用方式：在2樓的外國顧客服務台，在出示本人護照後，可以獲得5%折扣優惠券。",
+    "t": "免稅＋折扣優惠券（詳見頁面）",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
     "until": null,
-    "url": "https://www.beurlife.com/wp-content/uploads/2026/03/Keio-shinjuku-coupon-2027Mar.jpg",
-    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/5",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/5"
    }
   ],
   "odakyu": [
@@ -735,6 +743,14 @@
     "until": "2028-03-31",
     "url": "https://www.beurlife.com/wp-content/uploads/2026/10/odakyu_coupon_beurlife_2028Mar.png",
     "source": null
+   },
+   {
+    "until": null,
+    "source": null,
+    "t": "小田急百貨 6% 優惠券",
+    "d": "含稅滿 ¥1,000 起，食品、特價品、餐廳及咖啡廳除外。",
+    "url": "https://livejapan.com/zh-tw/in-tokyo/in-pref-tokyo/in-shinjuku/spot-lj0115826/coupon/?c=333628",
+    "static": true
    }
   ],
   "anaduty": [
@@ -764,11 +780,572 @@
   ],
   "sundrug": [
    {
-    "t": "消費10,000日圓以上：退稅10%＋3\b%折扣 起",
-    "d": "1. 消費10,000日圓以上：退稅10%＋3\b%折扣；2. 消費30,000~49,999日圓：退稅10%＋5\b%折扣；3. 消費50,000日圓以上：退稅10%＋7%折扣。使用方式：櫃台結算時出示此面",
-    "until": "2026-12-31",
-    "url": "https://imgcloud.cardu.com.tw/201910/20260322/Cardu_69bff1b6c5359.png",
+    "t": "最高可享10%免稅優惠 + 7%折價券，讓您在日本購物更加划算！ /",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/4",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/4"
+   }
+  ],
+  "jins": [
+   {
+    "t": "最高可享10%免稅優惠 + 5%折價券，讓您在日本購物更加划算！ /",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/3",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/3"
+   }
+  ],
+  "daimaru": [
+   {
+    "t": "免稅優惠 + 5%折價券，讓您在日本購物更加划算！ /",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/7",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/7"
+   }
+  ],
+  "matsuzakaya": [
+   {
+    "t": "免稅優惠 + 5%折價券，讓您在日本購物更加划算！ /",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/7",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/7"
+   }
+  ],
+  "lotte": [
+   {
+    "t": "/ 最高可享10%免稅優惠 + 8%折價券，讓您在日本購物更加划算！ /",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/8",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/8"
+   },
+   {
+    "until": null,
+    "source": null,
+    "t": "滿 ¥10,000 折 ¥1,000、滿 ¥20,000 折 ¥2,000",
+    "d": "LIVE JAPAN 官方優惠券，結帳時出示優惠券、電子機票與護照。",
+    "url": "https://livejapan.com/public/operation/coupon/lotte/en.html",
+    "static": true
+   }
+  ],
+  "alpen": [
+   {
+    "t": "免稅 + 高達 5% 折扣",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/11",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/11"
+   }
+  ],
+  "kintetsu": [
+   {
+    "t": "10% 免稅 + 高達 5% 折扣",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/13",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/13"
+   },
+   {
+    "until": null,
+    "source": null,
+    "t": "GUEST COUPON 5% OFF",
+    "d": "結帳及辦理免稅時出示此優惠券。",
+    "url": "https://livejapan.com/public/operation/coupon/kintetsudepartmentstore/zh-tw.html",
+    "static": true
+   }
+  ],
+  "victoria": [
+   {
+    "t": "免稅10% + 高達 5% 折扣",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/14",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/14"
+   }
+  ],
+  "jrrentacar": [
+   {
+    "t": "JR 租車 優惠券 10% 折扣",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/15",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/15"
+   }
+  ],
+  "ysroad": [
+   {
+    "t": "/ 最高可享10%免稅優惠 + 8%折價券，讓您在日本購物更加划算！ /",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/16",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/16"
+   }
+  ],
+  "seibu": [
+   {
+    "t": "免稅10% + 高達 5% 折扣",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/17",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/17"
+   }
+  ],
+  "sogo": [
+   {
+    "t": "免稅10% + 高達 5% 折扣",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/17",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/17"
+   }
+  ],
+  "kokumin": [
+   {
+    "t": "10% 免稅 + 高達 7% 折扣",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/18",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/18"
+   }
+  ],
+  "trial": [
+   {
+    "t": "/ 最高可享10%免稅優惠 + ¥500 off，讓您在日本購物更加划算！ /",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/19",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/19"
+   }
+  ],
+  "golfpartner": [
+   {
+    "t": "/ 最高可享10%免稅優惠 + 5%折價券，讓您在日本購物更加划算！ /",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/20",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/20"
+   }
+  ],
+  "welcia": [
+   {
+    "t": "/ 最高可享10%免稅優惠 + 8%折價券，讓您在日本購物更加划算！ /",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/21",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/21"
+   }
+  ],
+  "snowpeak": [
+   {
+    "t": "滿&yen;10,000~29,999(未稅)：退稅10%+贈送精美贈品 起",
+    "d": "1. 滿&yen;10,000~29,999(未稅)：退稅10%+贈送精美贈品；2. 滿&yen;30,000~49,999(未稅)：退稅10%+5\b%折扣；3. 滿&yen;50,000以上(未稅)：退稅10%+7%折扣。使用方式：結帳時手機出示以下優惠券畫面即可 *特價商品與折扣套裝不適用",
+    "until": "2027-03-31",
+    "url": "https://imgcloud.cardu.com.tw/201910/20260323/Cardu_69c0be1e3304a.jpg",
     "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+   },
+   {
+    "until": null,
+    "source": null,
+    "t": "免稅＋最高再 7% OFF",
+    "d": "LIVE JAPAN 官方優惠券，全日本 15 家店適用（含木更津、臨空 Outlet）。",
+    "url": "https://livejapan.com/public/operation/coupon/snowpeak/en.html",
+    "static": true
+   }
+  ],
+  "laox": [
+   {
+    "t": "在活動指定店鋪",
+    "d": "購買5,000日圓以上的顧客、可享8%折扣再加免10%*的消費稅。(*輕減稅率對象商品為8%)。使用方式：結帳時直接手機出示優惠券給店員",
+    "until": "2026-12-31",
+    "url": "https://imgcloud.cardu.com.tw/201910/20260322/Cardu_69bff94816410.webp",
+    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+   }
+  ],
+  "mitsuioutlet": [
+   {
+    "until": null,
+    "source": null,
+    "t": "外國旅客優惠券冊：最高 10% OFF＋贈品",
+    "d": "使用方式：至外國旅客服務中心出示護照，掃描 QR Code 領取優惠券冊。全日本 22 家三井 Outlet、LaLaport 適用。",
+    "url": "https://livejapan.com/public/operation/coupon/mitsui/en.html",
+    "btn": "查看領取方式",
+    "static": true
+   },
+   {
+    "until": null,
+    "source": null,
+    "t": "【刷 JCB 卡】最高 20% 事後現金回饋",
+    "d": "Now on JAPAN 活動，需刷 JCB 卡並依活動頁登錄。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/mitsuioutlet/93838/",
+    "static": true
+   }
+  ],
+  "premiumoutlets": [
+   {
+    "until": null,
+    "source": null,
+    "t": "外國旅客電子優惠券：最高 10% OFF",
+    "d": "使用方式：在 KKday 免費預訂後，到各 Premium Outlets 服務中心出示，換取優惠券 QR Code。御殿場、臨空、佐野、酒酒井等 10 家適用。",
+    "url": "https://www.kkday.com/en-us/product/583193",
+    "btn": "查看領取方式",
+    "static": true
+   }
+  ],
+  "aeonmall": [
+   {
+    "until": null,
+    "source": null,
+    "t": "外國旅客專屬：¥500 折價券或贈品（擇一）",
+    "d": "另有各館店家優惠券，從頁面選擇你要去的 AEON Mall。",
+    "url": "https://tw.aeonmall.global/coupons",
+    "static": true
+   }
+  ],
+  "hankyu": [
+   {
+    "until": null,
+    "source": null,
+    "t": "外國旅客 5% 來賓優惠券",
+    "d": "使用方式：出示護照至海外顧客櫃台、服務中心或免稅櫃台領取，發行日起 7 天內可無限次使用。未稅 ¥1,000 以下商品、特價品、餐廳等除外。",
+    "url": "https://livejapan.com/public/operation/coupon/hankyuhanshindepartmentstore/zh-tw.html",
+    "btn": "查看優惠",
+    "static": true
+   },
+   {
+    "until": "2026-12-31",
+    "source": null,
+    "t": "【玉山世界卡】博多阪急 7% 優惠",
+    "d": "需事前預約，出示玉山世界卡＋護照。",
+    "url": "https://event.esunbank.com.tw/credit/travel/jp_koa.html",
+    "static": true
+   }
+  ],
+  "hanshin": [
+   {
+    "until": null,
+    "source": null,
+    "t": "外國旅客 5% 來賓優惠券",
+    "d": "使用方式：出示護照至服務台領取，與阪急百貨同一優惠。",
+    "url": "https://livejapan.com/public/operation/coupon/hankyuhanshindepartmentstore/zh-tw.html",
+    "btn": "查看優惠",
+    "static": true
+   }
+  ],
+  "takashimaya": [
+   {
+    "until": null,
+    "source": null,
+    "t": "外國旅客優待卡：約 5% OFF",
+    "d": "單筆未稅 ¥3,000 起適用，鐘錶、珠寶、名牌等除外。",
+    "url": "https://www.takashimaya.co.jp/store/special/shopperscard/index_en.html",
+    "btn": "查看優待卡",
+    "static": true
+   }
+  ],
+  "mitsukoshi": [
+   {
+    "until": null,
+    "source": null,
+    "t": "MITSUKOSHI ISETAN JAPAN 外國旅客 App",
+    "d": "下載三越伊勢丹官方外國旅客 App 享優惠，部分商品不適用。",
+    "url": "https://cp.mistore.jp/content/cpmistore/global/zh_hant/app.html",
+    "btn": "查看 App",
+    "static": true
+   },
+   {
+    "until": null,
+    "source": null,
+    "t": "【刷 JCB 卡】最高 20% 事後現金回饋",
+    "d": "Now on JAPAN 活動，需刷 JCB 卡並依活動頁登錄。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/mitsukoshiisetan/93855/",
+    "static": true
+   }
+  ],
+  "matsuyaginza": [
+   {
+    "until": "2027-03-31",
+    "source": null,
+    "t": "【刷 JCB 卡】95 折",
+    "d": "出示活動頁優惠券並刷 JCB 卡。食品、特價品、餐廳、部分品牌（如 LV）除外。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/matsuya/84149",
+    "static": true
+   }
+  ],
+  "takeya": [
+   {
+    "until": null,
+    "source": null,
+    "t": "免稅＋最高再 7% OFF",
+    "d": "LIVE JAPAN 官方優惠券。",
+    "url": "https://livejapan.com/public/operation/coupon/takeya/en.html",
+    "static": true
+   },
+   {
+    "until": "2027-04-30",
+    "source": null,
+    "t": "【刷 JCB 卡】9 折",
+    "d": "使用海外發行 JCB 卡單筆滿 ¥5,000，優惠上限 ¥10,000。",
+    "url": "https://www.cardu.com.tw/travel/detail.php?40490",
+    "static": true
+   }
+  ],
+  "aoki": [
+   {
+    "until": null,
+    "source": null,
+    "t": "外國旅客優惠券",
+    "d": "LIVE JAPAN 官方優惠券。",
+    "url": "https://livejapan.com/public/operation/coupon/aoki/en.html",
+    "static": true
+   }
+  ],
+  "orihica": [
+   {
+    "until": null,
+    "source": null,
+    "t": "外國旅客優惠券",
+    "d": "LIVE JAPAN 官方優惠券。",
+    "url": "https://livejapan.com/public/operation/coupon/orihica/en.html",
+    "static": true
+   }
+  ],
+  "nipponrentacar": [
+   {
+    "until": null,
+    "source": null,
+    "t": "租車 9 折（6 天以上 85 折）",
+    "d": "LIVE JAPAN 官方優惠券。",
+    "url": "https://livejapan.com/public/operation/coupon/nipponrentacar/zh-tw.html",
+    "static": true
+   }
+  ],
+  "ninjawifi": [
+   {
+    "until": null,
+    "source": null,
+    "t": "NINJA WiFi 優惠",
+    "d": "LIVE JAPAN 官方優惠券。",
+    "url": "https://livejapan.com/public/operation/coupon/ninjawifi/zh-tw.html",
+    "static": true
+   }
+  ],
+  "nakagawa": [
+   {
+    "until": null,
+    "source": null,
+    "t": "最高 15% OFF",
+    "d": "在 MATCHA 優惠券頁面中找到「中川政七商店」。",
+    "url": "https://matcha-jp.com/tw/coupon",
+    "static": true
+   }
+  ],
+  "tomods": [
+   {
+    "until": null,
+    "source": null,
+    "t": "免稅＋最高再 8% OFF",
+    "d": "MATCHA 優惠券。",
+    "url": "https://matcha-jp.com/tw/coupon/148",
+    "static": true
+   }
+  ],
+  "fukutaro": [
+   {
+    "until": null,
+    "source": null,
+    "t": "滿 ¥10,000 折 3%、¥30,000 折 5%、¥50,000 折 8%",
+    "d": "MATCHA 優惠券。",
+    "url": "https://matcha-jp.com/tw/coupon/143",
+    "static": true
+   }
+  ],
+  "nikigolf": [
+   {
+    "until": null,
+    "source": null,
+    "t": "免稅後再 9 折",
+    "d": "上野阿美橫本店及全日本免稅分店適用。",
+    "url": "https://reurl.cc/G5AjNv",
+    "static": true
+   }
+  ],
+  "negishi": [
+   {
+    "until": "2027-04-30",
+    "source": null,
+    "t": "一組客人贈送一盤迷你牛舌",
+    "d": "出示優惠券畫面即可，全日本根岸牛舌適用。",
+    "url": "https://reurl.cc/LWrWOa",
+    "static": true
+   }
+  ],
+  "fukuokaairport": [
+   {
+    "until": "2027-03-31",
+    "source": null,
+    "t": "【刷玉山卡】不限金額再 5% OFF",
+    "d": "結帳前出示專屬優惠券並刷玉山信用卡。",
+    "url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=3125",
+    "static": true
+   }
+  ],
+  "usj": [
+   {
+    "until": null,
+    "source": null,
+    "t": "【刷 JCB 卡】最高 20% 事後現金回饋",
+    "d": "Now on JAPAN 活動，需刷 JCB 卡並依活動頁登錄。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/usj/93849/",
+    "static": true
+   }
+  ],
+  "grandfront": [
+   {
+    "until": null,
+    "source": null,
+    "t": "梅田 7 大商城通用：含稅滿 ¥5,000 折 ¥500",
+    "d": "使用方式：先填寫線上問卷，再到 GRAND FRONT 大阪服務台、阪急三番街或 HEP FIVE 免稅櫃台出示畫面與護照，領取紙本優惠券。每人每天限領 1 次，每日數量有限。",
+    "url": "https://umeda-sc.jp/zh-hant/coupons",
+    "btn": "查看領取方式",
+    "static": true
+   }
+  ],
+  "grandgreen": [
+   {
+    "until": null,
+    "source": null,
+    "t": "梅田 7 大商城通用：含稅滿 ¥5,000 折 ¥500",
+    "d": "使用方式：先填寫線上問卷，再到 GRAND FRONT 大阪服務台、阪急三番街或 HEP FIVE 免稅櫃台出示畫面與護照，領取紙本優惠券。每人每天限領 1 次，每日數量有限。",
+    "url": "https://umeda-sc.jp/zh-hant/coupons",
+    "btn": "查看領取方式",
+    "static": true
+   }
+  ],
+  "hankyusanbangai": [
+   {
+    "until": null,
+    "source": null,
+    "t": "梅田 7 大商城通用：含稅滿 ¥5,000 折 ¥500",
+    "d": "使用方式：先填寫線上問卷，再到 GRAND FRONT 大阪服務台、阪急三番街或 HEP FIVE 免稅櫃台出示畫面與護照，領取紙本優惠券。每人每天限領 1 次，每日數量有限。",
+    "url": "https://umeda-sc.jp/zh-hant/coupons",
+    "btn": "查看領取方式",
+    "static": true
+   }
+  ],
+  "hepfive": [
+   {
+    "until": null,
+    "source": null,
+    "t": "梅田 7 大商城通用：含稅滿 ¥5,000 折 ¥500",
+    "d": "使用方式：先填寫線上問卷，再到 GRAND FRONT 大阪服務台、阪急三番街或 HEP FIVE 免稅櫃台出示畫面與護照，領取紙本優惠券。每人每天限領 1 次，每日數量有限。",
+    "url": "https://umeda-sc.jp/zh-hant/coupons",
+    "btn": "查看領取方式",
+    "static": true
+   }
+  ],
+  "diamor": [
+   {
+    "until": null,
+    "source": null,
+    "t": "梅田 7 大商城通用：含稅滿 ¥5,000 折 ¥500",
+    "d": "使用方式：先填寫線上問卷，再到 GRAND FRONT 大阪服務台、阪急三番街或 HEP FIVE 免稅櫃台出示畫面與護照，領取紙本優惠券。每人每天限領 1 次，每日數量有限。",
+    "url": "https://umeda-sc.jp/zh-hant/coupons",
+    "btn": "查看領取方式",
+    "static": true
+   }
+  ],
+  "umie": [
+   {
+    "until": null,
+    "source": null,
+    "t": "外國旅客專屬：¥500 折價券或贈品（擇一）",
+    "d": "AEON Mall 集團的外國旅客優惠，到服務台出示護照領取。",
+    "url": "https://tw.umie.global/coupons?couponid=22&mall=mall53",
+    "btn": "查看領取方式",
+    "static": true
+   }
+  ],
+  "kixdutyfree": [
+   {
+    "until": null,
+    "source": null,
+    "t": "線上預訂再享 3% 折扣券",
+    "d": "新會員限定：出發前 25 天至出發當天在官網預訂免稅品，出境後到專用櫃台取貨，不用排隊。",
+    "url": "https://www.kixdutyfree.jp/tw/promo-sale-allproduct-newcustomer.html",
+    "static": true
+   }
+  ],
+  "akakabe": [
+   {
+    "until": null,
+    "source": null,
+    "t": "滿 ¥10,000 免稅再 3% OFF 起",
+    "d": "滿 ¥10,000 再 3% OFF、滿 ¥30,000 再 5% OFF。大阪心齋橋、道頓堀一帶分店最多。",
+    "url": "https://reurl.cc/jyoO9L",
+    "static": true
+   }
+  ],
+  "tanabe": [
+   {
+    "until": null,
+    "source": null,
+    "t": "免稅 10%＋5% OFF",
+    "d": "滑雪用具專門店，關西地區。",
+    "url": "https://www.bubu-jp.com/archives/39713",
+    "static": true
+   }
+  ],
+  "sanrio": [
+   {
+    "until": null,
+    "source": null,
+    "t": "外國旅客專屬折扣",
+    "d": "步步日本整理的 Sanrio 外國旅客優惠。",
+    "url": "https://www.bubu-jp.com/archives/36015",
+    "static": true
+   }
+  ],
+  "joysound": [
+   {
+    "until": null,
+    "source": null,
+    "t": "外國旅客優惠",
+    "d": "步步日本整理的 JOYSOUND 外國旅客優惠。",
+    "url": "https://www.bubu-jp.com/archives/45733",
+    "static": true
+   }
+  ],
+  "briefing": [
+   {
+    "until": null,
+    "source": null,
+    "t": "免稅 10%＋再 10% OFF",
+    "d": "日本軍事風包包品牌。",
+    "url": "https://ksk.tw/briefing/",
+    "static": true
+   }
+  ],
+  "allu": [
+   {
+    "until": null,
+    "source": null,
+    "t": "免稅＋¥10,000 折扣",
+    "d": "中古名牌店。",
+    "url": "https://ksk.tw/allu-jp-coupon/",
+    "static": true
+   }
+  ],
+  "zoff": [
+   {
+    "until": null,
+    "source": null,
+    "t": "外國旅客購物優惠",
+    "d": "步步日本整理的 Zoff 外國旅客優惠。",
+    "url": "https://www.bubu-jp.com/archives/45382",
+    "static": true
    }
   ]
  }
