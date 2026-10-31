@@ -227,7 +227,8 @@
   "laox": "https://livejapan.com/public/operation/coupon/laox/zh-tw.html",
   "lotte": "https://livejapan.com/public/operation/coupon/lotte/zh-tw.html",
   "jdf": "https://livejapan.com/public/operation/coupon/japandutyfree/zh-tw.html",
-  "kokumin": "https://matcha-jp.com/tw/coupon/123"
+  "kokumin": "https://matcha-jp.com/tw/coupon/123",
+  "takeya": "https://matcha-jp.com/tw/coupon/111"
  },
  "taxfreeshops": {
   "name": "TAXFREESHOPS.JP（官方合作優惠券）",

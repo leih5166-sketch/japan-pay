@@ -267,7 +267,8 @@ export function cleanStoreName(name) {
 // 名字看起來不像店名（太短、只剩「店」字、殘缺）就不要自動新增
 export function badStoreName(n) {
   // 「全日空 店」「日本 店 和遊客專屬」這類：「店」字被單獨留下，代表前面的字被切掉了
-  return !n || n.length < 3 || n.length > 40 || /(^|\s)店(\s|$)/.test(n);
+  // 「日本免稅店 和遊客專屬折扣」這類是優惠券標題，不是店名
+  return !n || n.length < 3 || n.length > 40 || /(^|\s)店(\s|$)/.test(n) || /遊客|旅客|專屬|專享|限定|^日本免稅/.test(n);
 }
 
 // ---------- MATCHA 優惠券（列表頁＋每張券一頁） ----------
