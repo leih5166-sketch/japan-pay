@@ -1,117 +1,17 @@
 {
- "at": "2026-10-31T03:12:33.098Z",
+ "at": "2026-10-31T03:19:40.502Z",
  "log": [
-  {
-   "level": "change",
-   "msg": "中信 uniopen 聯名卡 更新為最高 11%"
-  },
-  {
-   "level": "change",
-   "msg": "玉山 熊本熊卡 更新為最高 8.5%"
-  },
-  {
-   "level": "change",
-   "msg": "富邦 J 卡 更新為最高 3%"
-  },
-  {
-   "level": "change",
-   "msg": "永豐 JCB 現金回饋卡 更新為最高 5%"
-  },
-  {
-   "level": "change",
-   "msg": "永豐 幣倍卡 更新為最高 6%"
-  },
-  {
-   "level": "change",
-   "msg": "星展 eco 永續卡 更新為最高 5%"
-  },
-  {
-   "level": "change",
-   "msg": "星展 傳說對決卡 更新為最高 5%"
-  },
-  {
-   "level": "change",
-   "msg": "富邦 Costco 聯名卡 更新為最高 5%"
-  },
-  {
-   "level": "change",
-   "msg": "中信 LINE Pay 卡 更新為最高 5%"
-  },
-  {
-   "level": "change",
-   "msg": "玉山 Unicard（Up 選） 更新為最高 4.5%"
-  },
-  {
-   "level": "change",
-   "msg": "永豐 大戶卡 更新為最高 4.5%"
-  },
-  {
-   "level": "change",
-   "msg": "樂天 Panda J 卡 更新為最高 4%"
-  },
   {
    "level": "ok",
    "msg": "這就是人生：日本信用卡回饋比較：解析 29 列刷卡回饋"
-  },
-  {
-   "level": "change",
-   "msg": "biccamera 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "tsuruha 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "cosmos 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "edion 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "yamada 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "anaduty 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "donki 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "sapporodrug 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "daikoku 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "sundrug 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "matsukiyo 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "keio 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "tobu 優惠券已更新"
   },
   {
    "level": "ok",
    "msg": "卡優新聞網：日本優惠券整理：解析 12 家店的優惠券"
   },
   {
-   "level": "error",
-   "msg": "LIVE JAPAN：唐吉訶德優惠券 失敗：HTTP 503"
+   "level": "warn",
+   "msg": "LIVE JAPAN：唐吉訶德優惠券 暫時無法連線（HTTP 503）"
   }
  ]
 }
