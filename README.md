@@ -86,3 +86,18 @@
 5. 回到 GitHub 編輯 `index.html`，把 Worker 網址填進 `const WORKER_URL = '';` 的引號裡。
 
 完成後，`index.html` 會出現拍照按鈕。`public.html` 永遠不會呼叫 API，不會產生費用。
+
+---
+
+## 選用：附近餐廳優惠券（Hot Pepper，免費）
+
+開啟後，按「GPS 找附近店家」時，會同時列出附近 1 公里內**有優惠券的餐廳**（包含連鎖店），每家都有「打開優惠券」按鈕。完全免費。
+
+1. 到 https://webservice.recruit.co.jp/register 用 Email 註冊，信箱會收到 API 金鑰。
+2. 到 Cloudflare 建立一個新的 Worker（例如 `japan-pay-hotpepper`），貼上 `worker/hotpepper.js` 的全部內容，按 **Deploy**。
+3. 在這個 Worker 的 **Settings → Variables and Secrets** 新增：
+   - `HOTPEPPER_KEY`（Secret）：Hot Pepper 的 API 金鑰
+   - `ALLOWED_ORIGIN`（Text）：`https://你的帳號.github.io`
+4. 回到 GitHub，分別編輯 `public.html` 和 `index.html`，把 Worker 網址填進 `const HOTPEPPER_URL = '';` 的引號裡。
+
+依照 Hot Pepper 的使用規定，網站上會顯示「Powered by ホットペッパー Webサービス」字樣，請不要移除。

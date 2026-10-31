@@ -134,6 +134,18 @@ section.block h2{font-size:17px;font-weight:900;margin:0 0 8px}
 .src{display:inline-block;margin-top:6px;margin-left:10px;font-size:12px;color:var(--muted)}
 .rank .src{margin-left:0;margin-top:2px}
 .best-src .src{color:var(--panel);opacity:.75;margin-left:0}
+.hp-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-top:4px}
+.hp-head strong{font-size:15px}
+.hp-head a{font-size:11px;color:var(--muted)}
+.hp-item{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:10px 12px;display:grid;grid-template-columns:56px 1fr;gap:10px}
+.hp-item img{width:56px;height:56px;object-fit:cover;border-radius:8px;background:var(--chip)}
+.hp-item .nm{font-weight:700;line-height:1.35}
+.hp-item .sub{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.45}
+.hp-item .acts{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.hp-item .acts a,.hp-item .acts button{font:inherit;font-size:13px;font-weight:700;padding:5px 10px;border-radius:8px;border:0;cursor:pointer;text-decoration:none}
+.hp-item .acts a{background:var(--gold);color:var(--gold-ink)}
+.hp-item .acts button{background:var(--chip);color:var(--ink)}
+.hp-more{width:100%}
 [hidden]{display:none!important}
 @media (prefers-reduced-motion: no-preference){
   .sign{animation:drop .35s ease-out}
@@ -165,6 +177,7 @@ section.block h2{font-size:17px;font-weight:900;margin:0 0 8px}
     </div>
     <div class="status" id="status" hidden></div>
     <div class="nearby" id="nearby" hidden></div>
+    <div class="nearby" id="hp" hidden></div>
 
     <div class="or">或直接輸入店名</div>
     <div class="search">
@@ -186,7 +199,7 @@ section.block h2{font-size:17px;font-weight:900;margin:0 0 8px}
     <p id="freshness">資料載入中…</p>
     <p>優惠券與回饋資料每天由程式自動上網搜尋並更新。回饋%為各活動公告的最高值，多數需要登錄、綁定帳戶或有上限；結帳前請以銀行與店家官網為準。</p>
     <p>PayPay 跨境支付免收 1.5% 海外交易手續費，但匯率約等於信用卡匯率加手續費，所以這裡的回饋%不另外加上 1.5%。</p>
-    <p>附近店家資料來自 © OpenStreetMap 貢獻者。</p>
+    <p>附近店家資料來自 © OpenStreetMap 貢獻者。附近餐廳優惠券由 <a href="http://webservice.recruit.co.jp/" target="_blank" rel="noopener">ホットペッパー Webサービス</a> 提供。</p>
   </div>
 </div>
 
@@ -194,6 +207,10 @@ section.block h2{font-size:17px;font-weight:900;margin:0 0 8px}
 // ====== 設定：部署 Cloudflare Worker 後，把網址填在這裡（留空則隱藏拍照功能） ======
 const WORKER_URL = '';
 // ====================================================================================
+
+// ====== 設定：部署 Hot Pepper 的 Cloudflare Worker 後，把網址填在這裡（留空則不顯示餐廳優惠券） ======
+const HOTPEPPER_URL = '';
+// ======================================================================================================
 
 const CATS = {
   electronics:'電器量販', drugstore:'藥妝店', discount:'綜合折扣店', convenience:'便利商店',
@@ -319,10 +336,11 @@ function renderNearby(list){
 }
 $('#btnGps').onclick = () => {
   if (!navigator.geolocation){ setStatus('<span>這個瀏覽器不支援定位，請改用拍照或輸入店名。</span>'); return; }
-  $('#nearby').hidden = true;
+  $('#nearby').hidden = true; $('#hp').hidden = true;
   setStatus('<span>正在取得你的位置…</span>');
   navigator.geolocation.getCurrentPosition(async pos => {
     const {latitude:lat, longitude:lon, accuracy} = pos.coords;
+    loadHotpepper(lat, lon, 1);
     setStatus('<span>正在搜尋附近店家…（定位誤差約 '+Math.round(accuracy)+' 公尺）</span>');
     try {
       const radius = Math.min(300, Math.max(80, Math.round(accuracy*1.5)));
@@ -386,6 +404,43 @@ async function recognize(file, input){
   }
 }
 
+// ---------- 附近有優惠券的餐廳（Hot Pepper） ----------
+let hpState = null;
+async function loadHotpepper(lat, lon, start) {
+  if (!HOTPEPPER_URL) return;
+  const box = $('#hp');
+  if (start === 1) { hpState = {lat, lon, shops: []}; box.hidden = false; box.innerHTML = '<p class="hint">正在搜尋附近有優惠券的餐廳…</p>'; }
+  try {
+    const r = await fetch(`${HOTPEPPER_URL}?lat=${lat}&lng=${lon}&range=3&start=${start}`);
+    const d = await r.json();
+    if (!r.ok || d.error) throw new Error(d.error || r.status);
+    if (!hpState || hpState.lat !== lat) return;          // 使用者已重新定位
+    d.shops.forEach(s => { s.d = dist(lat, lon, s.lat, s.lng); });
+    hpState.shops = hpState.shops.concat(d.shops);
+    hpState.next = start + 50 <= d.available ? start + 50 : null;
+    renderHotpepper();
+  } catch (e) {
+    box.hidden = false;
+    box.innerHTML = '<p class="hint">附近餐廳優惠券暫時無法取得，請稍後再試。</p>';
+  }
+}
+function renderHotpepper() {
+  const box = $('#hp'), list = hpState.shops.slice().sort((a, b) => a.d - b.d);
+  if (!list.length) { box.innerHTML = '<p class="hint">附近 1 公里內沒有找到有優惠券的餐廳。</p>'; return; }
+  box.innerHTML = '<div class="hp-head"><strong>附近有優惠券的餐廳（' + list.length + ' 家）</strong><a href="http://webservice.recruit.co.jp/" target="_blank" rel="noopener">Powered by ホットペッパー Webサービス</a></div>' +
+    list.map((s, i) => '<div class="hp-item">' + (s.photo ? '<img src="' + esc(s.photo) + '" alt="" loading="lazy">' : '<span></span>') +
+      '<div><div class="nm">' + esc(s.name) + '</div><div class="sub">' + Math.round(s.d) + ' 公尺・' + esc(s.genre) + (s.budget ? '・' + esc(s.budget) : '') + '</div>' +
+      (s.catch ? '<div class="sub">' + esc(s.catch) + '</div>' : '') +
+      '<div class="acts"><a href="' + esc(safeUrl(s.coupon) || '#') + '" target="_blank" rel="noopener">打開優惠券</a><button type="button" data-hp="' + i + '">刷哪張最划算</button></div></div></div>').join('') +
+    (hpState.next ? '<button type="button" class="btn-s hp-more" id="hpMore">載入更多餐廳</button>' : '');
+  box.querySelectorAll('[data-hp]').forEach(b => b.onclick = () => {
+    const s = list[+b.dataset.hp];
+    const chain = matchStore({name: s.name});
+    showStore(chain ? {...chain, hp: s} : {id: null, name: s.name, jp: '', cat: 'restaurant', hp: s}, {note: '來自 Hot Pepper：' + (s.access || s.genre), confidence: 'high'});
+  });
+  const more = $('#hpMore'); if (more) more.onclick = () => { more.disabled = true; more.textContent = '載入中…'; loadHotpepper(hpState.lat, hpState.lon, hpState.next); };
+}
+
 // ---------- 排名計算 ----------
 let current = null, currentMeta = null, noPayPay = false, showAll = false;
 function optionsFor(store, amountTWD, fx){
@@ -446,10 +501,17 @@ function render(){
   h += '<section class="block"><h2>可用優惠券</h2>';
   h += '<div class="notice">日本自 2026/11/1 起改為「先付含稅價、出境時退稅」，結帳時可能需要登錄退款用的信用卡。</div><div style="height:8px"></div>';
   const cps = ((store.id && (DATA.coupons || {})[store.id]) || []).filter(c => alive(c.until));
+  if (store.smartnews) {
+    // 連鎖店的 App 限定優惠券：引導到 SmartNews 領取
+    const android = /android/i.test(navigator.userAgent);
+    cps.push({t: '這家店的優惠券可在 SmartNews 領取', d: '下載 SmartNews 後把語言設為「日本語」，點「クーポン」分頁找到這家店，按「クーポンを使う」再出示給店員即可。優惠券每週更新。', until: null,
+      url: android ? 'https://play.google.com/store/apps/details?id=jp.gocro.smartnews.android' : 'https://apps.apple.com/jp/app/id579581125', source: null, btn: '下載 SmartNews'});
+  }
+  if (store.hp && store.hp.coupon) cps.unshift({t: 'Hot Pepper 餐廳優惠券', d: (store.hp.catch ? store.hp.catch + '。' : '') + '點開後向店員出示畫面即可使用，各店優惠內容與條件不同。', until: null, url: store.hp.coupon, source: store.hp.url || 'https://www.hotpepper.jp/'});
   if (cps.length){
     cps.forEach(c => {
       const u = safeUrl(c.url);
-      h += '<div class="coupon"><h3>'+esc(c.t)+'</h3>'+(c.d?'<p>'+esc(c.d)+'</p>':'')+'<p class="meta">'+(c.until ? '有效至 '+fmtDate(c.until) : '未標示期限')+'</p>'+(u?'<a href="'+esc(u)+'" target="_blank" rel="noopener">打開優惠券</a>':'')+srcHtml(c.source)+'</div>';
+      h += '<div class="coupon"><h3>'+esc(c.t)+'</h3>'+(c.d?'<p>'+esc(c.d)+'</p>':'')+(c.btn ? '' : '<p class="meta">'+(c.until ? '有效至 '+fmtDate(c.until) : '未標示期限')+'</p>')+(u?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(c.btn||'打開優惠券')+'</a>':'')+srcHtml(c.source)+'</div>';
     });
   } else {
     h += '<div class="empty">目前沒有找到這家店給外國旅客的優惠券。可以問店員「クーポンはありますか？」</div>';
