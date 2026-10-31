@@ -146,6 +146,11 @@ section.block h2{font-size:17px;font-weight:900;margin:0 0 8px}
 .hp-item .acts a{background:var(--gold);color:var(--gold-ink)}
 .hp-item .acts button{background:var(--chip);color:var(--ink)}
 .hp-more{width:100%}
+.card-offer{border-left-color:var(--pay)}
+.offer-tag{display:inline-block;font-size:12px;font-weight:700;color:var(--pay);border:1px solid var(--pay);border-radius:999px;padding:0 8px;margin-bottom:4px}
+.coupon a.offer-btn{background:transparent;color:var(--pay);border:1.5px solid var(--pay)}
+.sub-h{font-size:15px!important;margin:16px 0 2px!important}
+.sub-note{font-size:12px;color:var(--muted);margin:0 0 8px}
 [hidden]{display:none!important}
 @media (prefers-reduced-motion: no-preference){
   .sign{animation:drop .35s ease-out}
@@ -515,17 +520,24 @@ function render(){
       url: android ? 'https://play.google.com/store/apps/details?id=jp.gocro.smartnews.android' : 'https://apps.apple.com/jp/app/id579581125', source: null, btn: '下載 SmartNews'});
   }
   if (store.hp && store.hp.coupon) cps.unshift({t: 'Hot Pepper 餐廳優惠券', d: (store.hp.catch ? store.hp.catch + '。' : '') + '點開後向店員出示畫面即可使用，各店優惠內容與條件不同。', until: null, url: store.hp.coupon, source: store.hp.url || 'https://www.hotpepper.jp/'});
-  if (cps.length){
-    cps.forEach(c => {
+  // 信用卡活動（標題以【刷…卡】【玉山…】等開頭）不是優惠券，分開顯示，避免誤會
+  const isCard = c => c.kind === 'card' || /^【[^】]*(卡|Mastercard|Visa|JCB)[^】]*】/i.test(c.t || '');
+  const coupons = cps.filter(c => !isCard(c)), cards = cps.filter(isCard);
+  const cardBox = (title, desc, meta, url, src) => '<div class="coupon card-offer"><span class="offer-tag">信用卡活動</span><h3>'+esc(title)+'</h3>'+(desc?'<p>'+esc(desc)+'</p>':'')+(meta?'<p class="meta">'+esc(meta)+'</p>':'')+(url?'<a class="offer-btn" href="'+esc(url)+'" target="_blank" rel="noopener">查看活動說明</a>':'')+srcHtml(src)+'</div>';
+  if (coupons.length){
+    coupons.forEach(c => {
       const u = safeUrl(c.url);
       h += '<div class="coupon"><h3>'+esc(c.t)+'</h3>'+(c.d?'<p>'+esc(c.d)+'</p>':'')+(c.btn ? '' : '<p class="meta">'+(c.until ? '有效至 '+fmtDate(c.until) : '未標示期限')+'</p>')+(u?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(c.btn||'打開優惠券')+'</a>':'')+srcHtml(c.source)+'</div>';
     });
   } else {
     h += '<div class="empty">' + (store.nocoupon ? esc(store.nocoupon) : '目前沒有找到這家店給外國旅客的優惠券。可以問店員「クーポンはありますか？」') + '</div>';
   }
-  (DATA.promos || []).filter(p => alive(p.until) && store.id && (p.stores || []).includes(store.id)).forEach(p => {
-    h += '<div class="coupon"><h3>'+esc(p.label)+'（'+esc(p.net)+' 卡）</h3><p>'+esc(p.cond)+'</p><p class="meta">活動至 '+fmtDate(p.until)+'，已自動疊加到下方排名</p>'+srcHtml(p.source)+'</div>';
-  });
+  const promos = (DATA.promos || []).filter(p => alive(p.until) && store.id && (p.stores || []).includes(store.id));
+  if (cards.length || promos.length) {
+    h += '<h2 class="sub-h">信用卡專屬活動</h2><p class="sub-note">需要刷指定的信用卡，並依活動規定登錄或出示，才能享有優惠。</p>';
+    cards.forEach(c => { h += cardBox(c.t.replace(/^【([^】]*)】\s*/, '$1：'), c.d, c.until ? '活動至 '+fmtDate(c.until) : '', safeUrl(c.url), c.source); });
+    promos.forEach(p => { h += cardBox(p.label+'（'+p.net+' 卡）', p.cond, '活動至 '+fmtDate(p.until)+'，已自動算進下方刷卡排名', null, p.source); });
+  }
   h += '</section>';
 
   const list = optionsFor(store, amt, fx);
