@@ -1,29 +1,91 @@
 {
  "cards": [
-  {"name": "這就是人生：日本信用卡回饋比較", "url": "https://www.beurlife.com/2022/09/best-credit-card-to-travel-japan.html"}
+  {
+   "name": "這就是人生：日本信用卡回饋比較",
+   "url": "https://www.beurlife.com/2022/09/best-credit-card-to-travel-japan.html"
+  }
  ],
  "coupons": [
-  {"name": "卡優新聞網：日本優惠券整理", "url": "https://www.cardu.com.tw/travel/detail.php?40490"}
+  {
+   "name": "卡優新聞網：日本優惠券整理",
+   "url": "https://www.cardu.com.tw/travel/detail.php?40490"
+  }
  ],
  "donki": [
-  {"name": "LIVE JAPAN：唐吉訶德優惠券", "url": "https://livejapan.com/public/operation/coupon/donki/zh-tw.html"}
+  {
+   "name": "LIVE JAPAN：唐吉訶德優惠券",
+   "url": "https://livejapan.com/public/operation/coupon/donki/zh-tw.html"
+  }
  ],
  "coupon_store_keywords": {
-  "biccamera": ["BIC CAMERA", "Bic Camera", "ビックカメラ"],
-  "tsuruha": ["TSURUHA", "鶴羽"],
-  "cosmos": ["COSMOS", "科摩思"],
-  "edion": ["Edion", "EDION", "愛電王"],
-  "yamada": ["YAMADA", "山田電機"],
-  "anaduty": ["ANA免稅", "ANA 免稅"],
-  "donki": ["唐吉訶德", "唐吉軻德"],
-  "sapporodrug": ["札幌藥妝", "札榥藥妝"],
-  "daikoku": ["大國藥妝"],
-  "sundrug": ["Sundrug", "SUNDRUG"],
-  "matsukiyo": ["松本清"],
-  "keio": ["京王百貨"],
-  "tobu": ["東武百貨"],
-  "joshin": ["上新電機"],
-  "cocokara": ["cocokara", "ココカラ"],
-  "sugi": ["杉藥局"]
- }
+  "biccamera": [
+   "BIC CAMERA",
+   "Bic Camera",
+   "ビックカメラ"
+  ],
+  "tsuruha": [
+   "TSURUHA",
+   "鶴羽"
+  ],
+  "cosmos": [
+   "COSMOS",
+   "科摩思"
+  ],
+  "edion": [
+   "Edion",
+   "EDION",
+   "愛電王"
+  ],
+  "yamada": [
+   "YAMADA",
+   "山田電機"
+  ],
+  "anaduty": [
+   "ANA免稅",
+   "ANA 免稅"
+  ],
+  "donki": [
+   "唐吉訶德",
+   "唐吉軻德"
+  ],
+  "sapporodrug": [
+   "札幌藥妝",
+   "札榥藥妝"
+  ],
+  "daikoku": [
+   "大國藥妝"
+  ],
+  "sundrug": [
+   "Sundrug",
+   "SUNDRUG"
+  ],
+  "matsukiyo": [
+   "松本清"
+  ],
+  "keio": [
+   "京王百貨"
+  ],
+  "tobu": [
+   "東武百貨"
+  ],
+  "joshin": [
+   "上新電機"
+  ],
+  "cocokara": [
+   "cocokara",
+   "ココカラ"
+  ],
+  "sugi": [
+   "杉藥局"
+  ]
+ },
+ "donki_fallback": [
+  {
+   "t": "含稅滿 ¥11,000 折 5%、含稅滿 ¥33,000 折 7%",
+   "d": "2026/11/1 起的新門檻。需連網開啟官方優惠頁出示，截圖無效；菸酒、遊戲主機等不適用。",
+   "until": null,
+   "url": "https://japanportal.donki-global.com/coupon/?ptcd=0099000503",
+   "source": "https://livejapan.com/public/operation/coupon/donki/zh-tw.html"
+  }
+ ]
 }
