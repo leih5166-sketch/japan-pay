@@ -1,5 +1,5 @@
 {
- "at": "2026-10-31T07:56:48.734Z",
+ "at": "2026-10-31T08:00:41.950Z",
  "log": [
   {
    "level": "ok",
@@ -24,106 +24,6 @@
   {
    "level": "error",
    "msg": "FlyAsia：日本優惠券懶人包 失敗：HTTP 403"
-  },
-  {
-   "level": "change",
-   "msg": "donki 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "biccamera 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "jins 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "sundrug 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "keio 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "edion 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "daimaru 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "matsuzakaya 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "lotte 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "tsuruha 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "cosmos 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "alpen 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "yamada 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "kintetsu 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "victoria 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "jrrentacar 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "ysroad 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "seibu 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "sogo 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "kokumin 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "trial 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "golfpartner 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "welcia 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "snowpeak 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "laox 優惠券已更新"
   },
   {
    "level": "warn",
