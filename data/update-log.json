@@ -1,6 +1,54 @@
 {
- "at": "2026-10-31T08:42:32.554Z",
+ "at": "2026-10-31T08:52:20.603Z",
  "log": [
+  {
+   "level": "info",
+   "msg": "移除自動店家「杏林堂藥局」（已有手動資料）"
+  },
+  {
+   "level": "info",
+   "msg": "移除自動店家「JAPAN ROAD TRIP」（不是實體店家）"
+  },
+  {
+   "level": "info",
+   "msg": "移除自動店家「全日空 店」（已有手動資料）"
+  },
+  {
+   "level": "info",
+   "msg": "移除自動店家「AIRPORT TAXI」（不是實體店家）"
+  },
+  {
+   "level": "info",
+   "msg": "移除自動店家「Theory」（已有手動資料）"
+  },
+  {
+   "level": "info",
+   "msg": "移除自動店家「NINJA Wi-FI」（已有手動資料）"
+  },
+  {
+   "level": "info",
+   "msg": "移除自動店家「Japan Wireless」（不是實體店家）"
+  },
+  {
+   "level": "info",
+   "msg": "移除自動店家「日本 店 和遊客專屬」（店名殘缺）"
+  },
+  {
+   "level": "info",
+   "msg": "移除自動店家「JAL ABC」（不是實體店家）"
+  },
+  {
+   "level": "info",
+   "msg": "移除自動店家「Cafetalk」（不是實體店家）"
+  },
+  {
+   "level": "info",
+   "msg": "移除自動店家「Magical Trip」（不是實體店家）"
+  },
+  {
+   "level": "info",
+   "msg": "移除自動店家「ecbo cloak」（不是實體店家）"
+  },
   {
    "level": "ok",
    "msg": "這就是人生：日本信用卡回饋比較：解析 29 列刷卡回饋"
@@ -27,207 +75,23 @@
   },
   {
    "level": "new",
-   "msg": "自動新增店家：ecbo cloak"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：Magical Trip"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：Cafetalk"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：JAL ABC"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：日本 店 和遊客專屬"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：Nissan Rent a Car 日産租車"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：Japan Wireless"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：NINJA Wi-FI"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：Theory"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：AIRPORT TAXI"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：Samantha Thavasa"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：全日空 店"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：JAPAN ROAD TRIP"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：杏林堂藥局"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：Wants藥妝店"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：wellness藥妝店"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：DRUG ELEVEN"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：LADY藥局"
-  },
-  {
-   "level": "new",
-   "msg": "自動新增店家：日本機車百貨2RINKAN"
+   "msg": "自動新增店家：日本免稅店 和遊客專屬折扣"
   },
   {
    "level": "ok",
-   "msg": "MATCHA 優惠券：解析 62 張優惠券"
+   "msg": "MATCHA 優惠券：解析 50 張優惠券"
   },
   {
    "level": "change",
-   "msg": "takeya 優惠券已更新"
+   "msg": "auto-gv7mzv 優惠券已更新"
   },
   {
    "level": "change",
-   "msg": "tobu 優惠券已更新"
+   "msg": "theory 優惠券已更新"
   },
   {
    "level": "change",
-   "msg": "auto-1ajb5qz 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-1j0394d 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "nipponrentacar 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-1ub9j3d 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-1gmzt07 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "odakyu 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "cocokara 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-q7ie12 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-1d7adb7 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-1fqsdrs 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "nakagawa 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-1rfh7pk 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "tanabe 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-15etpmt 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-13vk9kj 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-1xcp5ev 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-1biufh0 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "briefing 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "parismiki 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "sugi 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-ay8k17 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-1q7ywd1 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-82bh98 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-skj2ey 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-1tu44ox 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "fukutaro 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-1112fr9 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "tomods 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "auto-1ab2d3 優惠券已更新"
+   "msg": "kyorindo 優惠券已更新"
   },
   {
    "level": "warn",
@@ -238,8 +102,16 @@
    "msg": "唐吉訶德沿用前次從官方頁取得的優惠券"
   },
   {
-   "level": "error",
-   "msg": "JCB 精選優惠 失敗：只找到 0 個活動，沿用前次資料"
+   "level": "info",
+   "msg": "JCB 活動找不到對應店家：【僅限御尊卡、臻寶卡、尊榮卡、極緻卡持卡人！】 消費滿100"
+  },
+  {
+   "level": "info",
+   "msg": "JCB 活動找不到對應店家：【台灣持卡人限定】刷JCB卡暢遊愛知縣名古屋享獨家優惠！"
+  },
+  {
+   "level": "ok",
+   "msg": "JCB 精選優惠：比對到 6 個店家活動"
   },
   {
    "level": "warn",
@@ -247,7 +119,7 @@
   },
   {
    "level": "info",
-   "msg": "本次自動新增 19 家店"
+   "msg": "本次自動新增 1 家店"
   }
  ]
 }
