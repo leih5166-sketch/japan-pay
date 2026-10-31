@@ -1,3 +1,4 @@
+// 版本：2026-10-31 v3（MATCHA 店名修正）
 // 免費爬蟲：每天抓取固定的比較網頁，用規則擷取優惠券與刷卡回饋，更新 data/data.json
 // 不需要任何 API 金鑰。只有在確定解析成功時才覆蓋數值；解析失敗就保留舊資料，並寫入紀錄。
 // 執行：node scripts/scrape.mjs        測試：node scripts/scrape.mjs --fixture 資料夾
@@ -276,9 +277,12 @@ export function discoverMatcha(html) {
   return [...new Set([...html.matchAll(/\/tw\/coupon\/(\d{1,4})(?![\w])/g)].map(m => +m[1]))].sort((a, b) => a - b);
 }
 export function parseMatchaCoupon(html) {
-  const h1 = (html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [])[1] || '';
-  const name = htmlToText(h1.split(/<br\s*\/?>/i)[0]).replace(/\s+/g, ' ').trim();
-  const sub = htmlToText(h1.split(/<br\s*\/?>/i).slice(1).join(' ')).replace(/\s+/g, ' ').trim();
+  // 頁面上可能有好幾個大標題（網站標誌區的「日本免稅店優惠券和遊客專屬折扣」也是），全部讀出來，挑出真正的店名
+  const h1s = [...html.matchAll(/<h1[^>]*>([\s\S]*?)<\/h1>/gi)].map(m => m[1]);
+  const heads = h1s.map(h => ({name: htmlToText(h.split(/<br\s*\/?>/i)[0]).replace(/\s+/g, ' ').trim(), sub: htmlToText(h.split(/<br\s*\/?>/i).slice(1).join(' ')).replace(/\s+/g, ' ').trim()}));
+  const good = heads.filter(h => h.name && !badStoreName(cleanStoreName(h.name)));
+  const best = good[good.length - 1] || heads[heads.length - 1] || {name: '', sub: ''};
+  const name = best.name, sub = best.sub;
   // 網頁標題，例如「國民藥妝店 KoKuMiN 8% - MATCHA優惠券」→「國民藥妝店 KoKuMiN」
   const title = htmlToText((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || '')
     .split(/\s+-\s+MATCHA|｜|\|/)[0].replace(/(MAX\s*)?\d+\s*[%％]\s*(OFF)?\s*$/i, '').replace(/\s+/g, ' ').trim();
