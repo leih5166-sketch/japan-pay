@@ -1,5 +1,5 @@
 {
- "at": "2026-10-31T08:26:26.723Z",
+ "at": "2026-10-31T08:42:32.554Z",
  "log": [
   {
    "level": "ok",
@@ -7,7 +7,7 @@
   },
   {
    "level": "info",
-   "msg": "TAXFREESHOPS 第 22 頁（JAPAN & GLOBAL eSIM）不在店家清單中，略過"
+   "msg": "TAXFREESHOPS 第 22 頁（JAPAN & GLOBAL eSIM）不是實體店家，略過"
   },
   {
    "level": "ok",
@@ -18,8 +18,216 @@
    "msg": "daikoku 的優惠券圖片已從網頁中還原（138 KB）"
   },
   {
+   "level": "warn",
+   "msg": "takeya 找不到優惠券連結"
+  },
+  {
    "level": "ok",
-   "msg": "卡優新聞網：日本優惠券整理：解析 18 家店的優惠券"
+   "msg": "卡優新聞網：日本優惠券整理：解析 19 家店的優惠券"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：ecbo cloak"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：Magical Trip"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：Cafetalk"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：JAL ABC"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：日本 店 和遊客專屬"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：Nissan Rent a Car 日産租車"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：Japan Wireless"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：NINJA Wi-FI"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：Theory"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：AIRPORT TAXI"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：Samantha Thavasa"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：全日空 店"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：JAPAN ROAD TRIP"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：杏林堂藥局"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：Wants藥妝店"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：wellness藥妝店"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：DRUG ELEVEN"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：LADY藥局"
+  },
+  {
+   "level": "new",
+   "msg": "自動新增店家：日本機車百貨2RINKAN"
+  },
+  {
+   "level": "ok",
+   "msg": "MATCHA 優惠券：解析 62 張優惠券"
+  },
+  {
+   "level": "change",
+   "msg": "takeya 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "tobu 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-1ajb5qz 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-1j0394d 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "nipponrentacar 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-1ub9j3d 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-1gmzt07 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "odakyu 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "cocokara 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-q7ie12 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-1d7adb7 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-1fqsdrs 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "nakagawa 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-1rfh7pk 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "tanabe 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-15etpmt 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-13vk9kj 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-1xcp5ev 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-1biufh0 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "briefing 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "parismiki 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "sugi 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-ay8k17 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-1q7ywd1 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-82bh98 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-skj2ey 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-1tu44ox 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "fukutaro 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-1112fr9 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "tomods 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "auto-1ab2d3 優惠券已更新"
   },
   {
    "level": "warn",
@@ -30,8 +238,16 @@
    "msg": "唐吉訶德沿用前次從官方頁取得的優惠券"
   },
   {
+   "level": "error",
+   "msg": "JCB 精選優惠 失敗：只找到 0 個活動，沿用前次資料"
+  },
+  {
    "level": "warn",
    "msg": "LIVE JAPAN 維修中或無法連線，相關優惠券已加上提示"
+  },
+  {
+   "level": "info",
+   "msg": "本次自動新增 19 家店"
   }
  ]
 }

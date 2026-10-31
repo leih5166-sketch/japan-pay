@@ -1,0 +1,211 @@
+[
+ {
+  "id": "auto-1ajb5qz",
+  "name": "ecbo cloak",
+  "jp": "",
+  "cat": "other",
+  "alias": [
+   "ecbo cloak"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-1j0394d",
+  "name": "Magical Trip",
+  "jp": "",
+  "cat": "other",
+  "alias": [
+   "Magical Trip"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-1ub9j3d",
+  "name": "Cafetalk",
+  "jp": "",
+  "cat": "restaurant",
+  "alias": [
+   "Cafetalk"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-1gmzt07",
+  "name": "JAL ABC",
+  "jp": "",
+  "cat": "other",
+  "alias": [
+   "JAL ABC"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-q7ie12",
+  "name": "日本 店 和遊客專屬",
+  "jp": "",
+  "cat": "other",
+  "alias": [
+   "日本 店 和遊客專屬"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-1d7adb7",
+  "name": "Nissan Rent a Car 日産租車",
+  "jp": "",
+  "cat": "service",
+  "alias": [
+   "Nissan Rent a Car 日産租車"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-1fqsdrs",
+  "name": "Japan Wireless",
+  "jp": "",
+  "cat": "other",
+  "alias": [
+   "Japan Wireless"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-1rfh7pk",
+  "name": "NINJA Wi-FI",
+  "jp": "",
+  "cat": "other",
+  "alias": [
+   "NINJA Wi-FI"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-15etpmt",
+  "name": "Theory",
+  "jp": "",
+  "cat": "other",
+  "alias": [
+   "Theory"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-13vk9kj",
+  "name": "AIRPORT TAXI",
+  "jp": "",
+  "cat": "other",
+  "alias": [
+   "AIRPORT TAXI"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-1xcp5ev",
+  "name": "Samantha Thavasa",
+  "jp": "",
+  "cat": "apparel",
+  "alias": [
+   "Samantha Thavasa"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-1biufh0",
+  "name": "全日空 店",
+  "jp": "",
+  "cat": "other",
+  "alias": [
+   "全日空 店"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-ay8k17",
+  "name": "JAPAN ROAD TRIP",
+  "jp": "",
+  "cat": "other",
+  "alias": [
+   "JAPAN ROAD TRIP"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-1q7ywd1",
+  "name": "杏林堂藥局",
+  "jp": "",
+  "cat": "drugstore",
+  "alias": [
+   "杏林堂藥局"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-82bh98",
+  "name": "Wants藥妝店",
+  "jp": "",
+  "cat": "drugstore",
+  "alias": [
+   "Wants藥妝店"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-skj2ey",
+  "name": "wellness藥妝店",
+  "jp": "",
+  "cat": "drugstore",
+  "alias": [
+   "wellness藥妝店"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-1tu44ox",
+  "name": "DRUG ELEVEN",
+  "jp": "",
+  "cat": "drugstore",
+  "alias": [
+   "DRUG ELEVEN"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-1112fr9",
+  "name": "LADY藥局",
+  "jp": "",
+  "cat": "drugstore",
+  "alias": [
+   "LADY藥局"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ },
+ {
+  "id": "auto-1ab2d3",
+  "name": "日本機車百貨2RINKAN",
+  "jp": "",
+  "cat": "department",
+  "alias": [
+   "日本機車百貨2RINKAN"
+  ],
+  "auto": true,
+  "added": "2026-10-31"
+ }
+]

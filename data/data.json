@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-31T08:26:26.723Z",
- "note": "資料與前次相同",
+ "updated_at": "2026-10-31T08:42:32.554Z",
+ "note": "部分來源暫時無法更新（1 項），已沿用前次資料",
  "payments": [
   {
    "id": "uniopen",
@@ -683,11 +683,11 @@
   ],
   "cocokara": [
    {
-    "t": "最高 7% 折扣",
-    "d": "依消費金額分級。",
+    "t": "免稅＋最高 7%折扣",
+    "d": "使用條件：店內商品消費滿10,000日圓以上未滿30,000日圓，可享店內商品3%折扣 店內商品消費滿30,000日圓以上未滿50,000日圓，可享店內商品5%折扣 店內商品消費滿50,000日圓以上，可享店內商品7%折扣 有效期限：2027年3月3…",
     "until": "2027-03-31",
-    "url": "https://www.beurlife.com/wp-content/uploads/2026/03/cocokara_fine_drug_store_coupon-2027Mar.png",
-    "source": null
+    "url": "https://matcha-jp.com/tw/coupon/73",
+    "source": "https://matcha-jp.com/tw/coupon/73"
    }
   ],
   "cosmos": [
@@ -710,11 +710,11 @@
   ],
   "sugi": [
    {
-    "t": "最高 8% 折扣",
-    "d": "依消費金額分級。",
+    "t": "免稅＋最高 18%折扣",
+    "d": "使用條件：結帳時出示此優惠券 不可與其他優惠券並用 部分商品無法使用此優惠券",
     "until": "2027-02-28",
-    "url": "https://s.beurlife.com/sugi",
-    "source": null
+    "url": "https://matcha-jp.com/tw/coupon/133",
+    "source": "https://matcha-jp.com/tw/coupon/133"
    }
   ],
   "sapporodrug": [
@@ -726,7 +726,15 @@
     "source": "https://www.cardu.com.tw/travel/detail.php?40490"
    }
   ],
-  "tobu": [],
+  "tobu": [
+   {
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：這是可在東武百貨店池袋店利用的5%折扣券的兌換券 只限在留資格為短期滯在的人 將本券與護照帶至2樓一番地的旅行諮詢處，將可以兌換5%優惠券※1人限1張 １張收據1000日圓（含稅）以上的商品為對象 不可和其他優待和折扣制度併用 支付限現金、…",
+    "until": "2027-09-30",
+    "url": "https://matcha-jp.com/tw/coupon/64",
+    "source": "https://matcha-jp.com/tw/coupon/64"
+   }
+  ],
   "keio": [
    {
     "t": "免稅＋折扣優惠券（詳見頁面）",
@@ -738,11 +746,11 @@
   ],
   "odakyu": [
    {
-    "t": "滿 ¥1,000 享 6% 折扣",
-    "d": "食品不適用。",
+    "t": "免稅＋6%折扣",
+    "d": "使用條件：可以在小田急百貨店使用的6%優惠券。 限居住於海外的外國人。 付款方式限定為現金、信用卡、銀聯卡、支付實或微信支付。 〈折扣對象外商品〉 食品、廉售商品、餐廳、咖啡廳及其它指定的品牌等。 「6%優恵券」適用於1,000日元（含稅）以上的商品…",
     "until": "2028-03-31",
-    "url": "https://www.beurlife.com/wp-content/uploads/2026/10/odakyu_coupon_beurlife_2028Mar.png",
-    "source": null
+    "url": "https://matcha-jp.com/tw/coupon/66",
+    "source": "https://matcha-jp.com/tw/coupon/66"
    },
    {
     "until": null,
@@ -973,14 +981,6 @@
     "url": "https://livejapan.com/public/operation/coupon/mitsui/en.html",
     "btn": "查看領取方式",
     "static": true
-   },
-   {
-    "until": null,
-    "source": null,
-    "t": "【刷 JCB 卡】最高 20% 事後現金回饋",
-    "d": "Now on JAPAN 活動，需刷 JCB 卡並依活動頁登錄。",
-    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/mitsuioutlet/93838/",
-    "static": true
    }
   ],
   "premiumoutlets": [
@@ -1054,41 +1054,23 @@
     "url": "https://cp.mistore.jp/content/cpmistore/global/zh_hant/app.html",
     "btn": "查看 App",
     "static": true
-   },
-   {
-    "until": null,
-    "source": null,
-    "t": "【刷 JCB 卡】最高 20% 事後現金回饋",
-    "d": "Now on JAPAN 活動，需刷 JCB 卡並依活動頁登錄。",
-    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/mitsukoshiisetan/93855/",
-    "static": true
    }
   ],
-  "matsuyaginza": [
-   {
-    "until": "2027-03-31",
-    "source": null,
-    "t": "【刷 JCB 卡】95 折",
-    "d": "出示活動頁優惠券並刷 JCB 卡。食品、特價品、餐廳、部分品牌（如 LV）除外。",
-    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/matsuya/84149",
-    "static": true
-   }
-  ],
+  "matsuyaginza": [],
   "takeya": [
+   {
+    "t": "在多慶屋使用海外發行JCB信用卡",
+    "d": "單筆消費滿5,000日元，享受9折優惠！單筆優惠金額上限10,000日元。",
+    "until": "2027-04-30",
+    "url": null,
+    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+   },
    {
     "until": null,
     "source": null,
     "t": "免稅＋最高再 7% OFF",
     "d": "LIVE JAPAN 官方優惠券。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/takeya/en.html",
-    "static": true
-   },
-   {
-    "until": "2027-04-30",
-    "source": null,
-    "t": "【刷 JCB 卡】9 折",
-    "d": "使用海外發行 JCB 卡單筆滿 ¥5,000，優惠上限 ¥10,000。",
-    "url": "https://www.cardu.com.tw/travel/detail.php?40490",
     "static": true
    }
   ],
@@ -1114,6 +1096,20 @@
   ],
   "nipponrentacar": [
    {
+    "t": "免稅＋10%折扣",
+    "d": "使用條件：如何在日本租車 租車前需要準備的事項 日本交通規則 Nippon Rent-A-Car 服務詳情 車型與價格 保險內容 高速公路通行證 享受 10% 折扣預訂租車 「Nippon Rent-A-Car(日本租車)」透過官方網站預訂最划算。點…",
+    "until": "2029-11-30",
+    "url": "https://matcha-jp.com/tw/coupon/27",
+    "source": "https://matcha-jp.com/tw/coupon/27"
+   },
+   {
+    "t": "免稅＋15%折扣",
+    "d": "使用條件：如何在日本租車 租車前需要準備的事項 日本交通規則 Nippon Rent-A-Car 服務詳情 車型與價格 保險內容 高速公路通行證 6天以上的長期租借專用, 可享85折優惠 「Nippon Rent-A-Car(日本租車)」透過官方網站…",
+    "until": "2027-03-31",
+    "url": "https://matcha-jp.com/tw/coupon/124",
+    "source": "https://matcha-jp.com/tw/coupon/124"
+   },
+   {
     "until": null,
     "source": null,
     "t": "租車 9 折（6 天以上 85 折）",
@@ -1134,6 +1130,13 @@
   ],
   "nakagawa": [
    {
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：※優惠券為店內價格的5% ※此優惠券可與退稅服務一起使用（請出示護照） ※不能與其他優惠券同時使用 ※在收銀台付款前請務必出示條碼。如果不出示條碼，你將無法使用該折扣 ※最高購買金額上限為5萬日元 ※只能使用一次 ※不能在參與活動的商店之外…",
+    "until": "2026-12-31",
+    "url": "https://matcha-jp.com/tw/coupon/101",
+    "source": "https://matcha-jp.com/tw/coupon/101"
+   },
+   {
     "until": null,
     "source": null,
     "t": "最高 15% OFF",
@@ -1144,6 +1147,13 @@
   ],
   "tomods": [
    {
+    "t": "免稅＋最高 18%折扣",
+    "d": "使用條件：結帳時請出示此優惠券，付款完成後恕無法提供折扣。 部分商品恕無法使用此優惠券 本優惠券恕無法與其他優惠同時使用 Tomod’s藥妝於東京及周邊地區擁有超過250家門市，是東京知名的連鎖藥妝店。Tomod’s藥妝提供藥品保健品、美妝保養品、生…",
+    "until": "2026-12-31",
+    "url": "https://matcha-jp.com/tw/coupon/148",
+    "source": "https://matcha-jp.com/tw/coupon/148"
+   },
+   {
     "until": null,
     "source": null,
     "t": "免稅＋最高再 8% OFF",
@@ -1153,6 +1163,13 @@
    }
   ],
   "fukutaro": [
+   {
+    "t": "免稅＋最高 18%折扣",
+    "d": "使用條件：有效期限至2027年4月30日 不得和其他優惠併用 結帳前請出示優惠券，結帳後恕不提供折扣 部分化妝品、酒類、雞蛋、米、香菸、POSA卡、垃圾袋、處方藥等商品不適用此優惠 僅限可免稅旅客使用 本優惠券不得兌換現金 優惠券的折扣將從店內標示價…",
+    "until": "2027-04-30",
+    "url": "https://matcha-jp.com/tw/coupon/143",
+    "source": "https://matcha-jp.com/tw/coupon/143"
+   },
    {
     "until": null,
     "source": null,
@@ -1192,16 +1209,7 @@
     "static": true
    }
   ],
-  "usj": [
-   {
-    "until": null,
-    "source": null,
-    "t": "【刷 JCB 卡】最高 20% 事後現金回饋",
-    "d": "Now on JAPAN 活動，需刷 JCB 卡並依活動頁登錄。",
-    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/usj/93849/",
-    "static": true
-   }
-  ],
+  "usj": [],
   "grandfront": [
    {
     "until": null,
@@ -1290,6 +1298,13 @@
   ],
   "tanabe": [
    {
+    "t": "免稅＋最高 15%折扣",
+    "d": "使用條件：１、所有居住在日本以外的國家的人 ２、不可與其他優惠券同時使用 ３、部分商品不適用於折扣 ４、僅適用於實體店的來店顧客",
+    "until": "2027-05-31",
+    "url": "https://matcha-jp.com/tw/coupon/109",
+    "source": "https://matcha-jp.com/tw/coupon/109"
+   },
+   {
     "until": null,
     "source": null,
     "t": "免稅 10%＋5% OFF",
@@ -1319,6 +1334,13 @@
    }
   ],
   "briefing": [
+   {
+    "t": "免稅＋10%折扣",
+    "d": "使用條件：SALE品除外 1998年作為一個追求真正「軍事主義」的行李品牌誕生的BRIEFING。理解美國全力打造的堅韌零件與頂尖技術，並開發出能夠將這些過於充足的功能，適用於城市使用為首的各種場景與風格的產品。如今，BRIEFING已成長為一個能夠…",
+    "until": "2027-02-28",
+    "url": "https://matcha-jp.com/tw/coupon/128",
+    "source": "https://matcha-jp.com/tw/coupon/128"
+   },
    {
     "until": null,
     "source": null,
@@ -1380,6 +1402,13 @@
   ],
   "parismiki": [
    {
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：※ 僅限指定店舖使用 ※ 結賬後不能使用優惠券，請務必在結賬前出示。 ※ 不能和其他優惠券同時使用。 ※ 結賬後，不能因客人主觀原因退貨或退款，望您知悉。 ※ 其他未盡事宜，以店舖當日告知為准。 適用門店 巴黎三城 日本橋本店 〒103-0…",
+    "until": "2026-12-31",
+    "url": "https://matcha-jp.com/tw/coupon/129",
+    "source": "https://matcha-jp.com/tw/coupon/129"
+   },
+   {
     "until": "2026-12-31",
     "source": null,
     "t": "再 3% OFF",
@@ -1396,6 +1425,254 @@
     "d": "九州（福岡天神等）的大賀藥局。",
     "url": "https://go.flyasia.co/ohga-pharmacy/blog",
     "static": true
+   }
+  ],
+  "auto-1ajb5qz": [
+   {
+    "t": "免稅＋¥300折扣",
+    "d": "使用條件：本優惠券可用於減免ecbo cloak使用費300日圓（含稅）。 請務必在完成ecbo cloak預訂前輸入優惠券代碼（促銷代碼）。優惠券會在預訂時自動應用。 若您持有多張優惠券，根據優惠券的類型、有效期限等條件，可能無法使用此活動優惠券。…",
+    "until": "2027-12-31",
+    "url": "https://matcha-jp.com/tw/coupon/7",
+    "source": "https://matcha-jp.com/tw/coupon/7"
+   }
+  ],
+  "auto-1j0394d": [
+   {
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：請注意必須在預約完成前，輸入優惠代碼，預約時才能自動顯示折扣後價格",
+    "until": "2030-12-31",
+    "url": "https://matcha-jp.com/tw/coupon/17",
+    "source": "https://matcha-jp.com/tw/coupon/17"
+   }
+  ],
+  "auto-1ub9j3d": [
+   {
+    "t": "免稅＋¥1000折扣",
+    "d": "使用條件：於指定網址完成會員註冊方能獲得點數。 此課程點數需於一個月內使用完畢。 更多品牌相關資訊 Cafetalk 學語言就是要開心啊！日語線上教學平台推薦6選 下班後來不及吃飯還要趕去補習班進修日文？遇到加班只好蹺課請假，但是又懶得補課嗎？現在有…",
+    "until": "2030-12-31",
+    "url": "https://matcha-jp.com/tw/coupon/28",
+    "source": "https://matcha-jp.com/tw/coupon/28"
+   }
+  ],
+  "auto-1gmzt07": [
+   {
+    "t": "免稅＋10%折扣",
+    "d": "使用條件：不可與其他活動或優惠券併用。 成田國際機場 羽田機場（國際線第3航站） 關西國際機場的抵達大廳JAL ABC櫃檯",
+    "until": "2027-03-31",
+    "url": "https://matcha-jp.com/tw/coupon/45",
+    "source": "https://matcha-jp.com/tw/coupon/45"
+   },
+   {
+    "t": "免稅＋10%折扣",
+    "d": "使用條件：不可與其他活動或優惠券併用 成田國際機場,羽田機場（國際線第3航站）,關西國際機場的抵達大廳JAL ABC櫃檯",
+    "until": "2027-03-31",
+    "url": "https://matcha-jp.com/tw/coupon/49",
+    "source": "https://matcha-jp.com/tw/coupon/49"
+   },
+   {
+    "t": "免稅＋10%折扣",
+    "d": "使用條件：不可與其他活動或優惠券併用。 成田國際機場 羽田機場（國際線第3航站） 中部國際機場 關西國際機場的JAL ABC櫃檯",
+    "until": "2027-03-31",
+    "url": "https://matcha-jp.com/tw/coupon/50",
+    "source": "https://matcha-jp.com/tw/coupon/50"
+   },
+   {
+    "t": "免稅＋10%折扣",
+    "d": "使用條件：不可與其他活動或優惠券併用。 成田國際機場第2航廈的出發大廳JALABC櫃檯",
+    "until": "2027-03-31",
+    "url": "https://matcha-jp.com/tw/coupon/51",
+    "source": "https://matcha-jp.com/tw/coupon/51"
+   },
+   {
+    "t": "免稅＋¥200折扣",
+    "d": "使用條件：1件行李折扣200日圓（含稅）（入國 出國宅配共通） 不可與其他活動或優惠券併用。 成田國際機場 羽田機場（國際線第3航站） 中部國際機場 關西國際機場的JAL ABC櫃檯",
+    "until": "2027-03-31",
+    "url": "https://matcha-jp.com/tw/coupon/52",
+    "source": "https://matcha-jp.com/tw/coupon/52"
+   }
+  ],
+  "auto-q7ie12": [
+   {
+    "t": "免稅＋最高17%折扣",
+    "d": "MATCHA 優惠券，結帳時出示頁面。",
+    "until": null,
+    "url": "https://matcha-jp.com/tw/coupon/88",
+    "source": "https://matcha-jp.com/tw/coupon/88"
+   },
+   {
+    "t": "免稅＋最高17%折扣",
+    "d": "MATCHA 優惠券，結帳時出示頁面。",
+    "until": null,
+    "url": "https://matcha-jp.com/tw/coupon/100",
+    "source": "https://matcha-jp.com/tw/coupon/100"
+   },
+   {
+    "t": "免稅＋最高17%折扣",
+    "d": "MATCHA 優惠券，結帳時出示頁面。",
+    "until": null,
+    "url": "https://matcha-jp.com/tw/coupon/105",
+    "source": "https://matcha-jp.com/tw/coupon/105"
+   },
+   {
+    "t": "免稅＋最高17%折扣",
+    "d": "MATCHA 優惠券，結帳時出示頁面。",
+    "until": null,
+    "url": "https://matcha-jp.com/tw/coupon/118",
+    "source": "https://matcha-jp.com/tw/coupon/118"
+   },
+   {
+    "t": "免稅＋最高17%折扣",
+    "d": "MATCHA 優惠券，結帳時出示頁面。",
+    "until": null,
+    "url": "https://matcha-jp.com/tw/coupon/146",
+    "source": "https://matcha-jp.com/tw/coupon/146"
+   },
+   {
+    "t": "免稅＋最高17%折扣",
+    "d": "MATCHA 優惠券，結帳時出示頁面。",
+    "until": null,
+    "url": "https://matcha-jp.com/tw/coupon/147",
+    "source": "https://matcha-jp.com/tw/coupon/147"
+   }
+  ],
+  "auto-1d7adb7": [
+   {
+    "t": "免稅＋10%折扣",
+    "d": "使用條件：無法與其他優惠券併用。 日產租車提供許多使用最新技術、低燃料費的優質車輛。 體積小、便宜又低燃料費的「Note e-POWER」、可乘載7～8人迷你休閒車「SERENA」等，是目前最受歡迎的型號。 要特別提醒的是，只有在官方網站才能租到後車…",
+    "until": "2029-12-31",
+    "url": "https://matcha-jp.com/tw/coupon/92",
+    "source": "https://matcha-jp.com/tw/coupon/92"
+   }
+  ],
+  "auto-1fqsdrs": [
+   {
+    "t": "免稅＋20%折扣",
+    "d": "使用條件：無法跟其他優惠券併用。 更多品牌相關資訊 Japan Wireless",
+    "until": "2029-12-31",
+    "url": "https://matcha-jp.com/tw/coupon/99",
+    "source": "https://matcha-jp.com/tw/coupon/99"
+   }
+  ],
+  "auto-1rfh7pk": [
+   {
+    "t": "免稅＋30%折扣",
+    "d": "使用條件：此折扣優惠不可和其他折扣優惠併用 更多品牌相關資訊 NINJA Wi-FI 日本旅行手機網路怎麼辦？推薦的10家eSIM服務比較、使用方式、優缺點一次說 日本旅行中若想使用網路，其中一個最方便的方式是使用eSIM。本文將介紹eSIM的使用方…",
+    "until": "2029-12-31",
+    "url": "https://matcha-jp.com/tw/coupon/108",
+    "source": "https://matcha-jp.com/tw/coupon/108"
+   }
+  ],
+  "auto-15etpmt": [
+   {
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：本優惠券僅限在日本境內的上述舖使用。 東京: Theory青山店, Theory東京店, 銀座SIX 4F, 麻布台Hills 2F, NEWoMan新宿 3F, NEWoMan高輪South 3F, 上野Parco_ya 2F 神奈川: …",
+    "until": "2027-08-31",
+    "url": "https://matcha-jp.com/tw/coupon/110",
+    "source": "https://matcha-jp.com/tw/coupon/110"
+   }
+  ],
+  "auto-13vk9kj": [
+   {
+    "t": "免稅＋¥500折扣",
+    "d": "使用條件：※活動適用時間：即日起～2025 9 30（二）23:59 前完成預約者 ※不適用於先前已完成預訂之訂單 ※需額外報價的包車行程將不適用於本優惠 ※下單時記得輸入折扣碼才能享有折扣！ ※於 2025 9 30 前成功使用折扣碼完成訂單，即使…",
+    "until": "2026-12-31",
+    "url": "https://matcha-jp.com/tw/coupon/117",
+    "source": "https://matcha-jp.com/tw/coupon/117"
+   }
+  ],
+  "auto-1xcp5ev": [
+   {
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：僅適用於購買店內商品滿10000日圓（不含稅）以上的顧客 可使用優惠券的店舖如下: 台場購物廣場店 神戶Marui店 AMU PLAZA博多店 西銀座店 天神地下街店 LUMINE新宿店 札幌Parco店 河原町OPA店 羽田機場1航廈店 …",
+    "until": "2026-12-31",
+    "url": "https://matcha-jp.com/tw/coupon/119",
+    "source": "https://matcha-jp.com/tw/coupon/119"
+   }
+  ],
+  "auto-1biufh0": [
+   {
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：1. 一部分商品不享受優惠，以店內告知為准。 2. 不能與其他折扣優惠同時使用。 3. 結算結束後，不能因客人主觀原因退款或退貨，望您知悉。 適用門店 TIAT DUTY FREE SHOP SOUTH LIQUOR&TOBACCO 營業時…",
+    "until": "2027-03-31",
+    "url": "https://matcha-jp.com/tw/coupon/125",
+    "source": "https://matcha-jp.com/tw/coupon/125"
+   },
+   {
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：1. 一部分商品不享受優惠，以店內告知為准。 2. 不能與其他折扣優惠同時使用。 3. 結算結束後，不能因客人主觀原因退款或退貨，望您知悉。 適用門店 TIAT DUTY FREE SOUVENIR 營業時間 06:35-翌日01:00 每…",
+    "until": "2027-03-31",
+    "url": "https://matcha-jp.com/tw/coupon/126",
+    "source": "https://matcha-jp.com/tw/coupon/126"
+   },
+   {
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：1. 白い戀人以及獺祭等，一部分商品不享受優惠。以店內告知為准。 2. 不能與其他折扣優惠同時使用。 3. 結算結束後，不能因客人主觀原因退款或退貨，望您知悉。 適用門店 ANA DUTY & TAX FREE SHOP 營業時間 08:0…",
+    "until": "2027-03-31",
+    "url": "https://matcha-jp.com/tw/coupon/127",
+    "source": "https://matcha-jp.com/tw/coupon/127"
+   }
+  ],
+  "auto-ay8k17": [
+   {
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：本優惠券無法與其他優惠券一起使用 租車公司在北海道、東京、關西、廣島、九州等地皆有營業所，甚至可以在東京到大阪之間自由還車，非常方便。 東京及大阪之間，只要支付額外費用就能夠選擇異地還車。 可租借5至6人的露營車，價格從每天19,800日圓…",
+    "until": "2050-05-31",
+    "url": "https://matcha-jp.com/tw/coupon/134",
+    "source": "https://matcha-jp.com/tw/coupon/134"
+   }
+  ],
+  "auto-1q7ywd1": [
+   {
+    "t": "免稅＋最高 18%折扣",
+    "d": "使用條件：有效期限至2027年2月28日 不得和其他優惠併用 結帳前請出示優惠券，結帳後恕不提供折扣 部分商品不適用此優惠 僅限可免稅旅客使用 本優惠券不得兌換現金 折扣將以店內標示價格（含稅）計算 杏林堂藥局是一家以靜岡縣為據點的藥妝店，在靜岡縣內…",
+    "until": "2027-02-28",
+    "url": "https://matcha-jp.com/tw/coupon/135",
+    "source": "https://matcha-jp.com/tw/coupon/135"
+   }
+  ],
+  "auto-82bh98": [
+   {
+    "t": "免稅＋最高 17%折扣",
+    "d": "使用條件：有效期限至2027年3月31日 不得和其他優惠併用 結帳前請出示優惠券，結帳後恕不提供折扣 部分商品不適用此優惠 僅限可免稅旅客使用 本優惠券不得兌換現金 折扣將以店內標示價格（含稅）計算 Wants藥妝店是一家以山口縣和廣島縣為據點的連鎖…",
+    "until": "2027-03-31",
+    "url": "https://matcha-jp.com/tw/coupon/136",
+    "source": "https://matcha-jp.com/tw/coupon/136"
+   }
+  ],
+  "auto-skj2ey": [
+   {
+    "t": "免稅＋最高 17%折扣",
+    "d": "使用條件：有效期限至2027年3月31日 不得和其他優惠併用 結帳前請出示優惠券，結帳後恕不提供折扣 部分商品不適用此優惠 僅限可免稅旅客使用 本優惠券不得兌換現金 折扣將以店內標示價格（含稅）計算 wellness藥妝店(ドラッグストアウェルネス)…",
+    "until": "2027-03-31",
+    "url": "https://matcha-jp.com/tw/coupon/137",
+    "source": "https://matcha-jp.com/tw/coupon/137"
+   }
+  ],
+  "auto-1tu44ox": [
+   {
+    "t": "免稅＋最高 17%折扣",
+    "d": "使用條件：有效期限至2027年2月28日 不得和其他優惠併用 結帳前請出示優惠券，結帳後恕不提供折扣 部分商品不適用此優惠 僅限可免稅旅客使用 本優惠券不得兌換現金 折扣將以店內標示價格（含稅）計算 DRUG ELEVEN（ドラッグイレブン）藥妝店是…",
+    "until": "2027-02-28",
+    "url": "https://matcha-jp.com/tw/coupon/138",
+    "source": "https://matcha-jp.com/tw/coupon/138"
+   }
+  ],
+  "auto-1112fr9": [
+   {
+    "t": "免稅＋17%折扣",
+    "d": "使用條件：有效期限至2027年2月28日 不得和其他優惠併用 結帳前請出示優惠券，結帳後恕不提供折扣 部分化妝品、酒類、雞蛋、米、香菸、POSA卡、垃圾袋、處方藥等商品不適用此優惠 僅限可免稅旅客使用 本優惠券不得兌換現金 優惠券的折扣將從店內標示價…",
+    "until": "2027-02-28",
+    "url": "https://matcha-jp.com/tw/coupon/144",
+    "source": "https://matcha-jp.com/tw/coupon/144"
+   }
+  ],
+  "auto-1ab2d3": [
+   {
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：※本優惠券可享店頭價格95折 ※不可與其他優惠券併用 ※結帳前請務必出示條碼，未出示者恕無法享受折扣 ※僅限於指定店舖使用，其他店舖無效 ※有效期限至2027年7月31日 創立超過40年，擁有遍布全日本據點的機車用品與零件專業連鎖店 「2R…",
+    "until": "2027-07-31",
+    "url": "https://matcha-jp.com/tw/coupon/151",
+    "source": "https://matcha-jp.com/tw/coupon/151"
    }
   ]
  }
