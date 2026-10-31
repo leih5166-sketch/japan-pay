@@ -1,9 +1,57 @@
 {
- "at": "2026-10-31T03:20:49.059Z",
+ "at": "2026-10-31T04:07:37.193Z",
  "log": [
   {
    "level": "ok",
    "msg": "這就是人生：日本信用卡回饋比較：解析 29 列刷卡回饋"
+  },
+  {
+   "level": "change",
+   "msg": "biccamera 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "tsuruha 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "cosmos 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "edion 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "yamada 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "anaduty 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "sapporodrug 優惠券已更新"
+  },
+  {
+   "level": "ok",
+   "msg": "daikoku 的優惠券圖片已從網頁中還原（138 KB）"
+  },
+  {
+   "level": "change",
+   "msg": "daikoku 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "sundrug 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "matsukiyo 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "keio 優惠券已更新"
   },
   {
    "level": "ok",
@@ -15,7 +63,7 @@
   },
   {
    "level": "info",
-   "msg": "唐吉訶德使用 sources.json 中的備用資料"
+   "msg": "唐吉訶德沿用前次從官方頁取得的優惠券"
   }
  ]
 }
