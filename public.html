@@ -203,9 +203,10 @@ const HOTPEPPER_URL = 'https://japan-pay-hotpepper.leih5166.workers.dev';
 const CATS = {
   electronics:'電器量販', drugstore:'藥妝店', discount:'綜合折扣店', convenience:'便利商店',
   department:'百貨公司', apparel:'服飾', restaurant:'餐廳', themepark:'主題樂園', outlet:'Outlet',
-  dutyfree:'機場免稅店', supermarket:'超市', transit:'交通', hotel:'住宿', other:'其他店家'
+  dutyfree:'免稅店', supermarket:'超市', transit:'交通', hotel:'住宿', other:'其他店家',
+  mall:'購物中心', sports:'運動・戶外', eyewear:'眼鏡', hobby:'動漫・電玩・二手', lifestyle:'生活雜貨', beauty:'美妝', service:'旅遊服務'
 };
-const POPULAR = ['donki','biccamera','matsukiyo','seven','lawson','uniqlo','yodobashi','ic'];
+const POPULAR = ['donki','biccamera','matsukiyo','daimaru','mitsuioutlet','lotte','seven','ic'];
 let STORES = [], DATA = {payments:[], promos:[], coupons:{}};
 
 // ---------- Helpers ----------
@@ -272,10 +273,16 @@ function matchStore(tags){
 function catOf(tags){
   const sh = tags.shop, am = tags.amenity;
   if (sh === 'convenience') return 'convenience';
-  if (sh === 'chemist' || sh === 'pharmacy' || am === 'pharmacy' || sh === 'cosmetics') return 'drugstore';
+  if (sh === 'chemist' || sh === 'pharmacy' || am === 'pharmacy') return 'drugstore';
+  if (sh === 'cosmetics' || sh === 'beauty' || sh === 'perfumery') return 'beauty';
+  if (sh === 'optician') return 'eyewear';
+  if (sh === 'sports' || sh === 'outdoor' || sh === 'bicycle' || sh === 'golf') return 'sports';
+  if (sh === 'books' || sh === 'games' || sh === 'video_games' || sh === 'anime' || sh === 'toys' || sh === 'second_hand' || sh === 'collector' || sh === 'model') return 'hobby';
+  if (sh === 'houseware' || sh === 'gift' || sh === 'stationery' || sh === 'furniture' || sh === 'interior_decoration') return 'lifestyle';
   if (sh === 'electronics' || sh === 'computer' || sh === 'mobile_phone' || sh === 'appliance') return 'electronics';
-  if (sh === 'department_store' || sh === 'mall') return 'department';
-  if (sh === 'clothes' || sh === 'shoes' || sh === 'sports' || sh === 'outdoor') return 'apparel';
+  if (sh === 'department_store') return 'department';
+  if (sh === 'mall') return 'mall';
+  if (sh === 'clothes' || sh === 'shoes' || sh === 'bag' || sh === 'fashion_accessories') return 'apparel';
   if (sh === 'supermarket') return 'supermarket';
   if (sh === 'variety_store' || sh === 'general' || sh === 'discount') return 'discount';
   if (am === 'restaurant' || am === 'fast_food' || am === 'cafe' || am === 'bar' || am === 'pub') return 'restaurant';
@@ -457,7 +464,7 @@ function render(){
       h += '<div class="coupon"><h3>'+esc(c.t)+'</h3>'+(c.d?'<p>'+esc(c.d)+'</p>':'')+(c.btn ? '' : '<p class="meta">'+(c.until ? '有效至 '+fmtDate(c.until) : '未標示期限')+'</p>')+(u?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(c.btn||'打開優惠券')+'</a>':'')+srcHtml(c.source)+'</div>';
     });
   } else {
-    h += '<div class="empty">目前沒有找到這家店給外國旅客的優惠券。可以問店員「クーポンはありますか？」</div>';
+    h += '<div class="empty">' + (store.nocoupon ? esc(store.nocoupon) : '目前沒有找到這家店給外國旅客的優惠券。可以問店員「クーポンはありますか？」') + '</div>';
   }
   (DATA.promos || []).filter(p => alive(p.until) && store.id && (p.stores || []).includes(store.id)).forEach(p => {
     h += '<div class="coupon"><h3>'+esc(p.label)+'（'+esc(p.net)+' 卡）</h3><p>'+esc(p.cond)+'</p><p class="meta">活動至 '+fmtDate(p.until)+'，已自動疊加到下方排名</p>'+srcHtml(p.source)+'</div>';
