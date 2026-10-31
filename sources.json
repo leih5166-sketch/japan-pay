@@ -1,0 +1,29 @@
+{
+ "cards": [
+  {"name": "這就是人生：日本信用卡回饋比較", "url": "https://www.beurlife.com/2022/09/best-credit-card-to-travel-japan.html"}
+ ],
+ "coupons": [
+  {"name": "卡優新聞網：日本優惠券整理", "url": "https://www.cardu.com.tw/travel/detail.php?40490"}
+ ],
+ "donki": [
+  {"name": "LIVE JAPAN：唐吉訶德優惠券", "url": "https://livejapan.com/public/operation/coupon/donki/zh-tw.html"}
+ ],
+ "coupon_store_keywords": {
+  "biccamera": ["BIC CAMERA", "Bic Camera", "ビックカメラ"],
+  "tsuruha": ["TSURUHA", "鶴羽"],
+  "cosmos": ["COSMOS", "科摩思"],
+  "edion": ["Edion", "EDION", "愛電王"],
+  "yamada": ["YAMADA", "山田電機"],
+  "anaduty": ["ANA免稅", "ANA 免稅"],
+  "donki": ["唐吉訶德", "唐吉軻德"],
+  "sapporodrug": ["札幌藥妝", "札榥藥妝"],
+  "daikoku": ["大國藥妝"],
+  "sundrug": ["Sundrug", "SUNDRUG"],
+  "matsukiyo": ["松本清"],
+  "keio": ["京王百貨"],
+  "tobu": ["東武百貨"],
+  "joshin": ["上新電機"],
+  "cocokara": ["cocokara", "ココカラ"],
+  "sugi": ["杉藥局"]
+ }
+}

@@ -1,0 +1,767 @@
+{
+ "updated_at": "2026-10-30T12:00:00+08:00",
+ "note": "初始資料（手動整理）",
+ "payments": [
+  {
+   "id": "uniopen",
+   "name": "中信 uniopen 聯名卡",
+   "kind": "card",
+   "net": [
+    "MC"
+   ],
+   "base": 3,
+   "bonuses": [
+    {
+     "rate": 8,
+     "cap": 500,
+     "capText": "每月 NT$500",
+     "stores": null,
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "免登錄。限實體刷卡，網購只有 2%。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "uniopen"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "kuma",
+   "name": "玉山 熊本熊卡",
+   "kind": "card",
+   "net": [
+    "JCB"
+   ],
+   "base": 2.5,
+   "bonuses": [
+    {
+     "rate": 6,
+     "cap": 500,
+     "capText": "每期帳單 NT$500",
+     "stores": [
+      "biccamera",
+      "yodobashi",
+      "donki",
+      "matsukiyo",
+      "daikoku",
+      "muji",
+      "mitsuioutlet",
+      "uniqlo",
+      "gu",
+      "montbell",
+      "alpen",
+      "disney",
+      "usj",
+      "huistenbosch",
+      "harrypotter",
+      "legoland",
+      "ic",
+      "jr",
+      "doutor",
+      "matsuya",
+      "sukiya",
+      "katsuretsutei",
+      "jojoen",
+      "gyukaku",
+      "shakeshack",
+      "sushiro",
+      "kura",
+      "torikizoku",
+      "ichiran",
+      "imahan"
+     ],
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "需登錄一次（不限名額）。6% 加碼只限指定日本商店。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "熊本熊"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "jihe",
+   "name": "聯邦 吉鶴卡（綁 Apple Pay／Google Pay）",
+   "kind": "card",
+   "net": [
+    "JCB"
+   ],
+   "base": 2.5,
+   "bonuses": [
+    {
+     "rate": 1.5,
+     "cap": 600,
+     "capText": "每月 NT$600",
+     "stores": null,
+     "min": null,
+     "until": null
+    },
+    {
+     "rate": 3,
+     "cap": 600,
+     "capText": "活動期間 NT$600",
+     "stores": [
+      "seven",
+      "family",
+      "lawson",
+      "disney",
+      "usj",
+      "aeon",
+      "mitsukoshi",
+      "takashimaya",
+      "biccamera",
+      "yodobashi",
+      "donki"
+     ],
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "要用手機感應付款（跟店員說「Touch」），單筆滿 NT$100；行動支付加碼需登錄一次。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "吉鶴"
+   ],
+   "auto": "until"
+  },
+  {
+   "id": "fubonj",
+   "name": "富邦 J 卡",
+   "kind": "card",
+   "net": [
+    "JCB"
+   ],
+   "base": 3,
+   "bonuses": [
+    {
+     "rate": 3,
+     "cap": 1000,
+     "capText": "每季 NT$1,000",
+     "stores": null,
+     "min": 1000,
+     "until": "2026-09-30"
+    }
+   ],
+   "cond": "3% 無上限需電子帳單。加碼 3% 需登錄（每季限額），且單筆滿 NT$1,000；第四季名額請先到官網確認。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "富邦 J卡",
+    "富邦J卡"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "sinojcb",
+   "name": "永豐 JCB 現金回饋卡",
+   "kind": "card",
+   "net": [
+    "JCB"
+   ],
+   "base": 2,
+   "bonuses": [
+    {
+     "rate": 3,
+     "cap": 300,
+     "capText": "每期帳單 NT$300",
+     "stores": null,
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "需用永豐帳戶扣繳卡費。第四季滿額再加 5% 的登錄已額滿。",
+   "until": "2027-03-31",
+   "source": null,
+   "match": [
+    "永豐 JCB",
+    "永豐JCB"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "sinodual",
+   "name": "永豐 幣倍卡",
+   "kind": "card",
+   "net": [
+    "MC"
+   ],
+   "base": 2,
+   "bonuses": [
+    {
+     "rate": 4,
+     "cap": 800,
+     "capText": "每期帳單 NT$800",
+     "stores": null,
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "需大戶等級（或資產達門檻）且永豐帳戶扣繳。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "幣倍"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "dbseco",
+   "name": "星展 eco 永續卡",
+   "kind": "card",
+   "net": [
+    "MC"
+   ],
+   "base": 1,
+   "bonuses": [
+    {
+     "rate": 4,
+     "cap": 600,
+     "capText": "每期帳單 NT$600",
+     "stores": null,
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "限日本當地實體刷卡或 Apple Pay。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "eco"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "dbsaov",
+   "name": "星展 傳說對決卡",
+   "kind": "card",
+   "net": [
+    "Visa"
+   ],
+   "base": 1,
+   "bonuses": [
+    {
+     "rate": 4,
+     "cap": 500,
+     "capText": "每月 NT$500",
+     "stores": null,
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "限日本當地實體消費。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "傳說"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "costco",
+   "name": "富邦 Costco 聯名卡",
+   "kind": "card",
+   "net": [
+    "MC"
+   ],
+   "base": 1,
+   "bonuses": [
+    {
+     "rate": 4,
+     "cap": 600,
+     "capText": "每月 NT$600",
+     "stores": null,
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "需登錄，每月限額。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "costco"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "linepay",
+   "name": "中信 LINE Pay 卡",
+   "kind": "card",
+   "net": [
+    "JCB",
+    "Visa"
+   ],
+   "base": 2.8,
+   "bonuses": [
+    {
+     "rate": 2.2,
+     "cap": 450,
+     "capText": "活動期間 NT$450",
+     "stores": null,
+     "min": null,
+     "until": "2026-09-30"
+    }
+   ],
+   "cond": "2.8% 無上限。加碼需每週二搶登錄（每週 3,000 名）。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "LINE Pay卡"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "unicard",
+   "name": "玉山 Unicard（Up 選）",
+   "kind": "card",
+   "net": [
+    "Visa",
+    "MC"
+   ],
+   "base": 1,
+   "bonuses": [
+    {
+     "rate": 3.5,
+     "cap": 5000,
+     "capText": "每月 NT$5,000",
+     "stores": null,
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "需切換 Up 選（扣 149 點），電子帳單＋玉山帳戶扣繳。適合大額消費。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "unicard"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "dawho",
+   "name": "永豐 大戶卡",
+   "kind": "card",
+   "net": [
+    "Visa"
+   ],
+   "base": 2,
+   "bonuses": [
+    {
+     "rate": 2.5,
+     "cap": 400,
+     "capText": "每期帳單 NT$400",
+     "stores": null,
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "大戶帳戶需達資產門檻。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "大戶"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "panda",
+   "name": "樂天 Panda J 卡",
+   "kind": "card",
+   "net": [
+    "JCB"
+   ],
+   "base": 1.5,
+   "bonuses": [
+    {
+     "rate": 2.5,
+     "cap": 300,
+     "capText": "每期帳單 NT$300",
+     "stores": null,
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "無門檻，限實體消費。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "Panda"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "mylove",
+   "name": "彰銀 My 樂卡",
+   "kind": "card",
+   "net": [
+    "MC"
+   ],
+   "base": 3.5,
+   "bonuses": [],
+   "cond": "需數位帳戶達門檻、電子帳單、綁 Google Pay。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "My樂"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "richart",
+   "name": "台新 Richart 卡（玩旅刷）",
+   "kind": "card",
+   "net": [
+    "Visa",
+    "MC",
+    "JCB"
+   ],
+   "base": 3.3,
+   "bonuses": [],
+   "cond": "當天需切換「玩旅刷」方案，無上限。",
+   "until": "2027-03-31",
+   "source": null,
+   "match": [
+    "Richart"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "cube",
+   "name": "國泰 CUBE 卡（趣旅行）",
+   "kind": "card",
+   "net": [
+    "Visa",
+    "MC",
+    "JCB"
+   ],
+   "base": 3,
+   "bonuses": [],
+   "cond": "需切換「趣旅行」權益，無上限。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "CUBE"
+   ],
+   "auto": "full"
+  },
+  {
+   "id": "plus_cathay",
+   "name": "全盈+Pay 綁國泰世華帳戶",
+   "kind": "pay",
+   "net": [],
+   "base": 0,
+   "bonuses": [
+    {
+     "rate": 5.5,
+     "cap": 150,
+     "capText": "每月 NT$150",
+     "stores": null,
+     "min": null,
+     "until": null
+    },
+    {
+     "rate": 15,
+     "cap": 200,
+     "capText": "NT$200（總名額有限）",
+     "stores": null,
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "店家要有 PayPay。基本 5.5% 與帳戶加碼都有全體總名額，額滿就沒有。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "全盈"
+   ],
+   "auto": "until"
+  },
+  {
+   "id": "plus_esun",
+   "name": "全盈+Pay 綁玉山數位帳戶",
+   "kind": "pay",
+   "net": [],
+   "base": 0,
+   "bonuses": [
+    {
+     "rate": 5.5,
+     "cap": 150,
+     "capText": "每月 NT$150",
+     "stores": null,
+     "min": null,
+     "until": null
+    },
+    {
+     "rate": 13,
+     "cap": 100,
+     "capText": "NT$100（總名額有限）",
+     "stores": null,
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "店家要有 PayPay。名額有限。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "全盈"
+   ],
+   "auto": "until"
+  },
+  {
+   "id": "px",
+   "name": "全支付 綁國泰／將來銀行帳戶",
+   "kind": "pay",
+   "net": [],
+   "base": 0,
+   "bonuses": [
+    {
+     "rate": 3.5,
+     "cap": 140,
+     "capText": "每月 140 點，單筆 35 點",
+     "stores": null,
+     "min": null,
+     "until": null
+    },
+    {
+     "rate": 5,
+     "cap": 100,
+     "capText": "每週 100 點",
+     "stores": null,
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "店家要有 PayPay。3.5% 每筆最好不超過 NT$1,000（單筆上限 35 點）。",
+   "until": "2027-01-03",
+   "source": null,
+   "match": [
+    "全支付"
+   ],
+   "auto": "until"
+  },
+  {
+   "id": "taishinpay",
+   "name": "台新 Pay+ 綁 Richart 卡（Pay 著刷）",
+   "kind": "pay",
+   "net": [],
+   "base": 3.8,
+   "bonuses": [],
+   "cond": "店家要有 PayPay。需 LEVEL 2 並切換「Pay 著刷」，無上限；同一天就不能再拿實體卡拿玩旅刷回饋。",
+   "until": "2027-12-31",
+   "source": null,
+   "match": [
+    "台新Pay"
+   ],
+   "auto": "until"
+  },
+  {
+   "id": "jko",
+   "name": "街口支付 街利存帳戶",
+   "kind": "pay",
+   "net": [],
+   "base": 1,
+   "bonuses": [
+    {
+     "rate": 2.5,
+     "cap": 500,
+     "capText": "每期 NT$500",
+     "stores": null,
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "店家要有 PayPay。1% 需銀牌會員；加碼依等級 2～2.5%，需前月街利存餘額達門檻。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "街口"
+   ],
+   "auto": "until"
+  },
+  {
+   "id": "esunwallet",
+   "name": "玉山 Wallet 綁熊本熊卡",
+   "kind": "pay",
+   "net": [],
+   "base": 0,
+   "bonuses": [
+    {
+     "rate": 3.5,
+     "cap": 100,
+     "capText": "每季 NT$100",
+     "stores": null,
+     "min": null,
+     "until": null
+    }
+   ],
+   "cond": "店家要有 PayPay，需用主掃（你掃店家 QR Code）。",
+   "until": "2026-12-31",
+   "source": null,
+   "match": [
+    "玉山 Wallet",
+    "玉山Wallet"
+   ],
+   "auto": "until"
+  }
+ ],
+ "promos": [
+  {
+   "id": "visaselect",
+   "net": "Visa",
+   "stores": [
+    "biccamera",
+    "takashimaya"
+   ],
+   "rate": 10,
+   "capJPY": 10000,
+   "label": "Visa Select 加碼 10%",
+   "cond": "需先到 Visa Select 網站登錄，每卡每店回饋上限 ¥10,000；總預算有限。",
+   "until": "2026-11-30",
+   "source": null
+  }
+ ],
+ "coupons": {
+  "biccamera": [
+   {
+    "t": "免稅＋電器 7%／藥妝 5%／酒類 3% 折扣",
+    "d": "單筆未稅滿 ¥5,000，結帳出示優惠券與護照。KOJIMA 也可用。",
+    "until": "2026-10-31",
+    "url": "https://s.beurlife.com/bic",
+    "source": null
+   }
+  ],
+  "donki": [
+   {
+    "t": "含稅滿 ¥11,000 折 5%、滿 ¥33,000 折 7%",
+    "d": "2026/11/1 起適用（10/31 前為未稅 ¥10,000／¥30,000）。需連網開啟優惠頁出示，截圖無效；菸酒、遊戲主機等不適用。",
+    "until": null,
+    "url": "https://japanportal.donki-global.com/coupon/?ptcd=0099000503",
+    "source": "https://livejapan.com/public/operation/coupon/donki/zh-tw.html"
+   }
+  ],
+  "matsukiyo": [
+   {
+    "t": "滿 ¥10,000 折 3%、¥30,000 折 5%、¥50,000 折 7%",
+    "d": "可搭配免稅／退稅使用。",
+    "until": "2027-03-31",
+    "url": "https://s.beurlife.com/tbu",
+    "source": null
+   }
+  ],
+  "edion": [
+   {
+    "t": "電器產品 7% 折扣",
+    "d": "結帳時出示優惠券。",
+    "until": "2026-10-31",
+    "url": "https://s.beurlife.com/edion",
+    "source": null
+   }
+  ],
+  "yamada": [
+   {
+    "t": "電器產品 7% 折扣",
+    "d": "結帳時出示優惠券。",
+    "until": "2027-03-31",
+    "url": "https://s.beurlife.com/yamada",
+    "source": null
+   }
+  ],
+  "joshin": [
+   {
+    "t": "模型／玩具 8% 折扣",
+    "d": "大阪、京都上新電機適用。",
+    "until": "2026-10-31",
+    "url": "https://s.beurlife.com/joshin",
+    "source": null
+   }
+  ],
+  "cocokara": [
+   {
+    "t": "最高 7% 折扣",
+    "d": "依消費金額分級。",
+    "until": "2027-03-31",
+    "url": "https://www.beurlife.com/wp-content/uploads/2026/03/cocokara_fine_drug_store_coupon-2027Mar.png",
+    "source": null
+   }
+  ],
+  "cosmos": [
+   {
+    "t": "最高 9% 折扣",
+    "d": "依消費金額分級。",
+    "until": "2027-12-31",
+    "url": "https://www.beurlife.com/wp-content/uploads/2026/10/COSMOS_Japan_drug_store_coupon-2027Dec.jpg",
+    "source": null
+   }
+  ],
+  "tsuruha": [
+   {
+    "t": "最高 7% 折扣",
+    "d": "依消費金額分級。",
+    "until": "2026-12-31",
+    "url": "https://s.beurlife.com/tsu",
+    "source": null
+   }
+  ],
+  "sugi": [
+   {
+    "t": "最高 8% 折扣",
+    "d": "依消費金額分級。",
+    "until": "2027-02-28",
+    "url": "https://s.beurlife.com/sugi",
+    "source": null
+   }
+  ],
+  "sapporodrug": [
+   {
+    "t": "5% 折扣，未稅滿 ¥38,888 折 7%",
+    "d": "有效期限未公告，使用前請向店員確認。",
+    "until": null,
+    "url": null,
+    "source": null
+   }
+  ],
+  "tobu": [
+   {
+    "t": "滿 ¥1,000 享 5% 折扣",
+    "d": "食品不適用。",
+    "until": "2027-09-30",
+    "url": "https://s.beurlife.com/tobu",
+    "source": null
+   }
+  ],
+  "keio": [
+   {
+    "t": "滿 ¥3,000 享 5% 折扣",
+    "d": "食品不適用。",
+    "until": "2027-03-31",
+    "url": "https://www.beurlife.com/wp-content/uploads/2026/03/Keio-shinjuku-coupon-2027Mar.jpg",
+    "source": null
+   }
+  ],
+  "odakyu": [
+   {
+    "t": "滿 ¥1,000 享 6% 折扣",
+    "d": "食品不適用。",
+    "until": "2028-03-31",
+    "url": "https://www.beurlife.com/wp-content/uploads/2026/10/odakyu_coupon_beurlife_2028Mar.png",
+    "source": null
+   }
+  ],
+  "anaduty": [
+   {
+    "t": "菸酒、化妝品 5% 折扣",
+    "d": "成田、羽田 ANA 免稅店。",
+    "until": "2027-03-31",
+    "url": "https://www.beurlife.com/wp-content/uploads/2026/03/ANA_Duty_free_shop_NRT-2027Mar.jpg",
+    "source": null
+   }
+  ]
+ }
+}

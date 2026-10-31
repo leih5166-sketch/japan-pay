@@ -1,0 +1,546 @@
+[
+ {
+  "id": "biccamera",
+  "name": "Bic Camera",
+  "jp": "ビックカメラ",
+  "cat": "electronics",
+  "alias": [
+   "bic camera",
+   "biccamera",
+   "ビックカメラ",
+   "必酷",
+   "kojima",
+   "コジマ"
+  ]
+ },
+ {
+  "id": "yodobashi",
+  "name": "Yodobashi 友都八喜",
+  "jp": "ヨドバシカメラ",
+  "cat": "electronics",
+  "alias": [
+   "yodobashi",
+   "友都八喜",
+   "淀橋"
+  ]
+ },
+ {
+  "id": "edion",
+  "name": "EDION 愛電王",
+  "jp": "エディオン",
+  "cat": "electronics",
+  "alias": [
+   "edion",
+   "愛電王"
+  ]
+ },
+ {
+  "id": "yamada",
+  "name": "山田電機",
+  "jp": "ヤマダデンキ",
+  "cat": "electronics",
+  "alias": [
+   "yamada",
+   "山田",
+   "labi"
+  ]
+ },
+ {
+  "id": "joshin",
+  "name": "上新電機 Joshin",
+  "jp": "ジョーシン",
+  "cat": "electronics",
+  "alias": [
+   "joshin",
+   "上新"
+  ]
+ },
+ {
+  "id": "donki",
+  "name": "唐吉訶德",
+  "jp": "ドン・キホーテ",
+  "cat": "discount",
+  "alias": [
+   "donki",
+   "don quijote",
+   "ドン・キホーテ",
+   "唐吉訶德",
+   "唐吉軻德",
+   "驚安"
+  ]
+ },
+ {
+  "id": "matsukiyo",
+  "name": "松本清",
+  "jp": "マツモトキヨシ",
+  "cat": "drugstore",
+  "alias": [
+   "matsumoto",
+   "kiyoshi",
+   "マツキヨ",
+   "松本清"
+  ]
+ },
+ {
+  "id": "daikoku",
+  "name": "大國藥妝",
+  "jp": "ダイコクドラッグ",
+  "cat": "drugstore",
+  "alias": [
+   "daikoku",
+   "大國",
+   "大国"
+  ]
+ },
+ {
+  "id": "cocokara",
+  "name": "cocokara fine",
+  "jp": "ココカラファイン",
+  "cat": "drugstore",
+  "alias": [
+   "cocokara",
+   "ココカラ"
+  ]
+ },
+ {
+  "id": "tsuruha",
+  "name": "鶴羽藥妝",
+  "jp": "ツルハドラッグ",
+  "cat": "drugstore",
+  "alias": [
+   "tsuruha",
+   "鶴羽",
+   "ツルハ"
+  ]
+ },
+ {
+  "id": "sugi",
+  "name": "杉藥局",
+  "jp": "スギ薬局",
+  "cat": "drugstore",
+  "alias": [
+   "sugi pharmacy",
+   "スギ薬局",
+   "杉藥局"
+  ]
+ },
+ {
+  "id": "cosmos",
+  "name": "COSMOS 藥妝",
+  "jp": "コスモス薬品",
+  "cat": "drugstore",
+  "alias": [
+   "drug cosmos",
+   "コスモス薬品",
+   "ドラッグコスモス"
+  ]
+ },
+ {
+  "id": "sundrug",
+  "name": "Sundrug 尚都樂客",
+  "jp": "サンドラッグ",
+  "cat": "drugstore",
+  "alias": [
+   "sundrug",
+   "サンドラッグ",
+   "尚都樂客"
+  ]
+ },
+ {
+  "id": "sapporodrug",
+  "name": "札幌藥妝",
+  "jp": "サツドラ",
+  "cat": "drugstore",
+  "alias": [
+   "satudora",
+   "サツドラ",
+   "札幌藥妝",
+   "札幌薬粧"
+  ]
+ },
+ {
+  "id": "uniqlo",
+  "name": "UNIQLO",
+  "jp": "ユニクロ",
+  "cat": "apparel",
+  "alias": [
+   "uniqlo",
+   "優衣庫",
+   "ユニクロ"
+  ]
+ },
+ {
+  "id": "gu",
+  "name": "GU",
+  "jp": "ジーユー",
+  "cat": "apparel",
+  "alias": [
+   "gu",
+   "ジーユー"
+  ]
+ },
+ {
+  "id": "muji",
+  "name": "無印良品",
+  "jp": "無印良品",
+  "cat": "apparel",
+  "alias": [
+   "muji",
+   "無印"
+  ]
+ },
+ {
+  "id": "montbell",
+  "name": "mont-bell",
+  "jp": "モンベル",
+  "cat": "apparel",
+  "alias": [
+   "montbell",
+   "モンベル"
+  ]
+ },
+ {
+  "id": "alpen",
+  "name": "Alpen",
+  "jp": "アルペン",
+  "cat": "apparel",
+  "alias": [
+   "alpen",
+   "アルペン"
+  ]
+ },
+ {
+  "id": "mitsuioutlet",
+  "name": "三井 Outlet Park",
+  "jp": "三井アウトレットパーク",
+  "cat": "outlet",
+  "alias": [
+   "mitsui outlet",
+   "三井アウトレット",
+   "三井outlet"
+  ]
+ },
+ {
+  "id": "seven",
+  "name": "7-Eleven",
+  "jp": "セブン-イレブン",
+  "cat": "convenience",
+  "alias": [
+   "7-11",
+   "711",
+   "seven",
+   "セブン",
+   "小七"
+  ]
+ },
+ {
+  "id": "family",
+  "name": "全家 FamilyMart",
+  "jp": "ファミリーマート",
+  "cat": "convenience",
+  "alias": [
+   "familymart",
+   "family mart",
+   "ファミリーマート",
+   "ファミマ",
+   "全家"
+  ]
+ },
+ {
+  "id": "lawson",
+  "name": "LAWSON",
+  "jp": "ローソン",
+  "cat": "convenience",
+  "alias": [
+   "lawson",
+   "ローソン",
+   "羅森"
+  ]
+ },
+ {
+  "id": "aeon",
+  "name": "AEON 永旺",
+  "jp": "イオン",
+  "cat": "supermarket",
+  "alias": [
+   "aeon",
+   "イオン",
+   "永旺"
+  ]
+ },
+ {
+  "id": "takashimaya",
+  "name": "高島屋",
+  "jp": "髙島屋",
+  "cat": "department",
+  "alias": [
+   "takashimaya",
+   "高島屋",
+   "髙島屋"
+  ]
+ },
+ {
+  "id": "mitsukoshi",
+  "name": "三越",
+  "jp": "三越",
+  "cat": "department",
+  "alias": [
+   "mitsukoshi",
+   "三越",
+   "伊勢丹"
+  ]
+ },
+ {
+  "id": "tobu",
+  "name": "池袋東武百貨",
+  "jp": "東武百貨店 池袋",
+  "cat": "department",
+  "alias": [
+   "東武百貨店",
+   "tobu department"
+  ]
+ },
+ {
+  "id": "keio",
+  "name": "新宿京王百貨",
+  "jp": "京王百貨店 新宿",
+  "cat": "department",
+  "alias": [
+   "京王百貨店",
+   "keio department"
+  ]
+ },
+ {
+  "id": "odakyu",
+  "name": "新宿小田急百貨",
+  "jp": "小田急百貨店 新宿",
+  "cat": "department",
+  "alias": [
+   "小田急百貨店",
+   "odakyu department"
+  ]
+ },
+ {
+  "id": "anaduty",
+  "name": "ANA 機場免稅店（成田／羽田）",
+  "jp": "ANA DUTY FREE SHOP",
+  "cat": "dutyfree",
+  "alias": [
+   "ana duty free",
+   "ana免稅"
+  ]
+ },
+ {
+  "id": "disney",
+  "name": "東京迪士尼",
+  "jp": "東京ディズニーリゾート",
+  "cat": "themepark",
+  "alias": [
+   "disney",
+   "迪士尼",
+   "ディズニー"
+  ]
+ },
+ {
+  "id": "usj",
+  "name": "日本環球影城",
+  "jp": "ユニバーサル・スタジオ・ジャパン",
+  "cat": "themepark",
+  "alias": [
+   "usj",
+   "universal",
+   "環球影城",
+   "ユニバ"
+  ]
+ },
+ {
+  "id": "huistenbosch",
+  "name": "豪斯登堡",
+  "jp": "ハウステンボス",
+  "cat": "themepark",
+  "alias": [
+   "huis ten bosch",
+   "豪斯登堡"
+  ]
+ },
+ {
+  "id": "harrypotter",
+  "name": "華納兄弟哈利波特影城",
+  "jp": "ワーナー ブラザース スタジオツアー東京",
+  "cat": "themepark",
+  "alias": [
+   "harry potter",
+   "哈利波特"
+  ]
+ },
+ {
+  "id": "legoland",
+  "name": "名古屋樂高樂園",
+  "jp": "レゴランド",
+  "cat": "themepark",
+  "alias": [
+   "lego",
+   "樂高"
+  ]
+ },
+ {
+  "id": "ichiran",
+  "name": "一蘭拉麵",
+  "jp": "一蘭",
+  "cat": "restaurant",
+  "alias": [
+   "ichiran",
+   "一蘭",
+   "一兰"
+  ]
+ },
+ {
+  "id": "sushiro",
+  "name": "壽司郎",
+  "jp": "スシロー",
+  "cat": "restaurant",
+  "alias": [
+   "sushiro",
+   "壽司郎",
+   "スシロー"
+  ]
+ },
+ {
+  "id": "kura",
+  "name": "藏壽司",
+  "jp": "くら寿司",
+  "cat": "restaurant",
+  "alias": [
+   "kura sushi",
+   "くら寿司",
+   "藏壽司"
+  ]
+ },
+ {
+  "id": "sukiya",
+  "name": "すき家 SUKIYA",
+  "jp": "すき家",
+  "cat": "restaurant",
+  "alias": [
+   "sukiya",
+   "すき家",
+   "食其家"
+  ]
+ },
+ {
+  "id": "matsuya",
+  "name": "松屋",
+  "jp": "松屋",
+  "cat": "restaurant",
+  "alias": [
+   "matsuya",
+   "松屋"
+  ]
+ },
+ {
+  "id": "torikizoku",
+  "name": "鳥貴族",
+  "jp": "鳥貴族",
+  "cat": "restaurant",
+  "alias": [
+   "torikizoku",
+   "鳥貴族"
+  ]
+ },
+ {
+  "id": "gyukaku",
+  "name": "牛角",
+  "jp": "牛角",
+  "cat": "restaurant",
+  "alias": [
+   "gyukaku",
+   "牛角"
+  ]
+ },
+ {
+  "id": "jojoen",
+  "name": "敘敘苑",
+  "jp": "叙々苑",
+  "cat": "restaurant",
+  "alias": [
+   "jojoen",
+   "敘敘苑",
+   "叙々苑"
+  ]
+ },
+ {
+  "id": "katsuretsutei",
+  "name": "勝烈亭",
+  "jp": "勝烈亭",
+  "cat": "restaurant",
+  "alias": [
+   "勝烈亭"
+  ]
+ },
+ {
+  "id": "imahan",
+  "name": "人形町今半",
+  "jp": "人形町今半",
+  "cat": "restaurant",
+  "alias": [
+   "今半",
+   "imahan"
+  ]
+ },
+ {
+  "id": "doutor",
+  "name": "DOUTOR 羅多倫",
+  "jp": "ドトールコーヒー",
+  "cat": "restaurant",
+  "alias": [
+   "doutor",
+   "羅多倫",
+   "ドトール"
+  ]
+ },
+ {
+  "id": "shakeshack",
+  "name": "Shake Shack",
+  "jp": "シェイク シャック",
+  "cat": "restaurant",
+  "alias": [
+   "shake shack"
+  ]
+ },
+ {
+  "id": "ic",
+  "name": "交通卡儲值（Suica／PASMO／ICOCA）",
+  "jp": "交通系ICカード チャージ",
+  "cat": "transit",
+  "alias": [
+   "suica",
+   "pasmo",
+   "icoca",
+   "西瓜卡",
+   "交通卡",
+   "儲值"
+  ]
+ },
+ {
+  "id": "jr",
+  "name": "JR 鐵路",
+  "jp": "JR",
+  "cat": "transit",
+  "alias": [
+   "jr",
+   "新幹線",
+   "shinkansen"
+  ]
+ },
+ {
+  "id": "generic",
+  "name": "其他日本實體店家",
+  "jp": "",
+  "cat": "other",
+  "alias": [
+   "其他",
+   "餐廳",
+   "店"
+  ]
+ }
+]

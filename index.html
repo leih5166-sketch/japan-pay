@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#18233A">
+<title>拍招牌找優惠｜日本刷哪張</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF1F4; --panel:#FFFFFF; --ink:#18233A; --muted:#5E6A7C; --line:#D5DBE3;
+  --band:#16866B; --band-ink:#FFFFFF; --gold:#F2B705; --gold-ink:#18233A;
+  --warn-bg:#FFF6D6; --warn-ink:#6B4E00; --chip:#E3E8EE; --pay:#2F5BD3;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1320; --panel:#182032; --ink:#E7EBF2; --muted:#9AA6B8; --line:#2A3550;
+    --band:#1E9C7E; --band-ink:#FFFFFF; --gold:#F5C431; --gold-ink:#18233A;
+    --warn-bg:#3A3110; --warn-ink:#F3DC8A; --chip:#232D44; --pay:#7FA2FF;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1320; --panel:#182032; --ink:#E7EBF2; --muted:#9AA6B8; --line:#2A3550;
+  --band:#1E9C7E; --band-ink:#FFFFFF; --gold:#F5C431; --gold-ink:#18233A;
+  --warn-bg:#3A3110; --warn-ink:#F3DC8A; --chip:#232D44; --pay:#7FA2FF;
+  color-scheme: dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei","Heiti TC",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-text-size-adjust:100%}
+.wrap{max-width:560px;margin:0 auto;padding:20px 16px 48px}
+.num{font-family:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;font-weight:700;letter-spacing:.01em}
+h1{font-size:22px;font-weight:900;margin:4px 0 2px;letter-spacing:.02em}
+.sub{color:var(--muted);font-size:14px;margin:0 0 18px}
+.capture{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.shot{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  min-height:96px;border-radius:12px;border:2px dashed var(--line);background:transparent;color:var(--ink);
+  font:inherit;font-weight:700;cursor:pointer;padding:10px;text-align:center}
+.shot.primary{border-style:solid;border-color:var(--ink);background:var(--ink);color:var(--panel)}
+.shot svg{width:28px;height:28px}
+.shot small{font-weight:400;font-size:12px;opacity:.8}
+.shot:focus-visible,button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.noai{font-size:13px;color:var(--muted);margin:0 0 10px}
+.or{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:13px;margin:14px 0 10px}
+.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}
+.search{display:flex;gap:8px}
+.search input{flex:1;min-width:0;font:inherit;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.chip{border:0;background:var(--chip);color:var(--ink);font:inherit;font-size:14px;padding:6px 11px;border-radius:999px;cursor:pointer}
+.matches{margin-top:8px;display:flex;flex-direction:column;gap:4px}
+.matches button{text-align:left;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:inherit;padding:8px 12px;border-radius:8px;cursor:pointer}
+.amount{display:flex;align-items:center;gap:8px;margin-top:14px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.amount input{width:120px;font:inherit;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.amount .fx{width:70px}
+.status{margin-top:12px;font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:center}
+.status img{width:48px;height:48px;object-fit:cover;border-radius:8px}
+.status button{margin-left:auto}
+.btn-s{border:1px solid var(--line);background:var(--panel);color:var(--ink);font:inherit;font-size:13px;padding:5px 10px;border-radius:8px;cursor:pointer}
+
+/* station sign */
+#result{margin-top:22px}
+.sign{background:#FFFFFF;color:#18233A;border-radius:6px;overflow:hidden;border:1px solid #C9D1DB;box-shadow:0 2px 0 #C9D1DB}
+.sign-top{padding:16px 18px 10px;text-align:center}
+.sign-name{font-size:32px;font-weight:900;line-height:1.2;letter-spacing:.04em;word-break:break-word}
+.sign-jp{font-size:14px;color:#5E6A7C;margin-top:2px}
+.sign-band{background:var(--band);color:var(--band-ink);display:flex;justify-content:space-between;align-items:center;padding:6px 14px;font-size:14px;font-weight:700}
+.sign-band span:last-child{font-weight:400;opacity:.9}
+.conf{font-size:13px;color:var(--muted);margin:8px 2px 0}
+
+section.block{margin-top:20px}
+section.block h2{font-size:17px;font-weight:900;margin:0 0 8px}
+.notice{background:var(--warn-bg);color:var(--warn-ink);border-radius:10px;padding:10px 12px;font-size:13px;line-height:1.55}
+.coupon{background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.coupon.expired{border-left-color:var(--line);opacity:.75}
+.coupon h3{margin:0;font-size:16px}
+.coupon p{margin:4px 0 0;font-size:14px}
+.coupon .meta{color:var(--muted);font-size:13px}
+.coupon a{display:inline-block;margin-top:8px;font-weight:700;color:var(--ink);background:var(--gold);color:var(--gold-ink);padding:6px 12px;border-radius:8px;text-decoration:none;font-size:14px}
+.empty{color:var(--muted);font-size:14px;background:var(--panel);border:1px dashed var(--line);border-radius:10px;padding:12px 14px}
+
+.best{background:var(--ink);color:var(--panel);border-radius:14px;padding:16px 18px;position:relative}
+.best .label{font-size:13px;opacity:.8}
+.best .name{font-size:20px;font-weight:900;margin-top:2px;line-height:1.35}
+.best .rate{display:flex;align-items:baseline;gap:8px;margin-top:6px}
+.best .rate .num{font-size:64px;line-height:1;color:var(--gold)}
+.best .rate small{font-size:14px;opacity:.85}
+.best ul{margin:10px 0 0;padding-left:18px;font-size:14px;line-height:1.6}
+.kind{display:inline-block;font-size:12px;font-weight:700;padding:1px 8px;border-radius:999px;border:1px solid currentColor;vertical-align:2px;margin-left:6px}
+.rank{list-style:none;margin:10px 0 0;padding:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.rank li{display:grid;grid-template-columns:36px 1fr auto;gap:8px;align-items:start;padding:11px 12px;border-top:1px solid var(--line)}
+.rank li:first-child{border-top:0}
+.rank .pos{font-size:22px;color:var(--muted);line-height:1.2}
+.rank .nm{font-weight:700;font-size:15px;line-height:1.4}
+.rank .cd{font-size:13px;color:var(--muted);line-height:1.5;margin-top:2px}
+.rank .rt{text-align:right}
+.rank .rt .num{font-size:28px;line-height:1}
+.rank .rt small{display:block;font-size:12px;color:var(--muted)}
+.kind.pay{color:var(--pay)}
+.more{display:block;width:100%;margin-top:8px}
+.toggle{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);margin-top:10px}
+.foot{margin-top:28px;font-size:12px;color:var(--muted);line-height:1.6}
+.foot p{margin:0 0 6px}
+.live{display:flex;gap:10px;align-items:flex-start;margin-top:12px;padding:10px 12px;border-radius:10px;font-size:14px;line-height:1.5;border:1px solid var(--line);background:var(--panel)}
+.live small{color:var(--muted);font-size:12px}
+.live .btn-s{margin-left:auto;flex:none}
+.live.ok{border-color:var(--band)}
+.live.err{border-color:var(--gold)}
+.dot{flex:none;width:10px;height:10px;border-radius:50%;background:var(--band);margin-top:6px}
+@media (prefers-reduced-motion: no-preference){.dot{animation:pulse 1s ease-in-out infinite alternate}@keyframes pulse{from{opacity:.25}to{opacity:1}}}
+.src{display:inline-block;margin-top:6px;margin-left:10px;font-size:12px;color:var(--muted)}
+.coupon .src{margin-left:10px}
+.rank .src{margin-left:0;margin-top:2px}
+.best-src .src{color:var(--panel);opacity:.75;margin-left:0}
+
+.shots.three{grid-template-columns:1fr 1fr 1fr}
+.shots.three .shot.primary{grid-column:1 / -1;min-height:72px;flex-direction:row;gap:10px}
+.nearby{margin-top:12px;display:flex;flex-direction:column;gap:6px}
+.nearby .hint{margin:0;font-size:13px;color:var(--muted)}
+.near{display:flex;justify-content:space-between;align-items:center;gap:10px;text-align:left;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:inherit;padding:10px 12px;border-radius:10px;cursor:pointer}
+.near .nm{font-weight:700}
+.near .ds{font-size:13px;color:var(--muted);white-space:nowrap}
+.tag{display:inline-block;margin-left:6px;font-size:11px;font-weight:700;padding:1px 6px;border-radius:999px;background:var(--gold);color:var(--gold-ink);vertical-align:2px}
+.src{display:inline-block;margin-top:6px;margin-left:10px;font-size:12px;color:var(--muted)}
+.rank .src{margin-left:0;margin-top:2px}
+.best-src .src{color:var(--panel);opacity:.75;margin-left:0}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion: no-preference){
+  .sign{animation:drop .35s ease-out}
+  @keyframes drop{from{transform:translateY(-8px);opacity:0}to{transform:none;opacity:1}}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>拍招牌找優惠</h1>
+  <p class="sub">在日本店門口拍一張或用 GPS 定位，馬上知道有什麼優惠券、刷哪張最划算。</p>
+
+  <div class="capture">
+    <div class="shots three">
+      <button class="shot primary" id="btnGps" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg>
+        GPS 找附近店家
+      </button>
+      <button class="shot" id="btnCam" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        拍店家招牌
+      </button>
+      <button class="shot" id="btnMap" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        上傳地圖截圖
+      </button>
+      <input type="file" id="fileCam" accept="image/*" capture="environment" hidden>
+      <input type="file" id="fileMap" accept="image/*" hidden>
+    </div>
+    <div class="status" id="status" hidden></div>
+    <div class="nearby" id="nearby" hidden></div>
+
+    <div class="or">或直接輸入店名</div>
+    <div class="search">
+      <input id="q" type="search" placeholder="例如：唐吉訶德、ビックカメラ、Lawson" autocomplete="off" aria-label="搜尋店名">
+    </div>
+    <div class="matches" id="matches"></div>
+    <div class="chips" id="chips"></div>
+
+    <div class="amount">
+      <label for="amt">預計消費</label>
+      <span>¥</span><input id="amt" type="number" inputmode="numeric" min="0" placeholder="選填">
+      <label for="fx">匯率</label><input id="fx" class="fx" type="number" step="0.001" value="0.2" inputmode="decimal">
+    </div>
+  </div>
+
+  <div id="result" hidden></div>
+
+  <div class="foot">
+    <p id="freshness">資料載入中…</p>
+    <p>優惠券與回饋資料每天由程式自動上網搜尋並更新。回饋%為各活動公告的最高值，多數需要登錄、綁定帳戶或有上限；結帳前請以銀行與店家官網為準。</p>
+    <p>PayPay 跨境支付免收 1.5% 海外交易手續費，但匯率約等於信用卡匯率加手續費，所以這裡的回饋%不另外加上 1.5%。</p>
+    <p>附近店家資料來自 © OpenStreetMap 貢獻者。</p>
+  </div>
+</div>
+
+<script>
+// ====== 設定：部署 Cloudflare Worker 後，把網址填在這裡（留空則隱藏拍照功能） ======
+const WORKER_URL = '';
+// ====================================================================================
+
+const CATS = {
+  electronics:'電器量販', drugstore:'藥妝店', discount:'綜合折扣店', convenience:'便利商店',
+  department:'百貨公司', apparel:'服飾', restaurant:'餐廳', themepark:'主題樂園', outlet:'Outlet',
+  dutyfree:'機場免稅店', supermarket:'超市', transit:'交通', hotel:'住宿', other:'其他店家'
+};
+const POPULAR = ['donki','biccamera','matsukiyo','seven','lawson','uniqlo','yodobashi','ic'];
+let STORES = [], DATA = {payments:[], promos:[], coupons:{}};
+
+// ---------- Helpers ----------
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const today = new Date();
+const alive = until => !until || new Date(until + 'T23:59:59+09:00') >= today;
+const fmtDate = d => d ? String(d).replace(/-/g,'/') : '';
+const fmtNT = n => 'NT$' + Math.round(n).toLocaleString('en-US');
+const fmtPct = n => (Math.round(n*10)/10).toString();
+const byId = id => STORES.find(s => s.id === id);
+const hostOf = u => { try { return new URL(u).hostname.replace(/^www\./,''); } catch(e){ return ''; } };
+const safeUrl = u => { try { const x = new URL(u); return (x.protocol === 'https:' || x.protocol === 'http:') ? x.href : null; } catch(e){ return null; } };
+function norm(s){ return String(s || '').toLowerCase().replace(/[\s\-・･'’.]/g,''); }
+function setStatus(html){ const s=$('#status'); s.hidden=!html; s.innerHTML=html||''; }
+
+// ---------- 載入資料 ----------
+async function loadJson(path){
+  const r = await fetch(path + '?v=' + Date.now(), {cache:'no-store'});
+  if (!r.ok) throw new Error(path + ' ' + r.status);
+  return r.json();
+}
+(async () => {
+  try {
+    [STORES, DATA] = await Promise.all([loadJson('data/stores.json'), loadJson('data/data.json')]);
+    const t = new Date(DATA.updated_at);
+    $('#freshness').textContent = '資料更新時間：' + (isNaN(t) ? '未知' : t.toLocaleString('zh-TW',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'})) + (DATA.note ? '｜' + DATA.note : '');
+    const chips = $('#chips');
+    POPULAR.forEach(id => { const s = byId(id); if (!s) return; const b = document.createElement('button'); b.className='chip'; b.type='button'; b.textContent = s.name.replace(/（.*）/,''); b.onclick=()=>showStore(s,null); chips.append(b); });
+  } catch(e){
+    $('#freshness').textContent = '資料載入失敗，請重新整理頁面。';
+  }
+})();
+
+// ---------- 店名搜尋 ----------
+function searchStores(q){
+  const n = norm(q); if (!n) return [];
+  return STORES.filter(s => [s.name,s.jp,...(s.alias||[])].some(a => { const x = norm(a); return x && (x.includes(n) || n.includes(x)); })).slice(0,6);
+}
+$('#q').addEventListener('input', e => {
+  const box = $('#matches'); box.innerHTML='';
+  const q = e.target.value.trim(); if (!q) return;
+  const res = searchStores(q);
+  res.forEach(s => { const b=document.createElement('button'); b.type='button'; b.textContent = s.name + (s.jp ? '　' + s.jp : ''); b.onclick=()=>{box.innerHTML=''; e.target.value=''; showStore(s,null);}; box.append(b); });
+  if (!res.length){
+    const b=document.createElement('button'); b.type='button';
+    b.textContent = '找不到「' + q + '」，用一般日本店家計算';
+    b.onclick=()=>{box.innerHTML=''; e.target.value=''; showStore({id:null,name:q,jp:'',cat:'other'},null);}; box.append(b);
+  }
+});
+
+// ---------- GPS：用 OpenStreetMap 找附近店家 ----------
+function matchStore(tags){
+  const names = [tags.brand, tags['brand:ja'], tags['brand:en'], tags['brand:zh'], tags.name, tags['name:ja'], tags['name:en'], tags['name:zh']].filter(Boolean).map(norm);
+  for (const s of STORES){
+    if (s.id === 'generic') continue;
+    for (const a of (s.alias || [])){
+      const x = norm(a); if (!x) continue;
+      if (x.length <= 2 ? names.includes(x) : names.some(n => n.includes(x))) return s;
+    }
+  }
+  return null;
+}
+function catOf(tags){
+  const sh = tags.shop, am = tags.amenity;
+  if (sh === 'convenience') return 'convenience';
+  if (sh === 'chemist' || sh === 'pharmacy' || am === 'pharmacy' || sh === 'cosmetics') return 'drugstore';
+  if (sh === 'electronics' || sh === 'computer' || sh === 'mobile_phone' || sh === 'appliance') return 'electronics';
+  if (sh === 'department_store' || sh === 'mall') return 'department';
+  if (sh === 'clothes' || sh === 'shoes' || sh === 'sports' || sh === 'outdoor') return 'apparel';
+  if (sh === 'supermarket') return 'supermarket';
+  if (sh === 'variety_store' || sh === 'general' || sh === 'discount') return 'discount';
+  if (am === 'restaurant' || am === 'fast_food' || am === 'cafe' || am === 'bar' || am === 'pub') return 'restaurant';
+  if (tags.tourism === 'hotel') return 'hotel';
+  return 'other';
+}
+function dist(a, b, c, d){
+  const R = 6371000, r = x => x*Math.PI/180;
+  const dl = r(c-a), dn = r(d-b);
+  const h = Math.sin(dl/2)**2 + Math.cos(r(a))*Math.cos(r(c))*Math.sin(dn/2)**2;
+  return 2*R*Math.asin(Math.sqrt(h));
+}
+async function findNearby(lat, lon, radius){
+  const q = `[out:json][timeout:20];(nwr(around:${radius},${lat},${lon})["shop"]["name"];nwr(around:${radius},${lat},${lon})["amenity"~"^(restaurant|fast_food|cafe|pharmacy)$"]["name"];);out center tags 120;`;
+  const endpoints = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter'];
+  let lastErr;
+  for (const ep of endpoints){
+    try {
+      const r = await fetch(ep, {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:'data=' + encodeURIComponent(q)});
+      if (!r.ok) throw new Error('overpass ' + r.status);
+      const d = await r.json();
+      return (d.elements || []).map(el => {
+        const la = el.lat ?? el.center?.lat, lo = el.lon ?? el.center?.lon;
+        const tags = el.tags || {};
+        const m = matchStore(tags);
+        return {tags, m, name: tags['name:zh'] || tags.name || '', jp: tags['name:ja'] || tags.name || '', cat: m ? m.cat : catOf(tags), d: (la != null && lo != null) ? dist(lat, lon, la, lo) : 9999};
+      }).filter(x => x.name);
+    } catch(e){ lastErr = e; }
+  }
+  throw lastErr;
+}
+function renderNearby(list){
+  const box = $('#nearby');
+  if (!list.length){ box.hidden = false; box.innerHTML = '<p class="hint">附近找不到店家資料，請改用拍照或輸入店名。</p>'; return; }
+  // 已收錄的連鎖店排前面，其餘依距離
+  const seen = new Set();
+  const items = list.sort((a,b) => (!!b.m - !!a.m) || (a.d - b.d)).filter(x => { const k = (x.m ? x.m.id : '') + x.name; if (seen.has(k)) return false; seen.add(k); return true; }).slice(0, 12);
+  box.hidden = false;
+  box.innerHTML = '<p class="hint">選擇你所在的店家：</p>' + items.map((x,i) =>
+    '<button type="button" class="near" data-i="'+i+'"><span class="nm">'+esc(x.name)+(x.m?'<span class="tag">已收錄</span>':'')+'</span><span class="ds">'+(x.d<9999?Math.round(x.d)+' 公尺':'')+'・'+esc(CATS[x.cat]||'')+'</span></button>').join('');
+  box.querySelectorAll('.near').forEach(b => b.onclick = () => {
+    const x = items[+b.dataset.i];
+    box.hidden = true;
+    showStore(x.m || {id:null, name:x.name, jp:x.jp !== x.name ? x.jp : '', cat:x.cat}, x.m ? {note:'由 GPS 定位找到：' + x.name, confidence:'high'} : null);
+  });
+}
+$('#btnGps').onclick = () => {
+  if (!navigator.geolocation){ setStatus('<span>這個瀏覽器不支援定位，請改用拍照或輸入店名。</span>'); return; }
+  $('#nearby').hidden = true;
+  setStatus('<span>正在取得你的位置…</span>');
+  navigator.geolocation.getCurrentPosition(async pos => {
+    const {latitude:lat, longitude:lon, accuracy} = pos.coords;
+    setStatus('<span>正在搜尋附近店家…（定位誤差約 '+Math.round(accuracy)+' 公尺）</span>');
+    try {
+      const radius = Math.min(300, Math.max(80, Math.round(accuracy*1.5)));
+      let list = await findNearby(lat, lon, radius);
+      if (!list.length && radius < 300) list = await findNearby(lat, lon, 300);
+      setStatus('');
+      renderNearby(list);
+    } catch(e){
+      setStatus('<span>附近店家資料暫時無法取得，請稍後再試，或改用拍照、輸入店名。</span>');
+    }
+  }, err => {
+    const msg = err.code === 1 ? '你沒有允許定位。請在瀏覽器設定中允許此網站使用位置，或改用拍照、輸入店名。'
+      : err.code === 3 ? '定位逾時，請到室外或靠近窗邊再試一次。' : '無法取得位置，請再試一次。';
+    setStatus('<span>'+esc(msg)+'</span>');
+  }, {enableHighAccuracy:true, timeout:15000, maximumAge:30000});
+};
+
+// ---------- 拍照辨識（經由 Cloudflare Worker） ----------
+if (!WORKER_URL){ $('#btnCam').hidden = true; $('#btnMap').hidden = true; $('.shots').classList.remove('three'); }
+$('#btnCam').onclick = () => $('#fileCam').click();
+$('#btnMap').onclick = () => $('#fileMap').click();
+$('#fileCam').onchange = e => recognize(e.target.files[0], e.target);
+$('#fileMap').onchange = e => recognize(e.target.files[0], e.target);
+
+async function shrink(file){
+  // 縮小到最長邊 1280px 的 JPEG，加快上傳也降低費用
+  const bmp = await createImageBitmap(file).catch(() => null);
+  if (!bmp) return null;
+  const scale = Math.min(1, 1280 / Math.max(bmp.width, bmp.height));
+  const c = document.createElement('canvas');
+  c.width = Math.round(bmp.width*scale); c.height = Math.round(bmp.height*scale);
+  c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height);
+  return c.toDataURL('image/jpeg', 0.85).split(',')[1];
+}
+let photoCtl = null;
+async function recognize(file, input){
+  if (!file || !WORKER_URL) return;
+  photoCtl?.abort(); photoCtl = new AbortController();
+  $('#nearby').hidden = true;
+  const url = URL.createObjectURL(file);
+  setStatus('<img alt="" src="'+url+'"><span>辨識店家中，約需 5～15 秒…</span><button class="btn-s" id="stopBtn" type="button">停止</button>');
+  $('#stopBtn').onclick = () => photoCtl.abort();
+  try {
+    const image = await shrink(file);
+    input.value = '';
+    if (!image){ setStatus('<img alt="" src="'+url+'"><span>這張圖片無法讀取，請換一張 JPG 或 PNG。</span>'); return; }
+    const r = await fetch(WORKER_URL, {method:'POST', signal:photoCtl.signal, headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({image, mediaType:'image/jpeg', stores: STORES.filter(s => s.id !== 'generic').map(s => ({id:s.id, name:s.name, jp:s.jp}))})});
+    const d = await r.json().catch(() => ({error:'bad_response'}));
+    if (!r.ok || d.error){
+      const msg = {rate_limited:'使用太頻繁了，請稍等一分鐘再試。', busy:'辨識服務忙碌中，請稍後再試。', forbidden_origin:'辨識服務設定有誤（網站網址未加入允許清單）。', server_not_configured:'辨識服務尚未設定 API 金鑰。', bad_image:'圖片太大或格式不支援，請換一張。'}[d.error] || '辨識失敗，請再試一次或改用 GPS、輸入店名。';
+      setStatus('<img alt="" src="'+url+'"><span>'+esc(msg)+'</span>'); return;
+    }
+    if (!d.id && !d.name){ setStatus('<img alt="" src="'+url+'"><span>看不出是哪家店。請換一張更清楚的招牌照，或改用 GPS、輸入店名。</span>'); return; }
+    setStatus('');
+    const known = d.id ? byId(d.id) : null;
+    showStore(known || {id:null, name:d.name || '未知店家', jp:d.jp || '', cat: CATS[d.category] ? d.category : 'other'}, {note:d.note, confidence:d.confidence});
+  } catch(e){
+    input.value = '';
+    setStatus('<img alt="" src="'+url+'"><span>'+(e.name === 'AbortError' ? '已停止。' : '連不上辨識服務，請檢查網路後再試。')+'</span>');
+  }
+}
+
+// ---------- 排名計算 ----------
+let current = null, currentMeta = null, noPayPay = false, showAll = false;
+function optionsFor(store, amountTWD, fx){
+  const sid = store.id;
+  const list = [];
+  for (const o of DATA.payments || []){
+    if (!alive(o.until)) continue;
+    if (o.kind === 'pay' && (noPayPay || sid === 'ic')) continue;
+    const bons = (o.bonuses || []).filter(b => (!b.stores || b.stores.includes(sid)) && alive(b.until)).map(b => ({...b}));
+    const extra = [];
+    if (o.kind === 'card'){
+      for (const p of DATA.promos || []){
+        if (alive(p.until) && sid && (p.stores || []).includes(sid) && (o.net || []).includes(p.net)){
+          bons.push({rate:p.rate, cap: p.capJPY ? p.capJPY*fx : null, capText: p.capJPY ? '每卡每店 ¥'+p.capJPY.toLocaleString('en-US') : '', promo:p.label});
+          if (p.cond) extra.push(p.cond);
+        }
+      }
+    }
+    const usable = amountTWD ? bons.filter(b => !b.min || amountTWD >= b.min) : bons;
+    const rate = o.base + usable.reduce((a,b) => a + b.rate, 0);
+    const rebate = amountTWD ? amountTWD*o.base/100 + usable.reduce((a,b) => a + (b.cap ? Math.min(amountTWD*b.rate/100, b.cap) : amountTWD*b.rate/100), 0) : null;
+    list.push({...o, rate, rebate, usable, extra, capSum: usable.reduce((a,b) => a + (b.cap || 1e9), 0)});
+  }
+  list.sort((a,b) => amountTWD ? (b.rebate-a.rebate) || (b.rate-a.rate) : (b.rate-a.rate) || (b.base-a.base) || (b.capSum-a.capSum));
+  return list;
+}
+function capLine(o){
+  if (!o.usable.length) return o.base ? '無上限' : '';
+  const parts = o.usable.map(b => (b.promo ? b.promo + '：' : '加碼 ' + fmtPct(b.rate) + '%：') + (b.cap ? '上限 ' + (b.capText || fmtNT(b.cap)) + '（約刷 ' + fmtNT(b.cap/(b.rate/100)) + ' 封頂）' : '無上限'));
+  if (o.base && o.usable.some(b => b.cap)) parts.push('超過上限後仍有 ' + fmtPct(o.base) + '%');
+  return parts.join('；');
+}
+function srcHtml(u){
+  const s = safeUrl(u); if (!s) return '';
+  return '<a class="src" href="'+esc(s)+'" target="_blank" rel="noopener">來源：'+esc(hostOf(s))+'</a>';
+}
+
+// ---------- 畫面 ----------
+function amountTWD(){
+  const jpy = parseFloat($('#amt').value); const fx = parseFloat($('#fx').value) || 0.2;
+  return jpy > 0 ? jpy*fx : 0;
+}
+function showStore(store, meta){
+  current = store; currentMeta = meta; showAll = false; noPayPay = false;
+  render();
+  $('#result').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start'});
+}
+function render(){
+  const store = current; if (!store) return;
+  const fx = parseFloat($('#fx').value) || 0.2;
+  const amt = amountTWD();
+  const el = $('#result'); el.hidden = false;
+  const cat = CATS[store.cat] || CATS.other;
+
+  let h = '<div class="sign"><div class="sign-top"><div class="sign-name">'+esc(store.name)+'</div>'+(store.jp?'<div class="sign-jp">'+esc(store.jp)+'</div>':'')+'</div><div class="sign-band"><span>'+esc(cat)+'</span><span>'+(store.id && store.id!=='generic' ? '已收錄' : '一般店家')+'</span></div></div>';
+  if (currentMeta && currentMeta.note) h += '<p class="conf">'+esc(currentMeta.note)+(currentMeta.confidence==='low'?'（把握度不高，不對的話請重新選擇）':'')+'</p>';
+
+  h += '<section class="block"><h2>可用優惠券</h2>';
+  h += '<div class="notice">日本自 2026/11/1 起改為「先付含稅價、出境時退稅」，結帳時可能需要登錄退款用的信用卡。</div><div style="height:8px"></div>';
+  const cps = ((store.id && (DATA.coupons || {})[store.id]) || []).filter(c => alive(c.until));
+  if (cps.length){
+    cps.forEach(c => {
+      const u = safeUrl(c.url);
+      h += '<div class="coupon"><h3>'+esc(c.t)+'</h3>'+(c.d?'<p>'+esc(c.d)+'</p>':'')+'<p class="meta">'+(c.until ? '有效至 '+fmtDate(c.until) : '未標示期限')+'</p>'+(u?'<a href="'+esc(u)+'" target="_blank" rel="noopener">打開優惠券</a>':'')+srcHtml(c.source)+'</div>';
+    });
+  } else {
+    h += '<div class="empty">目前沒有找到這家店給外國旅客的優惠券。可以問店員「クーポンはありますか？」</div>';
+  }
+  (DATA.promos || []).filter(p => alive(p.until) && store.id && (p.stores || []).includes(store.id)).forEach(p => {
+    h += '<div class="coupon"><h3>'+esc(p.label)+'（'+esc(p.net)+' 卡）</h3><p>'+esc(p.cond)+'</p><p class="meta">活動至 '+fmtDate(p.until)+'，已自動疊加到下方排名</p>'+srcHtml(p.source)+'</div>';
+  });
+  h += '</section>';
+
+  const list = optionsFor(store, amt, fx);
+  h += '<section class="block"><h2>刷這個最划算</h2>';
+  if (store.id === 'ic') h += '<div class="notice">交通卡要用 iPhone 的 Apple Pay 儲值 Suica／PASMO／ICOCA，PayPay 不能用。</div><div style="height:8px"></div>';
+  if (list.length){
+    const b = list[0];
+    h += '<div class="best"><div class="label">'+(amt?'以 ¥'+Number($('#amt').value).toLocaleString('en-US')+'（約 '+fmtNT(amt)+'）計算':'目前最高回饋')+'</div>';
+    h += '<div class="name">'+esc(b.name)+'<span class="kind">'+(b.kind==='pay'?'PayPay 掃碼':'信用卡')+'</span></div>';
+    h += '<div class="rate"><span class="num">'+fmtPct(amt ? b.rebate/amt*100 : b.rate)+'%</span><small>'+(amt?'約回饋 '+fmtNT(b.rebate):'最高回饋')+'</small></div><ul>';
+    const cl = capLine(b); if (cl) h += '<li>'+esc(cl)+'</li>';
+    if (b.cond) h += '<li>'+esc(b.cond)+'</li>';
+    b.extra.forEach(c => h += '<li>'+esc(c)+'</li>');
+    if (b.until) h += '<li>活動至 '+fmtDate(b.until)+'</li>';
+    h += '</ul>'+(b.source?'<div class="best-src">'+srcHtml(b.source)+'</div>':'')+'</div>';
+    const rest = list.slice(1, showAll ? list.length : 8);
+    if (rest.length){
+      h += '<ol class="rank">';
+      rest.forEach((o,i) => {
+        h += '<li><span class="pos num">'+(i+2)+'</span><div><div class="nm">'+esc(o.name)+'<span class="kind'+(o.kind==='pay'?' pay':'')+'">'+(o.kind==='pay'?'PayPay':'卡')+'</span></div><div class="cd">'+esc([capLine(o), o.cond, ...o.extra].filter(Boolean).join(' '))+'</div>'+srcHtml(o.source)+'</div><div class="rt"><span class="num">'+fmtPct(amt ? o.rebate/amt*100 : o.rate)+'%</span>'+(amt?'<small>'+fmtNT(o.rebate)+'</small>':'')+'</div></li>';
+      });
+      h += '</ol>';
+      if (!showAll && list.length > 8) h += '<button class="btn-s more" id="moreBtn" type="button">顯示全部 '+list.length+' 種</button>';
+    }
+    if (store.id !== 'ic') h += '<label class="toggle"><input type="checkbox" id="noPP" '+(noPayPay?'checked':'')+'> 這家店沒有 PayPay（只看信用卡）</label>';
+  } else {
+    h += '<div class="empty">回饋資料載入中或暫時無法取得，請重新整理頁面。</div>';
+  }
+  h += '</section>';
+  el.innerHTML = h;
+  const mb = $('#moreBtn'); if (mb) mb.onclick = () => { showAll = true; render(); };
+  const np = $('#noPP'); if (np) np.onchange = e => { noPayPay = e.target.checked; render(); };
+}
+$('#amt').addEventListener('input', render);
+$('#fx').addEventListener('input', render);
+</script>
+</body>
+</html>
