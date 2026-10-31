@@ -236,7 +236,11 @@ async function loadJson(path){
 }
 (async () => {
   try {
-    [STORES, DATA] = await Promise.all([loadJson('data/stores.json'), loadJson('data/data.json')]);
+    let auto;
+    [STORES, DATA, auto] = await Promise.all([loadJson('data/stores.json'), loadJson('data/data.json'), loadJson('data/stores-auto.json').catch(() => [])]);
+    // 自動新增的店家排在手動清單後面（手動清單的比對優先）
+    const generic = STORES.filter(s => s.id === 'generic');
+    STORES = STORES.filter(s => s.id !== 'generic').concat(Array.isArray(auto) ? auto : [], generic);
     const t = new Date(DATA.updated_at);
     $('#freshness').textContent = '資料更新時間：' + (isNaN(t) ? '未知' : t.toLocaleString('zh-TW',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'})) + (DATA.note ? '｜' + DATA.note : '');
     const chips = $('#chips');
