@@ -46,9 +46,20 @@ export function parseCap(s) {
 
 async function getPage(url, fixtureName) {
   if (FIXTURE) return fs.readFile(path.join(FIXTURE, fixtureName), 'utf8');
-  const r = await fetch(url, {headers: {'User-Agent': 'Mozilla/5.0 (compatible; japan-pay-updater/1.0)', 'Accept-Language': 'zh-TW,zh;q=0.9'}});
-  if (!r.ok) throw new Error(`HTTP ${r.status}`);
-  return r.text();
+  const headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'zh-TW,zh;q=0.9,en;q=0.8'
+  };
+  let last;
+  for (let i = 0; i < 3; i++) {            // 503、429 等暫時性錯誤最多重試 3 次
+    const r = await fetch(url, {headers});
+    if (r.ok) return r.text();
+    last = r.status;
+    if (![429, 500, 502, 503, 504].includes(r.status)) break;
+    await new Promise(res => setTimeout(res, 5000 * (i + 1)));
+  }
+  throw new Error(`HTTP ${last}`);
 }
 
 // ---------- 刷卡回饋表 ----------
@@ -184,6 +195,7 @@ async function main() {
       const n = Object.values(got).filter(l => l.length).length;
       if (n < 5) throw new Error(`只解析到 ${n} 家店，可能網頁改版`);
       for (const [id, list] of Object.entries(got)) {
+        if (id === 'donki') continue;   // 唐吉訶德改由下方官方合作頁或備用資料處理
         list.forEach(c => { c.source = src.url; });
         if (JSON.stringify(out.coupons[id]?.map(c => [c.t, c.until])) !== JSON.stringify(list.map(c => [c.t, c.until]))) note('change', `${id} 優惠券已更新`);
         out.coupons[id] = list;
@@ -194,6 +206,7 @@ async function main() {
   }
 
   // 3. 唐吉訶德官方頁（比整理文章更準）
+  let donkiOk = false;
   for (const src of sources.donki) {
     try {
       const got = parseDonki(await getPage(src.url, 'donki.html'));
@@ -201,8 +214,13 @@ async function main() {
       got[0].source = src.url;
       out.coupons.donki = got;
       note('ok', `${src.name}：${got[0].t}`);
-      ok++; break;
-    } catch (e) { note('error', `${src.name} 失敗：${e.message}`); }
+      ok++; donkiOk = true; break;
+    } catch (e) { note('warn', `${src.name} 暫時無法連線（${e.message}）`); }
+  }
+  if (!donkiOk) {
+    const prevFromOfficial = (prev.coupons?.donki || []).some(c => (c.source || '').includes('livejapan'));
+    if (prevFromOfficial) note('info', '唐吉訶德沿用前次從官方頁取得的優惠券');
+    else if (sources.donki_fallback) { out.coupons.donki = sources.donki_fallback; note('info', '唐吉訶德使用 sources.json 中的備用資料'); }
   }
 
   // 4. 清掉已到期的項目
