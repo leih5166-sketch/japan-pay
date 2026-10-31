@@ -242,11 +242,6 @@
     "d": "使用方式：至外國旅客服務中心出示護照，掃描 QR Code 領取優惠券冊。全日本 22 家三井 Outlet、LaLaport 適用。",
     "url": "https://livejapan.com/public/operation/coupon/mitsui/en.html",
     "btn": "查看領取方式"
-   },
-   {
-    "t": "【刷 JCB 卡】最高 20% 事後現金回饋",
-    "d": "Now on JAPAN 活動，需刷 JCB 卡並依活動頁登錄。",
-    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/mitsuioutlet/93838/"
    }
   ],
   "premiumoutlets": [
@@ -300,19 +295,6 @@
     "d": "下載三越伊勢丹官方外國旅客 App 享優惠，部分商品不適用。",
     "url": "https://cp.mistore.jp/content/cpmistore/global/zh_hant/app.html",
     "btn": "查看 App"
-   },
-   {
-    "t": "【刷 JCB 卡】最高 20% 事後現金回饋",
-    "d": "Now on JAPAN 活動，需刷 JCB 卡並依活動頁登錄。",
-    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/mitsukoshiisetan/93855/"
-   }
-  ],
-  "matsuyaginza": [
-   {
-    "t": "【刷 JCB 卡】95 折",
-    "d": "出示活動頁優惠券並刷 JCB 卡。食品、特價品、餐廳、部分品牌（如 LV）除外。",
-    "until": "2027-03-31",
-    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/matsuya/84149"
    }
   ],
   "kintetsu": [
@@ -334,12 +316,6 @@
     "t": "免稅＋最高再 7% OFF",
     "d": "LIVE JAPAN 官方優惠券。",
     "url": "https://livejapan.com/public/operation/coupon/takeya/en.html"
-   },
-   {
-    "t": "【刷 JCB 卡】9 折",
-    "d": "使用海外發行 JCB 卡單筆滿 ¥5,000，優惠上限 ¥10,000。",
-    "until": "2027-04-30",
-    "url": "https://www.cardu.com.tw/travel/detail.php?40490"
    }
   ],
   "lotte": [
@@ -434,13 +410,6 @@
     "d": "需先註冊與啟用玉山指定 Mastercard 專屬優惠。",
     "until": "2026-12-31",
     "url": "https://event.esunbank.com.tw/credit/travel/jp_koa.html"
-   }
-  ],
-  "usj": [
-   {
-    "t": "【刷 JCB 卡】最高 20% 事後現金回饋",
-    "d": "Now on JAPAN 活動，需刷 JCB 卡並依活動頁登錄。",
-    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/usj/93849/"
    }
   ],
   "grandfront": [
@@ -586,5 +555,29 @@
     "url": "https://go.flyasia.co/ohga-pharmacy/blog"
    }
   ]
+ },
+ "matcha": {
+  "name": "MATCHA 優惠券",
+  "list": "https://matcha-jp.com/tw/coupon",
+  "page": "https://matcha-jp.com/tw/coupon/{id}",
+  "skip_keywords": [
+   "wifi",
+   "esim",
+   "sim卡",
+   "sim ",
+   "搬家",
+   "課程",
+   "攝影",
+   "行李",
+   "露營車",
+   "深度遊",
+   "乘車",
+   "宅配",
+   "包裝"
+  ]
+ },
+ "jcb": {
+  "name": "JCB 精選優惠",
+  "list": "https://www.specialoffers.jcb/zh-tw/campaign/"
  }
 }
