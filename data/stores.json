@@ -144,7 +144,8 @@
    "sundrug",
    "サンドラッグ",
    "尚都樂客"
-  ]
+  ],
+  "smartnews": true
  },
  {
   "id": "sapporodrug",
@@ -231,7 +232,8 @@
    "seven",
    "セブン",
    "小七"
-  ]
+  ],
+  "smartnews": true
  },
  {
   "id": "family",
@@ -244,7 +246,8 @@
    "ファミリーマート",
    "ファミマ",
    "全家"
-  ]
+  ],
+  "smartnews": true
  },
  {
   "id": "lawson",
@@ -255,7 +258,8 @@
    "lawson",
    "ローソン",
    "羅森"
-  ]
+  ],
+  "smartnews": true
  },
  {
   "id": "aeon",
@@ -266,7 +270,8 @@
    "aeon",
    "イオン",
    "永旺"
-  ]
+  ],
+  "smartnews": true
  },
  {
   "id": "takashimaya",
@@ -435,7 +440,8 @@
   "alias": [
    "matsuya",
    "松屋"
-  ]
+  ],
+  "smartnews": true
  },
  {
   "id": "torikizoku",
@@ -531,6 +537,93 @@
    "新幹線",
    "shinkansen"
   ]
+ },
+ {
+  "id": "mcdonalds",
+  "name": "麥當勞",
+  "jp": "マクドナルド",
+  "cat": "restaurant",
+  "alias": [
+   "mcdonald",
+   "マクドナルド",
+   "麥當勞",
+   "麦当劳",
+   "マック"
+  ],
+  "smartnews": true
+ },
+ {
+  "id": "mos",
+  "name": "摩斯漢堡",
+  "jp": "モスバーガー",
+  "cat": "restaurant",
+  "alias": [
+   "mos burger",
+   "モスバーガー",
+   "摩斯"
+  ],
+  "smartnews": true
+ },
+ {
+  "id": "yoshinoya",
+  "name": "吉野家",
+  "jp": "吉野家",
+  "cat": "restaurant",
+  "alias": [
+   "yoshinoya",
+   "吉野家"
+  ],
+  "smartnews": true
+ },
+ {
+  "id": "kfc",
+  "name": "肯德基",
+  "jp": "ケンタッキーフライドチキン",
+  "cat": "restaurant",
+  "alias": [
+   "kfc",
+   "kentucky",
+   "ケンタッキー",
+   "肯德基"
+  ],
+  "smartnews": true
+ },
+ {
+  "id": "hamazushi",
+  "name": "Hama 壽司",
+  "jp": "はま寿司",
+  "cat": "restaurant",
+  "alias": [
+   "hama sushi",
+   "はま寿司",
+   "濱壽司",
+   "hama壽司"
+  ],
+  "smartnews": true
+ },
+ {
+  "id": "lotteria",
+  "name": "儂特利",
+  "jp": "ロッテリア",
+  "cat": "restaurant",
+  "alias": [
+   "lotteria",
+   "ロッテリア",
+   "儂特利"
+  ],
+  "smartnews": true
+ },
+ {
+  "id": "shabuyo",
+  "name": "涮乃葉",
+  "jp": "しゃぶ葉",
+  "cat": "restaurant",
+  "alias": [
+   "shabuyo",
+   "しゃぶ葉",
+   "涮乃葉"
+  ],
+  "smartnews": true
  },
  {
   "id": "generic",

@@ -126,9 +126,26 @@ function applyCards(base, prevPayments, rows, pays, sourceUrl) {
   return result;
 }
 
+// 把優惠內容拆成「簡短標題」和「其餘說明」，避免兩者重複
+export function splitTitle(detail) {
+  // 有編號的分級優惠（1.… 2.… 3.…）
+  const tiers = detail.split(/\s(?=\d\s*[.、．]\s*\D)/).map(x => x.replace(/^\d\s*[.、．]\s*/, '').trim()).filter(Boolean);
+  if (tiers.length > 1) return {t: tiers[0] + ' 起', d: tiers.map((x, i) => `${i + 1}. ${x}`).join('；')};
+  const one = tiers[0] || detail;
+  // 在全形逗號、分號、句號處斷開（不切數字中的千分位逗號）
+  // 「…10% + 折扣 7% 日本清酒…」這類：在百分比後面的空白斷開（但不切「% + 」）
+  const pct = one.match(/^(.{6,36}?%)\s+(?![+＋\d])(.+)$/);
+  if (pct) return {t: pct[1].trim(), d: pct[2].trim()};
+  const m = one.match(/^(.{6,36}?)(?:[，；。！]|(?<!\d),(?!\d))(.+)$/);
+  if (m) return {t: m[1].trim(), d: m[2].trim()};
+  return one.length > 36 ? {t: one.slice(0, 36) + '…', d: one} : {t: one, d: ''};
+}
+
 // ---------- 優惠券（卡優新聞網整理頁） ----------
 export function parseCouponSections(html, keywords) {
   const out = {};
+  // 網頁屬性（例如 <h2 id="【-鶴羽藥妝-】">）裡也可能有「【」，先移除這些屬性，避免切錯段落
+  html = html.replace(/\s[\w-]+="[^"]*[【】][^"]*"/g, '');
   const chunks = html.split('【').slice(1);
   for (const chunk of chunks) {
     const end = chunk.indexOf('】');
@@ -136,19 +153,36 @@ export function parseCouponSections(html, keywords) {
     const title = htmlToText(chunk.slice(0, end)).trim();
     const id = Object.keys(keywords).find(k => keywords[k].some(w => title.toLowerCase().includes(w.toLowerCase())));
     if (!id) continue;
-    const body = chunk.slice(end + 1);
+    // 只取到這家店段落的結尾（分隔線或下一個標題）為止
+    const body = chunk.slice(end + 1).split(/<hr|<h[1-4][\s>]/i)[0];
     const text = htmlToText(body);
     const periodLine = (text.match(/活動期間[：:]?\s*([^\n■]*)/) || [])[1] || '';
     const until = /無期限/.test(periodLine) ? null : parseDate(periodLine);
     out[id] = out[id] || [];           // 來源有這家店：即使已到期也記錄，讓舊資料被清掉
     if (until && !alive(until)) continue;
     let detail = (text.match(/優惠內容[^：:]*[：:]\s*([\s\S]*?)(?:■|>>|\* \* \*|$)/) || [])[1] || '';
-    detail = detail.replace(/\s*\/\s*/g, ' ').replace(/\s+/g, ' ').replace(/\\/g, '').trim();
+    detail = detail.replace(/<[^>]*$/, '').replace(/\s*\/\s*/g, ' ').replace(/\s+/g, ' ').replace(/\\/g, '').trim();
     if (!detail) continue;
-    const a = body.match(/<a[^>]+href="([^"]+)"[^>]*>(?:(?!<\/a>)[\s\S])*?下載優惠券/);
-    const url = a && /^https?:\/\//.test(a[1]) ? a[1] : null;
-    const t = detail.length > 40 ? detail.slice(0, 40) + '…' : detail;
-    (out[id] = out[id] || []).push({t, d: detail.length > 40 ? detail : '', until, url, source: null});
+    // 優惠券連結：優先用「下載優惠券」文字連結，沒有的話用段落中的優惠券圖片
+    const a = body.match(/<a[^>]+href="([^"]+)"[^>]*>(?:(?!<\/a>)[\s\S])*?(?:下載|領取|取得)優惠券/);
+    // 圖片可能是延遲載入（data-src、data-lazy-src），也要找
+    const img = body.match(/<img[^>]+?(?:data-lazy-src|data-src|data-original|src)="(https?:\/\/[^"]+\.(?:jpe?g|png|webp|gif)[^"]*)"/i);
+    let url = a && /^https?:\/\//.test(a[1]) && !/data:image/i.test(a[1]) ? a[1] : null;
+    if (!url && img && !/logo|icon|banner|avatar/i.test(img[1])) url = img[1];
+    // 圖片直接嵌在網頁程式碼裡（data:image/...;base64,...）：先記下來，稍後存成圖片檔
+    let embedded = null;
+    if (!url) {
+      const e = body.match(/(?:href|src)="(?:https?:\/\/)?(data:image\/(png|jpe?g|webp|gif);base64,([A-Za-z0-9+\/=\s]{2000,}))"/i);
+      if (e) embedded = {ext: e[2].toLowerCase().replace('jpeg', 'jpg'), b64: e[3].replace(/\s/g, '')};
+    }
+    const {t, d: rest} = splitTitle(detail);
+    // 「使用方式」也一起顯示，讓使用者知道條件（例如要刷特定信用卡、要出示護照）
+    let how = (text.match(/使用方式[^：:]*[：:]\s*([\s\S]*?)(?:■|>>|\* \* \*|$)/) || [])[1] || '';
+    how = how.replace(/<[^>]*$/, '').replace(/\s*\/\s*/g, ' ').replace(/\s+/g, ' ').replace(/[①②③④⑤]/g, ' ').trim();
+    if (how.length > 120) how = how.slice(0, 120) + '…';
+    // 用句號串接，網站不用修改就能正常顯示
+    const d = (rest && how && !/[。！!]$/.test(rest) ? rest + '。' : rest) + (how ? `使用方式：${how}` : '');
+    out[id].push({t, d, until, url, source: null, ...(embedded ? {embedded} : {})});
   }
   return out;
 }
@@ -164,6 +198,24 @@ export function parseDonki(html) {
     d: '需連網開啟官方優惠頁出示，截圖無效；菸酒、遊戲主機等不適用。',
     until: null, url: a ? a[1].replace(/&amp;/g, '&') : null, source: null
   }];
+}
+
+// ---------- 存下嵌入在網頁中的優惠券圖片 ----------
+const savedImages = [];
+function siteBase() {
+  // 在 GitHub Actions 中自動得知網站網址，例如 https://帳號.github.io/japan-pay/
+  const repo = process.env.GITHUB_REPOSITORY || '';
+  const [owner, name] = repo.split('/');
+  return owner && name ? `https://${owner.toLowerCase()}.github.io/${name}/` : '';
+}
+function saveEmbedded(id, i, {ext, b64}) {
+  const buf = Buffer.from(b64, 'base64');
+  if (buf.length < 1000 || buf.length > 3_000_000) return null;   // 太小（不是優惠券）或太大就略過
+  const file = `data/coupons/${id}${i ? '-' + i : ''}.${ext}`;
+  savedImages.push({file, buf});
+  const base = siteBase();
+  note('ok', `${id} 的優惠券圖片已從網頁中還原（${Math.round(buf.length / 1024)} KB）`);
+  return base ? base + file : null;
 }
 
 // ---------- 主程式 ----------
@@ -194,9 +246,18 @@ async function main() {
       const got = parseCouponSections(html, sources.coupon_store_keywords);
       const n = Object.values(got).filter(l => l.length).length;
       if (n < 5) throw new Error(`只解析到 ${n} 家店，可能網頁改版`);
+      const fallback = sources.coupon_url_fallback || {};
       for (const [id, list] of Object.entries(got)) {
         if (id === 'donki') continue;   // 唐吉訶德改由下方官方合作頁或備用資料處理
-        list.forEach(c => { c.source = src.url; });
+        list.forEach((c, i) => {
+          c.source = src.url;
+          if (c.embedded) {                       // 還原嵌入的優惠券圖片並存檔
+            c.url = saveEmbedded(id, i, c.embedded);
+            delete c.embedded;
+          }
+          if (!c.url && fallback[id]) c.url = fallback[id];
+          if (!c.url) note('warn', `${id} 找不到優惠券連結`);
+        });
         if (JSON.stringify(out.coupons[id]?.map(c => [c.t, c.until])) !== JSON.stringify(list.map(c => [c.t, c.until]))) note('change', `${id} 優惠券已更新`);
         out.coupons[id] = list;
       }
@@ -231,6 +292,10 @@ async function main() {
   const errors = log.filter(l => l.level === 'error').length;
   out.note = errors ? `部分來源暫時無法更新（${errors} 項），已沿用前次資料` : (changes ? `本次更新 ${changes} 項` : '資料與前次相同');
 
+  if (savedImages.length) {
+    await fs.mkdir('data/coupons', {recursive: true});
+    for (const {file, buf} of savedImages) await fs.writeFile(file, buf);
+  }
   await fs.writeFile('data/data.json', JSON.stringify(out, null, 1));
   await fs.writeFile('data/update-log.json', JSON.stringify({at: out.updated_at, log}, null, 1));
   if (process.env.GITHUB_STEP_SUMMARY) {

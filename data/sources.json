@@ -87,5 +87,22 @@
    "url": "https://japanportal.donki-global.com/coupon/?ptcd=0099000503",
    "source": "https://livejapan.com/public/operation/coupon/donki/zh-tw.html"
   }
- ]
+ ],
+ "coupon_url_fallback": {
+  "biccamera": "https://s.beurlife.com/bic",
+  "tsuruha": "https://s.beurlife.com/tsu",
+  "edion": "https://s.beurlife.com/edion",
+  "yamada": "https://s.beurlife.com/yamada",
+  "joshin": "https://s.beurlife.com/joshin",
+  "sugi": "https://s.beurlife.com/sugi",
+  "matsukiyo": "https://s.beurlife.com/tbu",
+  "tobu": "https://s.beurlife.com/tobu",
+  "cosmos": "https://www.beurlife.com/wp-content/uploads/2026/10/COSMOS_Japan_drug_store_coupon-2027Dec.jpg",
+  "cocokara": "https://www.beurlife.com/wp-content/uploads/2026/03/cocokara_fine_drug_store_coupon-2027Mar.png",
+  "keio": "https://www.beurlife.com/wp-content/uploads/2026/03/Keio-shinjuku-coupon-2027Mar.jpg",
+  "odakyu": "https://www.beurlife.com/wp-content/uploads/2026/10/odakyu_coupon_beurlife_2028Mar.png",
+  "anaduty": "https://www.beurlife.com/wp-content/uploads/2026/03/ANA_Duty_free_shop_NRT-2027Mar.jpg",
+  "sapporodrug": "https://global-satudora.com/zh-tw/blogs/promotion/%E6%97%A5%E6%9C%AC%E6%9C%AD%E5%B9%8C%E8%97%A5%E5%A6%9D%E5%85%8D%E7%A8%85%E5%84%AA%E6%83%A0%E5%88%B8%E4%BE%86%E5%95%A6",
+  "sundrug": "https://imgcloud.cardu.com.tw/201910/20260322/Cardu_69bff1b6c5359.png"
+ }
 }
