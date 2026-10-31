@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-31T08:52:20.603Z",
+ "updated_at": "2026-10-31T08:58:04.570Z",
  "note": "本次更新 3 項",
  "payments": [
   {
@@ -1160,7 +1160,7 @@
     "t": "在多慶屋使用海外發行JCB信用卡",
     "d": "單筆消費滿5,000日元，享受9折優惠！單筆優惠金額上限10,000日元。",
     "until": "2027-04-30",
-    "url": null,
+    "url": "https://matcha-jp.com/tw/coupon/111",
     "source": "https://www.cardu.com.tw/travel/detail.php?40490"
    },
    {
@@ -1586,50 +1586,6 @@
     "until": "2027-07-31",
     "url": "https://matcha-jp.com/tw/coupon/151",
     "source": "https://matcha-jp.com/tw/coupon/151"
-   }
-  ],
-  "auto-gv7mzv": [
-   {
-    "t": "免稅＋最高17%折扣",
-    "d": "MATCHA 優惠券，結帳時出示頁面。",
-    "until": null,
-    "url": "https://matcha-jp.com/tw/coupon/88",
-    "source": "https://matcha-jp.com/tw/coupon/88"
-   },
-   {
-    "t": "免稅＋最高17%折扣",
-    "d": "MATCHA 優惠券，結帳時出示頁面。",
-    "until": null,
-    "url": "https://matcha-jp.com/tw/coupon/100",
-    "source": "https://matcha-jp.com/tw/coupon/100"
-   },
-   {
-    "t": "免稅＋最高17%折扣",
-    "d": "MATCHA 優惠券，結帳時出示頁面。",
-    "until": null,
-    "url": "https://matcha-jp.com/tw/coupon/105",
-    "source": "https://matcha-jp.com/tw/coupon/105"
-   },
-   {
-    "t": "免稅＋最高17%折扣",
-    "d": "MATCHA 優惠券，結帳時出示頁面。",
-    "until": null,
-    "url": "https://matcha-jp.com/tw/coupon/118",
-    "source": "https://matcha-jp.com/tw/coupon/118"
-   },
-   {
-    "t": "免稅＋最高17%折扣",
-    "d": "MATCHA 優惠券，結帳時出示頁面。",
-    "until": null,
-    "url": "https://matcha-jp.com/tw/coupon/146",
-    "source": "https://matcha-jp.com/tw/coupon/146"
-   },
-   {
-    "t": "免稅＋最高17%折扣",
-    "d": "MATCHA 優惠券，結帳時出示頁面。",
-    "until": null,
-    "url": "https://matcha-jp.com/tw/coupon/147",
-    "source": "https://matcha-jp.com/tw/coupon/147"
    }
   ],
   "theory": [

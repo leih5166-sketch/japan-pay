@@ -1,53 +1,9 @@
 {
- "at": "2026-10-31T08:52:20.603Z",
+ "at": "2026-10-31T08:58:04.570Z",
  "log": [
   {
    "level": "info",
-   "msg": "移除自動店家「杏林堂藥局」（已有手動資料）"
-  },
-  {
-   "level": "info",
-   "msg": "移除自動店家「JAPAN ROAD TRIP」（不是實體店家）"
-  },
-  {
-   "level": "info",
-   "msg": "移除自動店家「全日空 店」（已有手動資料）"
-  },
-  {
-   "level": "info",
-   "msg": "移除自動店家「AIRPORT TAXI」（不是實體店家）"
-  },
-  {
-   "level": "info",
-   "msg": "移除自動店家「Theory」（已有手動資料）"
-  },
-  {
-   "level": "info",
-   "msg": "移除自動店家「NINJA Wi-FI」（已有手動資料）"
-  },
-  {
-   "level": "info",
-   "msg": "移除自動店家「Japan Wireless」（不是實體店家）"
-  },
-  {
-   "level": "info",
-   "msg": "移除自動店家「日本 店 和遊客專屬」（店名殘缺）"
-  },
-  {
-   "level": "info",
-   "msg": "移除自動店家「JAL ABC」（不是實體店家）"
-  },
-  {
-   "level": "info",
-   "msg": "移除自動店家「Cafetalk」（不是實體店家）"
-  },
-  {
-   "level": "info",
-   "msg": "移除自動店家「Magical Trip」（不是實體店家）"
-  },
-  {
-   "level": "info",
-   "msg": "移除自動店家「ecbo cloak」（不是實體店家）"
+   "msg": "移除自動店家「日本免稅店 和遊客專屬折扣」（店名殘缺）"
   },
   {
    "level": "ok",
@@ -66,32 +22,48 @@
    "msg": "daikoku 的優惠券圖片已從網頁中還原（138 KB）"
   },
   {
-   "level": "warn",
-   "msg": "takeya 找不到優惠券連結"
-  },
-  {
    "level": "ok",
    "msg": "卡優新聞網：日本優惠券整理：解析 19 家店的優惠券"
   },
   {
-   "level": "new",
-   "msg": "自動新增店家：日本免稅店 和遊客專屬折扣"
+   "level": "info",
+   "msg": "店名無法辨識，略過：日本免稅店優惠券和遊客專屬折扣"
+  },
+  {
+   "level": "info",
+   "msg": "店名無法辨識，略過：日本免稅店優惠券和遊客專屬折扣"
+  },
+  {
+   "level": "info",
+   "msg": "店名無法辨識，略過：日本免稅店優惠券和遊客專屬折扣"
+  },
+  {
+   "level": "info",
+   "msg": "店名無法辨識，略過：日本免稅店優惠券和遊客專屬折扣"
+  },
+  {
+   "level": "info",
+   "msg": "店名無法辨識，略過：日本免稅店優惠券和遊客專屬折扣"
+  },
+  {
+   "level": "info",
+   "msg": "店名無法辨識，略過：日本免稅店優惠券和遊客專屬折扣"
   },
   {
    "level": "ok",
-   "msg": "MATCHA 優惠券：解析 50 張優惠券"
+   "msg": "MATCHA 優惠券：解析 44 張優惠券"
   },
   {
    "level": "change",
-   "msg": "auto-gv7mzv 優惠券已更新"
+   "msg": "edion 優惠券已更新"
   },
   {
    "level": "change",
-   "msg": "theory 優惠券已更新"
+   "msg": "yamada 優惠券已更新"
   },
   {
    "level": "change",
-   "msg": "kyorindo 優惠券已更新"
+   "msg": "kintetsu 優惠券已更新"
   },
   {
    "level": "warn",
@@ -116,10 +88,6 @@
   {
    "level": "warn",
    "msg": "LIVE JAPAN 維修中或無法連線，相關優惠券已加上提示"
-  },
-  {
-   "level": "info",
-   "msg": "本次自動新增 1 家店"
   }
  ]
 }
