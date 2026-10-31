@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-31T08:07:22.935Z",
+ "updated_at": "2026-10-31T08:26:26.723Z",
  "note": "資料與前次相同",
  "payments": [
   {
@@ -748,7 +748,7 @@
     "until": null,
     "source": null,
     "t": "小田急百貨 6% 優惠券",
-    "d": "含稅滿 ¥1,000 起，食品、特價品、餐廳及咖啡廳除外。",
+    "d": "含稅滿 ¥1,000 起，食品、特價品、餐廳及咖啡廳除外。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/zh-tw/in-tokyo/in-pref-tokyo/in-shinjuku/spot-lj0115826/coupon/?c=333628",
     "static": true
    }
@@ -826,7 +826,7 @@
     "until": null,
     "source": null,
     "t": "滿 ¥10,000 折 ¥1,000、滿 ¥20,000 折 ¥2,000",
-    "d": "LIVE JAPAN 官方優惠券，結帳時出示優惠券、電子機票與護照。",
+    "d": "LIVE JAPAN 官方優惠券，結帳時出示優惠券、電子機票與護照。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/lotte/en.html",
     "static": true
    }
@@ -852,7 +852,7 @@
     "until": null,
     "source": null,
     "t": "GUEST COUPON 5% OFF",
-    "d": "結帳及辦理免稅時出示此優惠券。",
+    "d": "結帳及辦理免稅時出示此優惠券。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/kintetsudepartmentstore/zh-tw.html",
     "static": true
    }
@@ -950,7 +950,7 @@
     "until": null,
     "source": null,
     "t": "免稅＋最高再 7% OFF",
-    "d": "LIVE JAPAN 官方優惠券，全日本 15 家店適用（含木更津、臨空 Outlet）。",
+    "d": "LIVE JAPAN 官方優惠券，全日本 15 家店適用（含木更津、臨空 Outlet）。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/snowpeak/en.html",
     "static": true
    }
@@ -969,7 +969,7 @@
     "until": null,
     "source": null,
     "t": "外國旅客優惠券冊：最高 10% OFF＋贈品",
-    "d": "使用方式：至外國旅客服務中心出示護照，掃描 QR Code 領取優惠券冊。全日本 22 家三井 Outlet、LaLaport 適用。",
+    "d": "使用方式：至外國旅客服務中心出示護照，掃描 QR Code 領取優惠券冊。全日本 22 家三井 Outlet、LaLaport 適用。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/mitsui/en.html",
     "btn": "查看領取方式",
     "static": true
@@ -1009,7 +1009,7 @@
     "until": null,
     "source": null,
     "t": "外國旅客 5% 來賓優惠券",
-    "d": "使用方式：出示護照至海外顧客櫃台、服務中心或免稅櫃台領取，發行日起 7 天內可無限次使用。未稅 ¥1,000 以下商品、特價品、餐廳等除外。",
+    "d": "使用方式：出示護照至海外顧客櫃台、服務中心或免稅櫃台領取，發行日起 7 天內可無限次使用。未稅 ¥1,000 以下商品、特價品、餐廳等除外。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/hankyuhanshindepartmentstore/zh-tw.html",
     "btn": "查看優惠",
     "static": true
@@ -1028,7 +1028,7 @@
     "until": null,
     "source": null,
     "t": "外國旅客 5% 來賓優惠券",
-    "d": "使用方式：出示護照至服務台領取，與阪急百貨同一優惠。",
+    "d": "使用方式：出示護照至服務台領取，與阪急百貨同一優惠。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/hankyuhanshindepartmentstore/zh-tw.html",
     "btn": "查看優惠",
     "static": true
@@ -1079,7 +1079,7 @@
     "until": null,
     "source": null,
     "t": "免稅＋最高再 7% OFF",
-    "d": "LIVE JAPAN 官方優惠券。",
+    "d": "LIVE JAPAN 官方優惠券。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/takeya/en.html",
     "static": true
    },
@@ -1097,7 +1097,7 @@
     "until": null,
     "source": null,
     "t": "外國旅客優惠券",
-    "d": "LIVE JAPAN 官方優惠券。",
+    "d": "LIVE JAPAN 官方優惠券。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/aoki/en.html",
     "static": true
    }
@@ -1107,7 +1107,7 @@
     "until": null,
     "source": null,
     "t": "外國旅客優惠券",
-    "d": "LIVE JAPAN 官方優惠券。",
+    "d": "LIVE JAPAN 官方優惠券。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/orihica/en.html",
     "static": true
    }
@@ -1117,7 +1117,7 @@
     "until": null,
     "source": null,
     "t": "租車 9 折（6 天以上 85 折）",
-    "d": "LIVE JAPAN 官方優惠券。",
+    "d": "LIVE JAPAN 官方優惠券。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/nipponrentacar/zh-tw.html",
     "static": true
    }
@@ -1127,7 +1127,7 @@
     "until": null,
     "source": null,
     "t": "NINJA WiFi 優惠",
-    "d": "LIVE JAPAN 官方優惠券。",
+    "d": "LIVE JAPAN 官方優惠券。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/ninjawifi/zh-tw.html",
     "static": true
    }
@@ -1353,7 +1353,7 @@
     "until": null,
     "source": null,
     "t": "免稅再 5% OFF",
-    "d": "成田機場 JAPAN DUTY FREE，化妝品、菸酒等適用，多數土產不適用。",
+    "d": "成田機場 JAPAN DUTY FREE，化妝品、菸酒等適用，多數土產不適用。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/japandutyfree/zh-tw.html",
     "static": true
    }
