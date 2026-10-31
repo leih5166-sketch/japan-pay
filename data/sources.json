@@ -242,6 +242,20 @@
     "d": "使用方式：至外國旅客服務中心出示護照，掃描 QR Code 領取優惠券冊。全日本 22 家三井 Outlet、LaLaport 適用。",
     "url": "https://livejapan.com/public/operation/coupon/mitsui/en.html",
     "btn": "查看領取方式"
+   },
+   {
+    "t": "搭星宇航空：登機證兌換 ¥500 購物券",
+    "d": "憑台灣出發的星宇航空登機證（搭機日起 10 天內）＋活動頁 QR Code，到外國旅客服務中心兌換。單筆含稅滿 ¥10,000 可用，限兌換的商場。",
+    "until": "2027-06-30",
+    "url": "https://www.starlux-airlines.com/flights/zh-tw/mitsui-outlet",
+    "btn": "查看兌換方式"
+   },
+   {
+    "t": "【刷 JCB 卡】MITSUI OUTLET PARK・LaLaport 最高 20% 事後現金回饋",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/mitsuioutlet/93838/",
+    "jcb_fallback": true,
+    "kind": "card"
    }
   ],
   "premiumoutlets": [
@@ -260,6 +274,12 @@
    }
   ],
   "hankyu": [
+   {
+    "t": "博多阪急：外國旅客 5% 電子優惠券",
+    "d": "使用方式：先在官方頁面完成登錄，再到 1 樓服務台或 M3 海外顧客服務中心啟用。",
+    "url": "https://global.hankyu-hanshin-dept.co.jp/zh-CHT/store/hakata/service/",
+    "btn": "查看登錄方式"
+   },
    {
     "t": "外國旅客 5% 來賓優惠券",
     "d": "使用方式：出示護照至海外顧客櫃台、服務中心或免稅櫃台領取，發行日起 7 天內可無限次使用。未稅 ¥1,000 以下商品、特價品、餐廳等除外。",
@@ -287,6 +307,11 @@
     "d": "單筆未稅 ¥3,000 起適用，鐘錶、珠寶、名牌等除外。",
     "url": "https://www.takashimaya.co.jp/store/special/shopperscard/index_en.html",
     "btn": "查看優待卡"
+   },
+   {
+    "t": "新宿高島屋時代廣場：LIVE JAPAN 獨家 ¥1,000 優惠券",
+    "d": "適用於化妝品、美容諮詢、午餐、甜點等。",
+    "url": "https://livejapan.com/zh-tw/in-tokyo/in-pref-tokyo/in-shinjuku/article-a0003434/"
    }
   ],
   "mitsukoshi": [
@@ -295,6 +320,13 @@
     "d": "下載三越伊勢丹官方外國旅客 App 享優惠，部分商品不適用。",
     "url": "https://cp.mistore.jp/content/cpmistore/global/zh_hant/app.html",
     "btn": "查看 App"
+   },
+   {
+    "t": "【刷 JCB 卡】三越伊勢丹最高 20% 事後現金回饋",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/mitsukoshiisetan/93855/",
+    "jcb_fallback": true,
+    "kind": "card"
    }
   ],
   "kintetsu": [
@@ -302,6 +334,13 @@
     "t": "GUEST COUPON 5% OFF",
     "d": "結帳及辦理免稅時出示此優惠券。",
     "url": "https://livejapan.com/public/operation/coupon/kintetsudepartmentstore/zh-tw.html"
+   },
+   {
+    "t": "【刷 JCB 卡】近鐵百貨領取 VIP 卡最高 7% 優惠",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/kintetsu/56845/",
+    "jcb_fallback": true,
+    "kind": "card"
    }
   ],
   "odakyu": [
@@ -554,6 +593,122 @@
     "until": "2028-12-31",
     "url": "https://go.flyasia.co/ohga-pharmacy/blog"
    }
+  ],
+  "daimarufukuoka": [
+   {
+    "t": "【台新卡】免稅 10%＋5% 現金回饋，指定專櫃再現折 5%",
+    "d": "東館 1 樓化妝品、4 樓手錶專區現折 5%。限實體卡或 Apple Pay 等綁定信用卡。",
+    "until": "2026-12-31",
+    "url": "https://mkpcard.taishinbank.com.tw/tscccms/promotion/detail/WM_20240411145335571"
+   },
+   {
+    "t": "【玉山卡】5% 現金回饋，指定專櫃再現折 5%",
+    "d": "每筆消費 5% 現金回饋，化妝品與手錶專區出示護照現折 5%。",
+    "until": "2026-12-31",
+    "url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=3288"
+   },
+   {
+    "t": "【國泰 CUBE 卡】領券消費最高 8% 小樹點回饋",
+    "d": "先在 CUBE App 領取優惠券，切換「秋日遊」或「趣旅行」權益。",
+    "until": "2026-12-30",
+    "url": "https://www.cathay-cube.com.tw/cathaybk/personal/event/overview/credit-card/shopping/202507/Daimaru2025H2"
+   }
+  ],
+  "ashibinaa": [
+   {
+    "t": "出示文章領取紙本優惠券",
+    "d": "沖繩唯一的 Outlet，距那霸機場約 15 分鐘。到服務台出示文章即可領取。",
+    "url": "https://linshibi.com/?p=42399",
+    "btn": "查看領取方式"
+   }
+  ],
+  "sinseido": [
+   {
+    "t": "免稅＋5% OFF（不限金額）",
+    "d": "九州新生堂藥局，限 7 家指定分店（含福岡天神南店）。",
+    "url": "https://ksk.tw/sinseido-drug/"
+   }
+  ],
+  "kyorindo": [
+   {
+    "t": "外國旅客免稅優惠券",
+    "d": "靜岡地區的杏林堂藥局。",
+    "url": "https://ksk.tw/kyorindo-coupon/"
+   }
+  ],
+  "barneys": [
+   {
+    "t": "免稅＋5% OFF",
+    "d": "BARNEYS NEW YORK 外國旅客優惠。",
+    "until": "2027-06-30",
+    "url": "https://www.bubu-jp.com/archives/35860"
+   }
+  ],
+  "theory": [
+   {
+    "t": "外國旅客專屬折扣",
+    "d": "步步日本整理的 Theory 外國旅客優惠。",
+    "url": "https://www.bubu-jp.com/archives/40248"
+   }
+  ],
+  "usj": [
+   {
+    "t": "【刷 JCB 卡】日本環球影城最高 20% 事後現金回饋",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/usj/93849/",
+    "jcb_fallback": true,
+    "kind": "card"
+   }
+  ],
+  "matsuyaginza": [
+   {
+    "t": "【刷 JCB 卡】松屋銀座 95 折",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/matsuya/84149",
+    "jcb_fallback": true,
+    "kind": "card"
+   }
+  ],
+  "daimaru": [
+   {
+    "t": "【刷 JCB 卡】大丸松坂屋刷 JCB 享 5% OFF 與美食券",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/daimaru_matsuzakaya/88819/",
+    "jcb_fallback": true,
+    "kind": "card"
+   }
+  ],
+  "matsuzakaya": [
+   {
+    "t": "【刷 JCB 卡】大丸松坂屋刷 JCB 享 5% OFF 與美食券",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/daimaru_matsuzakaya/88819/",
+    "jcb_fallback": true,
+    "kind": "card"
+   }
+  ],
+  "sapporodrug": [
+   {
+    "t": "【刷 JCB 卡】札幌藥妝最高 7% OFF",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/satudora/89680/",
+    "jcb_fallback": true,
+    "kind": "card"
+   }
+  ],
+  "miyageya": [
+   {
+    "t": "最高 12% OFF",
+    "d": "那霸國際通的沖繩名產店，可全試吃。",
+    "url": "https://okinawa.letsgojp.com/archives/877794/"
+   }
+  ],
+  "funasaka": [
+   {
+    "t": "出示優惠券免費送品酒代幣",
+    "d": "飛驒高山的清酒品酒體驗。",
+    "url": "https://chubu.letsgojp.com/archives/803649/"
+   }
   ]
  },
  "matcha": {
@@ -561,10 +716,9 @@
   "list": "https://matcha-jp.com/tw/coupon",
   "page": "https://matcha-jp.com/tw/coupon/{id}",
   "skip_keywords": [
-   "wifi",
+   "wi-?fi",
    "esim",
-   "sim卡",
-   "sim ",
+   "sim",
    "搬家",
    "課程",
    "攝影",
@@ -573,11 +727,23 @@
    "深度遊",
    "乘車",
    "宅配",
-   "包裝"
+   "包裝",
+   "cloak",
+   "trip",
+   "tour",
+   "talk",
+   "abc",
+   "wireless",
+   "taxi",
+   "計程車",
+   "寄存"
   ]
  },
  "jcb": {
   "name": "JCB 精選優惠",
-  "list": "https://www.specialoffers.jcb/zh-tw/campaign/"
+  "list": [
+   "https://www.specialoffers.jcb/zh-tw/",
+   "https://www.specialoffers.jcb/zh-tw/campaign/"
+  ]
  }
 }

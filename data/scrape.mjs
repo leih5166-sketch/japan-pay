@@ -188,9 +188,10 @@ export function parseCouponSections(html, keywords) {
 }
 
 // 依關鍵字找出標題對應的所有店家（例如「SEIBU SOGO」同時對應西武與 SOGO）
+const normKw = x => String(x || '').toLowerCase().replace(/[\s\-・･'’.＆&_]/g, '');
 export function matchIds(text, keywords) {
-  const t = String(text || '').toLowerCase();
-  return Object.keys(keywords).filter(k => (keywords[k] || []).some(w => w && t.includes(w.toLowerCase())));
+  const t = normKw(text);
+  return Object.keys(keywords).filter(k => (keywords[k] || []).some(w => { const n = normKw(w); return n.length >= 2 && t.includes(n); }));
 }
 
 // ---------- TAXFREESHOPS.JP（官方合作優惠券，每家店一頁） ----------
@@ -259,8 +260,14 @@ function slugId(name) {
 // 店名清理：去掉「優惠券」「免稅」「（福岡店鋪限定）」等字樣
 export function cleanStoreName(name) {
   return String(name || '').replace(/【[^】]*】|\([^)]*\)|（[^）]*）/g, ' ')
-    .replace(/優惠券|折價券|折扣券|優惠|coupon|免稅|退稅|折扣|最高|TAX ?FREE\+?|MAX|\d+\s*[%％]\s*(OFF)?|20\d\d年?最新?/gi, ' ')
+    .replace(/(免稅)?(折扣|折價|退稅)?(優惠券|折價券|折扣券|兌換券|coupon)/gi, ' ')
+    .replace(/(最高|MAX)?\s*\d+\s*[%％]\s*(OFF|折扣)?/gi, ' ').replace(/20\d\d年?(最新)?/g, ' ')
     .replace(/[｜|:：!！,，、。]+/g, ' ').replace(/\s+/g, ' ').trim();
+}
+// 名字看起來不像店名（太短、只剩「店」字、殘缺）就不要自動新增
+export function badStoreName(n) {
+  // 「全日空 店」「日本 店 和遊客專屬」這類：「店」字被單獨留下，代表前面的字被切掉了
+  return !n || n.length < 3 || n.length > 40 || /(^|\s)店(\s|$)/.test(n);
 }
 
 // ---------- MATCHA 優惠券（列表頁＋每張券一頁） ----------
@@ -270,13 +277,14 @@ export function discoverMatcha(html) {
 export function parseMatchaCoupon(html) {
   const h1 = (html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [])[1] || '';
   const name = htmlToText(h1.split(/<br\s*\/?>/i)[0]).replace(/\s+/g, ' ').trim();
+  const sub = htmlToText(h1.split(/<br\s*\/?>/i).slice(1).join(' ')).replace(/\s+/g, ' ').trim();
   const text = htmlToText(html);
   const offer = (text.match(/(最高\s*\d+\s*[%％]\s*折扣|\d+\s*[%％]\s*折扣|¥\s*[\d,]+\s*(?:OFF|折扣))/i) || [])[1] || '';
   const until = parseDate((text.match(/有效期限\s*([^\n]+)/) || [])[1] || '');
   let cond = (text.match(/使用條件\s*([\s\S]*?)(?:【|##|其他推薦|$)/) || [])[1] || '';
   cond = cond.replace(/[・·]/g, ' ').replace(/\s*\/\s*/g, ' ').replace(/\s+/g, ' ').trim();
   if (cond.length > 120) cond = cond.slice(0, 120) + '…';
-  return {name, offer: offer.replace(/\s+/g, ' '), until, cond};
+  return {name, sub, offer: offer.replace(/\s+/g, ' '), until, cond};
 }
 
 // ---------- JCB 精選優惠（信用卡活動列表） ----------
@@ -334,6 +342,15 @@ async function main() {
   // 自動新增的店家存在 data/stores-auto.json；比對時同時使用手動清單與自動清單
   const manualStores = JSON.parse(await fs.readFile('data/stores.json', 'utf8').catch(() => '[]'));
   const autoStores = JSON.parse(await fs.readFile('data/stores-auto.json', 'utf8').catch(() => '[]'));
+  // 清理自動清單：已經有手動資料的店（避免重複）、非店家的服務、店名殘缺的，全部移除
+  const kwManual = {...sources.coupon_store_keywords};
+  for (const st of manualStores) if (st.id !== 'generic') kwManual[st.id] = [...new Set([...(kwManual[st.id] || []), st.name.replace(/（.*）/, ''), ...(st.alias || []).filter(a => a.length >= 3)])];
+  const skipRe = new RegExp((sources.matcha?.skip_keywords || []).join('|'), 'i');
+  for (let i = autoStores.length - 1; i >= 0; i--) {
+    const a = autoStores[i];
+    const why = matchIds(a.name, kwManual).length ? '已有手動資料' : skipRe.test(a.name) ? '不是實體店家' : badStoreName(a.name) ? '店名殘缺' : '';
+    if (why) { note('info', `移除自動店家「${a.name}」（${why}）`); delete out.coupons[a.id]; autoStores.splice(i, 1); }
+  }
   const kwAll = {...sources.coupon_store_keywords};
   for (const st of [...manualStores, ...autoStores]) {
     if (st.id === 'generic') continue;
@@ -344,7 +361,7 @@ async function main() {
     const ids = matchIds(rawName, kwAll);
     if (ids.length) return ids;
     const name = cleanStoreName(rawName);
-    if (!name || name.length < 2 || name.length > 40) return [];
+    if (badStoreName(name)) { note('info', `店名無法辨識，略過：${rawName}`); return []; }
     const id = slugId(name);
     if (!autoStores.some(x => x.id === id)) {
       autoStores.push({id, name, jp: '', cat: guessCat(name + ' ' + (hint || '')), alias: [name], auto: true, added: today});
@@ -445,7 +462,7 @@ async function main() {
         const url = M.page.replace('{id}', id);
         try {
           const r = parseMatchaCoupon(await getPage(url, `matcha-${id}.html`));
-          if (!r.name || skip.test(r.name)) continue;
+          if (!r.name || skip.test(r.name + ' ' + r.sub)) continue;
           if (r.until && !alive(r.until)) continue;
           const sids = ensureStore(r.name, r.offer);
           sids.forEach(sid => { (got[sid] = got[sid] || []).push({t: r.offer ? `免稅＋${r.offer}` : '免稅＋折扣優惠券（詳見頁面）', d: r.cond ? `使用條件：${r.cond}` : 'MATCHA 優惠券，結帳時出示頁面。', until: r.until, url, source: url}); });
@@ -500,9 +517,13 @@ async function main() {
   // 4a. JCB 信用卡活動：自動比對店家，加到「信用卡專屬活動」
   if (sources.jcb) {
     try {
-      const list = parseJcbList(await getPage(sources.jcb.list, 'jcb.html'));
+      const list = [];
+      for (const u of [].concat(sources.jcb.list)) {
+        try { for (const a of parseJcbList(await getPage(u, 'jcb.html'))) if (!list.some(x => x.url === a.url)) list.push(a); } catch (e) {}
+      }
       if (list.length < 3) throw new Error(`只找到 ${list.length} 個活動`);
-      for (const k of Object.keys(out.coupons)) out.coupons[k] = (out.coupons[k] || []).filter(c => c.dyn !== 'jcb');
+      // 成功時：移除上次的 JCB 資料與備用資料，改用這次讀到的
+      for (const k of Object.keys(out.coupons)) out.coupons[k] = (out.coupons[k] || []).filter(c => c.dyn !== 'jcb' && !c.jcb_fallback);
       let n = 0;
       for (const a of list) {
         const sids = matchIds(a.title, kwAll);
@@ -514,7 +535,7 @@ async function main() {
         n++;
       }
       note('ok', `${sources.jcb.name}：比對到 ${n} 個店家活動`); ok++;
-    } catch (e) { note('error', `${sources.jcb.name} 失敗：${e.message}，沿用前次資料`); }
+    } catch (e) { note('warn', `${sources.jcb.name} 暫時讀不到（${e.message}），改用備用的 JCB 活動資料`); }
   }
 
   // 4b. 檢查 LIVE JAPAN 是否在維修：維修中就在相關優惠券加上提示，恢復後提示自動消失

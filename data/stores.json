@@ -1,5 +1,97 @@
 [
  {
+  "id": "miyageya",
+  "name": "MIYAGEYA 沖繩伴手禮",
+  "jp": "MIYAGEYA",
+  "cat": "other",
+  "alias": [
+   "miyageya",
+   "ミヤゲヤ"
+  ],
+  "region": "okinawa"
+ },
+ {
+  "id": "funasaka",
+  "name": "舩坂酒造店（飛驒高山）",
+  "jp": "舩坂酒造店",
+  "cat": "other",
+  "alias": [
+   "舩坂酒造",
+   "船坂酒造"
+  ],
+  "region": "chubu"
+ },
+ {
+  "id": "daimarufukuoka",
+  "name": "大丸福岡天神店",
+  "jp": "大丸福岡天神店",
+  "cat": "department",
+  "alias": [
+   "大丸福岡天神",
+   "博多大丸",
+   "daimaru fukuoka",
+   "大丸福岡天神店"
+  ],
+  "region": "kyushu"
+ },
+ {
+  "id": "ashibinaa",
+  "name": "沖繩 Outlet Mall Ashibinaa",
+  "jp": "アウトレットモールあしびなー",
+  "cat": "outlet",
+  "alias": [
+   "あしびなー",
+   "ashibinaa",
+   "アウトレットモールあしびなー"
+  ],
+  "region": "okinawa"
+ },
+ {
+  "id": "sinseido",
+  "name": "新生堂藥局",
+  "jp": "新生堂薬局",
+  "cat": "drugstore",
+  "alias": [
+   "新生堂薬局",
+   "新生堂",
+   "sinseido"
+  ],
+  "region": "kyushu"
+ },
+ {
+  "id": "kyorindo",
+  "name": "杏林堂藥局",
+  "jp": "杏林堂薬局",
+  "cat": "drugstore",
+  "alias": [
+   "杏林堂",
+   "kyorindo"
+  ],
+  "region": "chubu"
+ },
+ {
+  "id": "barneys",
+  "name": "BARNEYS NEW YORK",
+  "jp": "バーニーズ ニューヨーク",
+  "cat": "apparel",
+  "alias": [
+   "barneys",
+   "バーニーズ"
+  ],
+  "region": "tokyo"
+ },
+ {
+  "id": "theory",
+  "name": "Theory",
+  "jp": "セオリー",
+  "cat": "apparel",
+  "alias": [
+   "theory",
+   "セオリー"
+  ],
+  "region": "tokyo"
+ },
+ {
   "id": "grandfront",
   "name": "GRAND FRONT 大阪",
   "jp": "グランフロント大阪",
@@ -1112,7 +1204,9 @@
   "alias": [
    "ana duty free",
    "ana免稅",
-   "ANA DUTY FREE SHOP"
+   "ANA DUTY FREE SHOP",
+   "全日空",
+   "ana duty free shop"
   ]
  },
  {
