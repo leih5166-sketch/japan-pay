@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-31T09:14:30.740Z",
- "note": "本次更新 3 項",
+ "updated_at": "2026-10-31T09:19:19.375Z",
+ "note": "部分來源暫時無法更新（1 項），已沿用前次資料",
  "payments": [
   {
    "id": "uniopen",
@@ -1697,6 +1697,50 @@
     "d": "飛驒高山的清酒品酒體驗。",
     "url": "https://chubu.letsgojp.com/archives/803649/",
     "static": true
+   }
+  ],
+  "auto-11hqla4": [
+   {
+    "t": "免稅＋最高17%折扣",
+    "d": "MATCHA 優惠券，結帳時出示頁面。",
+    "until": null,
+    "url": "https://matcha-jp.com/tw/coupon/88",
+    "source": "https://matcha-jp.com/tw/coupon/88"
+   },
+   {
+    "t": "免稅＋最高17%折扣",
+    "d": "MATCHA 優惠券，結帳時出示頁面。",
+    "until": null,
+    "url": "https://matcha-jp.com/tw/coupon/100",
+    "source": "https://matcha-jp.com/tw/coupon/100"
+   },
+   {
+    "t": "免稅＋最高17%折扣",
+    "d": "MATCHA 優惠券，結帳時出示頁面。",
+    "until": null,
+    "url": "https://matcha-jp.com/tw/coupon/105",
+    "source": "https://matcha-jp.com/tw/coupon/105"
+   },
+   {
+    "t": "免稅＋最高17%折扣",
+    "d": "MATCHA 優惠券，結帳時出示頁面。",
+    "until": null,
+    "url": "https://matcha-jp.com/tw/coupon/118",
+    "source": "https://matcha-jp.com/tw/coupon/118"
+   },
+   {
+    "t": "免稅＋最高17%折扣",
+    "d": "MATCHA 優惠券，結帳時出示頁面。",
+    "until": null,
+    "url": "https://matcha-jp.com/tw/coupon/146",
+    "source": "https://matcha-jp.com/tw/coupon/146"
+   },
+   {
+    "t": "免稅＋最高17%折扣",
+    "d": "MATCHA 優惠券，結帳時出示頁面。",
+    "until": null,
+    "url": "https://matcha-jp.com/tw/coupon/147",
+    "source": "https://matcha-jp.com/tw/coupon/147"
    }
   ]
  }
