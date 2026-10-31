@@ -279,13 +279,16 @@ export function parseMatchaCoupon(html) {
   const h1 = (html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [])[1] || '';
   const name = htmlToText(h1.split(/<br\s*\/?>/i)[0]).replace(/\s+/g, ' ').trim();
   const sub = htmlToText(h1.split(/<br\s*\/?>/i).slice(1).join(' ')).replace(/\s+/g, ' ').trim();
+  // 網頁標題，例如「國民藥妝店 KoKuMiN 8% - MATCHA優惠券」→「國民藥妝店 KoKuMiN」
+  const title = htmlToText((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || '')
+    .split(/\s+-\s+MATCHA|｜|\|/)[0].replace(/(MAX\s*)?\d+\s*[%％]\s*(OFF)?\s*$/i, '').replace(/\s+/g, ' ').trim();
   const text = htmlToText(html);
   const offer = (text.match(/(最高\s*\d+\s*[%％]\s*折扣|\d+\s*[%％]\s*折扣|¥\s*[\d,]+\s*(?:OFF|折扣))/i) || [])[1] || '';
   const until = parseDate((text.match(/有效期限\s*([^\n]+)/) || [])[1] || '');
   let cond = (text.match(/使用條件\s*([\s\S]*?)(?:【|##|其他推薦|$)/) || [])[1] || '';
   cond = cond.replace(/[・·]/g, ' ').replace(/\s*\/\s*/g, ' ').replace(/\s+/g, ' ').trim();
   if (cond.length > 120) cond = cond.slice(0, 120) + '…';
-  return {name, sub, offer: offer.replace(/\s+/g, ' '), until, cond};
+  return {name, sub, title, offer: offer.replace(/\s+/g, ' '), until, cond};
 }
 
 // ---------- JCB 精選優惠（信用卡活動列表） ----------
@@ -463,9 +466,12 @@ async function main() {
         const url = M.page.replace('{id}', id);
         try {
           const r = parseMatchaCoupon(await getPage(url, `matcha-${id}.html`));
-          if (!r.name || skip.test(r.name + ' ' + r.sub)) continue;
+          if (!r.name && !r.title) continue;
+          if (skip.test(r.name + ' ' + r.sub + ' ' + r.title)) continue;
           if (r.until && !alive(r.until)) continue;
-          const sids = ensureStore(r.name, r.offer);
+          // 大標題是通用文字（例如「日本免稅店優惠券和遊客專屬折扣」）時，改用網頁標題或副標題當店名
+          const pick = [r.name, r.title, r.sub].find(x => x && (matchIds(x, kwAll).length || !badStoreName(cleanStoreName(x)))) || r.name;
+          const sids = ensureStore(pick, r.offer);
           sids.forEach(sid => { (got[sid] = got[sid] || []).push({t: r.offer ? `免稅＋${r.offer}` : '免稅＋折扣優惠券（詳見頁面）', d: r.cond ? `使用條件：${r.cond}` : 'MATCHA 優惠券，結帳時出示頁面。', until: r.until, url, source: url}); });
           if (sids.length) n++;
           if (!FIXTURE) await new Promise(res => setTimeout(res, 600));
