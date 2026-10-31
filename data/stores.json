@@ -1,5 +1,756 @@
 [
  {
+  "id": "grandfront",
+  "name": "GRAND FRONT 大阪",
+  "jp": "グランフロント大阪",
+  "cat": "mall",
+  "alias": [
+   "グランフロント",
+   "grand front",
+   "グランフロント大阪"
+  ],
+  "region": "kansai"
+ },
+ {
+  "id": "grandgreen",
+  "name": "GRAND GREEN 大阪",
+  "jp": "グラングリーン大阪",
+  "cat": "mall",
+  "alias": [
+   "グラングリーン",
+   "grand green",
+   "グラングリーン大阪"
+  ],
+  "region": "kansai"
+ },
+ {
+  "id": "hankyusanbangai",
+  "name": "阪急三番街",
+  "jp": "阪急三番街",
+  "cat": "mall",
+  "alias": [
+   "阪急三番街",
+   "hankyu sanbangai"
+  ],
+  "region": "kansai"
+ },
+ {
+  "id": "hepfive",
+  "name": "HEP FIVE",
+  "jp": "HEP FIVE",
+  "cat": "mall",
+  "alias": [
+   "hep five",
+   "hepfive",
+   "ヘップファイブ",
+   "HEP FIVE"
+  ],
+  "region": "kansai"
+ },
+ {
+  "id": "diamor",
+  "name": "DIAMOR 大阪",
+  "jp": "ディアモール大阪",
+  "cat": "mall",
+  "alias": [
+   "ディアモール",
+   "diamor",
+   "ディアモール大阪"
+  ],
+  "region": "kansai"
+ },
+ {
+  "id": "umie",
+  "name": "神戶 Harborland umie",
+  "jp": "umie",
+  "cat": "mall",
+  "alias": [
+   "umie",
+   "ウミエ"
+  ],
+  "region": "kansai"
+ },
+ {
+  "id": "kixdutyfree",
+  "name": "KIX DUTY FREE（關西機場）",
+  "jp": "KIX DUTY FREE",
+  "cat": "dutyfree",
+  "alias": [
+   "kix duty free",
+   "関空免税",
+   "關西機場免稅",
+   "KIX DUTY FREE"
+  ],
+  "region": "kansai"
+ },
+ {
+  "id": "akakabe",
+  "name": "赤壁藥妝 AKAKABE",
+  "jp": "ドラッグアカカベ",
+  "cat": "drugstore",
+  "alias": [
+   "アカカベ",
+   "akakabe",
+   "赤壁藥妝",
+   "ドラッグアカカベ"
+  ],
+  "region": "kansai"
+ },
+ {
+  "id": "tanabe",
+  "name": "TANABE SPORTS（滑雪用品）",
+  "jp": "タナベスポーツ",
+  "cat": "sports",
+  "alias": [
+   "タナベスポーツ",
+   "tanabe sports"
+  ],
+  "region": "kansai"
+ },
+ {
+  "id": "sanrio",
+  "name": "三麗鷗 Sanrio",
+  "jp": "サンリオ",
+  "cat": "hobby",
+  "alias": [
+   "sanrio",
+   "サンリオ",
+   "三麗鷗"
+  ]
+ },
+ {
+  "id": "joysound",
+  "name": "JOYSOUND 卡拉 OK",
+  "jp": "ジョイサウンド",
+  "cat": "service",
+  "alias": [
+   "joysound",
+   "ジョイサウンド"
+  ]
+ },
+ {
+  "id": "briefing",
+  "name": "BRIEFING",
+  "jp": "ブリーフィング",
+  "cat": "apparel",
+  "alias": [
+   "briefing",
+   "ブリーフィング"
+  ]
+ },
+ {
+  "id": "allu",
+  "name": "ALLU 中古名牌",
+  "jp": "アリュー",
+  "cat": "apparel",
+  "alias": [
+   "allu",
+   "アリュー"
+  ]
+ },
+ {
+  "id": "matsuyaginza",
+  "name": "松屋銀座",
+  "jp": "松屋銀座",
+  "cat": "department",
+  "alias": [
+   "松屋銀座",
+   "matsuya ginza"
+  ]
+ },
+ {
+  "id": "aeonmall",
+  "name": "AEON Mall 永旺夢樂城",
+  "jp": "イオンモール",
+  "cat": "mall",
+  "alias": [
+   "イオンモール",
+   "aeon mall",
+   "永旺夢樂城",
+   "aeonmall"
+  ]
+ },
+ {
+  "id": "daimaru",
+  "name": "大丸百貨",
+  "jp": "大丸",
+  "cat": "department",
+  "alias": [
+   "大丸",
+   "daimaru",
+   "大丸東京",
+   "大丸心斎橋",
+   "大丸梅田",
+   "大丸京都",
+   "大丸神戸",
+   "大丸札幌",
+   "大丸下関",
+   "大丸百貨",
+   "大丸松坂屋"
+  ]
+ },
+ {
+  "id": "matsuzakaya",
+  "name": "松坂屋",
+  "jp": "松坂屋",
+  "cat": "department",
+  "alias": [
+   "松坂屋",
+   "matsuzakaya"
+  ]
+ },
+ {
+  "id": "seibu",
+  "name": "西武百貨",
+  "jp": "西武",
+  "cat": "department",
+  "alias": [
+   "西武百貨",
+   "西武池袋本店",
+   "西武渋谷",
+   "seibu department",
+   "seibu ikebukuro"
+  ]
+ },
+ {
+  "id": "sogo",
+  "name": "SOGO 百貨",
+  "jp": "そごう",
+  "cat": "department",
+  "alias": [
+   "そごう",
+   "sogo",
+   "崇光"
+  ]
+ },
+ {
+  "id": "kintetsu",
+  "name": "近鐵百貨",
+  "jp": "近鉄百貨店",
+  "cat": "department",
+  "alias": [
+   "近鐵百貨",
+   "近鉄百貨店",
+   "近鉄本店",
+   "kintetsu department",
+   "kintetsu"
+  ]
+ },
+ {
+  "id": "hankyu",
+  "name": "阪急百貨",
+  "jp": "阪急百貨店",
+  "cat": "department",
+  "alias": [
+   "阪急百貨",
+   "阪急百貨店",
+   "阪急うめだ",
+   "博多阪急",
+   "阪急メンズ",
+   "hankyu department",
+   "hankyu"
+  ]
+ },
+ {
+  "id": "hanshin",
+  "name": "阪神百貨",
+  "jp": "阪神百貨店",
+  "cat": "department",
+  "alias": [
+   "阪神百貨",
+   "阪神百貨店",
+   "阪神梅田本店",
+   "hanshin department"
+  ]
+ },
+ {
+  "id": "meitetsu",
+  "name": "名鐵百貨",
+  "jp": "名鉄百貨店",
+  "cat": "department",
+  "alias": [
+   "名鐵百貨",
+   "名鉄百貨店",
+   "meitetsu department"
+  ]
+ },
+ {
+  "id": "premiumoutlets",
+  "name": "Premium Outlets",
+  "jp": "プレミアム・アウトレット",
+  "cat": "outlet",
+  "alias": [
+   "premium outlets",
+   "プレミアム・アウトレット",
+   "プレミアムアウトレット"
+  ]
+ },
+ {
+  "id": "lotte",
+  "name": "樂天免稅店（銀座）",
+  "jp": "ロッテ免税店",
+  "cat": "dutyfree",
+  "alias": [
+   "lotte duty free",
+   "ロッテ免税店",
+   "樂天免稅店",
+   "乐天免税店"
+  ]
+ },
+ {
+  "id": "laox",
+  "name": "LAOX",
+  "jp": "ラオックス",
+  "cat": "dutyfree",
+  "alias": [
+   "laox",
+   "ラオックス",
+   "樂購仕"
+  ]
+ },
+ {
+  "id": "takeya",
+  "name": "多慶屋",
+  "jp": "多慶屋",
+  "cat": "discount",
+  "alias": [
+   "多慶屋",
+   "takeya"
+  ]
+ },
+ {
+  "id": "fasola",
+  "name": "Fa-So-La 成田機場免稅店",
+  "jp": "FaSoLa",
+  "cat": "dutyfree",
+  "alias": [
+   "fasola",
+   "fa-so-la",
+   "FaSoLa"
+  ]
+ },
+ {
+  "id": "jdf",
+  "name": "JAPAN DUTY FREE（成田）",
+  "jp": "JAPAN DUTY FREE",
+  "cat": "dutyfree",
+  "alias": [
+   "japan duty free",
+   "JAPAN DUTY FREE"
+  ]
+ },
+ {
+  "id": "fukuokaairport",
+  "name": "福岡機場免稅店",
+  "jp": "福岡空港 免税店",
+  "cat": "dutyfree",
+  "alias": [
+   "福岡空港免税",
+   "福岡機場免稅",
+   "fukuoka airport duty free",
+   "福岡空港 免税店"
+  ]
+ },
+ {
+  "id": "kokumin",
+  "name": "國民藥妝",
+  "jp": "コクミンドラッグ",
+  "cat": "drugstore",
+  "alias": [
+   "kokumin",
+   "コクミン",
+   "國民藥妝",
+   "コクミンドラッグ"
+  ]
+ },
+ {
+  "id": "welcia",
+  "name": "Welcia",
+  "jp": "ウエルシア",
+  "cat": "drugstore",
+  "alias": [
+   "welcia",
+   "ウエルシア"
+  ]
+ },
+ {
+  "id": "ohga",
+  "name": "大賀藥局",
+  "jp": "大賀薬局",
+  "cat": "drugstore",
+  "alias": [
+   "大賀薬局",
+   "大賀藥局",
+   "ohga"
+  ]
+ },
+ {
+  "id": "tomods",
+  "name": "Tomod's",
+  "jp": "トモズ",
+  "cat": "drugstore",
+  "alias": [
+   "tomod",
+   "トモズ"
+  ]
+ },
+ {
+  "id": "fukutaro",
+  "name": "福太郎藥局",
+  "jp": "くすりの福太郎",
+  "cat": "drugstore",
+  "alias": [
+   "福太郎",
+   "fukutaro",
+   "くすりの福太郎"
+  ]
+ },
+ {
+  "id": "victoria",
+  "name": "Victoria／XEBIO",
+  "jp": "ヴィクトリア",
+  "cat": "sports",
+  "alias": [
+   "victoria",
+   "ヴィクトリア",
+   "xebio",
+   "ゼビオ",
+   "l-breath",
+   "エルブレス",
+   "super sports"
+  ]
+ },
+ {
+  "id": "golfpartner",
+  "name": "Golf Partner",
+  "jp": "ゴルフパートナー",
+  "cat": "sports",
+  "alias": [
+   "golf partner",
+   "ゴルフパートナー"
+  ]
+ },
+ {
+  "id": "nikigolf",
+  "name": "二木高爾夫",
+  "jp": "二木ゴルフ",
+  "cat": "sports",
+  "alias": [
+   "二木ゴルフ",
+   "niki golf",
+   "二木高爾夫"
+  ]
+ },
+ {
+  "id": "snowpeak",
+  "name": "Snow Peak",
+  "jp": "スノーピーク",
+  "cat": "sports",
+  "alias": [
+   "snow peak",
+   "snowpeak",
+   "スノーピーク"
+  ]
+ },
+ {
+  "id": "ysroad",
+  "name": "Y's Road 自行車",
+  "jp": "ワイズロード",
+  "cat": "sports",
+  "alias": [
+   "ys road",
+   "ワイズロード",
+   "y s road"
+  ]
+ },
+ {
+  "id": "aoyama",
+  "name": "洋服の青山",
+  "jp": "洋服の青山",
+  "cat": "apparel",
+  "alias": [
+   "洋服の青山",
+   "aoyama"
+  ]
+ },
+ {
+  "id": "aoki",
+  "name": "AOKI",
+  "jp": "AOKI",
+  "cat": "apparel",
+  "alias": [
+   "aoki",
+   "AOKI"
+  ]
+ },
+ {
+  "id": "orihica",
+  "name": "ORIHICA",
+  "jp": "ORIHICA",
+  "cat": "apparel",
+  "alias": [
+   "orihica",
+   "ORIHICA"
+  ]
+ },
+ {
+  "id": "jins",
+  "name": "JINS",
+  "jp": "JINS",
+  "cat": "eyewear",
+  "alias": [
+   "jins",
+   "JINS"
+  ]
+ },
+ {
+  "id": "parismiki",
+  "name": "Paris Miki",
+  "jp": "パリミキ",
+  "cat": "eyewear",
+  "alias": [
+   "paris miki",
+   "パリミキ"
+  ]
+ },
+ {
+  "id": "jungle",
+  "name": "JUNGLE 玩具",
+  "jp": "ジャングル",
+  "cat": "hobby",
+  "alias": [
+   "jungle akihabara",
+   "ジャングル"
+  ]
+ },
+ {
+  "id": "trial",
+  "name": "TRIAL",
+  "jp": "トライアル",
+  "cat": "supermarket",
+  "alias": [
+   "トライアル",
+   "trial supercenter",
+   "super center trial"
+  ]
+ },
+ {
+  "id": "nakagawa",
+  "name": "中川政七商店",
+  "jp": "中川政七商店",
+  "cat": "lifestyle",
+  "alias": [
+   "中川政七",
+   "nakagawa masashichi",
+   "中川政七商店"
+  ]
+ },
+ {
+  "id": "negishi",
+  "name": "根岸牛舌",
+  "jp": "ねぎし",
+  "cat": "restaurant",
+  "alias": [
+   "ねぎし",
+   "negishi",
+   "根岸牛舌"
+  ]
+ },
+ {
+  "id": "nipponrentacar",
+  "name": "日本租車",
+  "jp": "ニッポンレンタカー",
+  "cat": "service",
+  "alias": [
+   "nippon rent-a-car",
+   "ニッポンレンタカー",
+   "日本租車"
+  ]
+ },
+ {
+  "id": "jrrentacar",
+  "name": "JR 租車",
+  "jp": "駅レンタカー",
+  "cat": "service",
+  "alias": [
+   "駅レンタカー",
+   "jr rent-a-car",
+   "jr租車"
+  ]
+ },
+ {
+  "id": "ninjawifi",
+  "name": "NINJA WiFi",
+  "jp": "NINJA WiFi",
+  "cat": "service",
+  "alias": [
+   "ninja wifi",
+   "ninjawifi",
+   "NINJA WiFi"
+  ]
+ },
+ {
+  "id": "animate",
+  "name": "animate 動漫",
+  "jp": "アニメイト",
+  "cat": "hobby",
+  "alias": [
+   "animate",
+   "アニメイト"
+  ],
+  "nocoupon": "這家店沒有外國旅客專屬優惠券，只能享受免稅 10%。結帳時記得出示護照辦理免稅。"
+ },
+ {
+  "id": "surugaya",
+  "name": "駿河屋",
+  "jp": "駿河屋",
+  "cat": "hobby",
+  "alias": [
+   "駿河屋",
+   "surugaya",
+   "suruga-ya"
+  ],
+  "nocoupon": "這家店沒有外國旅客專屬優惠券，只能享受免稅 10%。結帳時記得出示護照辦理免稅。部分加盟店不提供免稅，結帳前先詢問店員。"
+ },
+ {
+  "id": "mandarake",
+  "name": "Mandarake",
+  "jp": "まんだらけ",
+  "cat": "hobby",
+  "alias": [
+   "まんだらけ",
+   "mandarake"
+  ],
+  "nocoupon": "這家店沒有外國旅客專屬優惠券，只能享受免稅 10%。結帳時記得出示護照辦理免稅。"
+ },
+ {
+  "id": "amiami",
+  "name": "AmiAmi",
+  "jp": "あみあみ",
+  "cat": "hobby",
+  "alias": [
+   "あみあみ",
+   "amiami"
+  ],
+  "nocoupon": "這家店沒有外國旅客專屬優惠券，只能享受免稅 10%。結帳時記得出示護照辦理免稅。"
+ },
+ {
+  "id": "yellowsub",
+  "name": "Yellow Submarine",
+  "jp": "イエローサブマリン",
+  "cat": "hobby",
+  "alias": [
+   "イエローサブマリン",
+   "yellow submarine"
+  ],
+  "nocoupon": "這家店沒有外國旅客專屬優惠券，只能享受免稅 10%。結帳時記得出示護照辦理免稅。"
+ },
+ {
+  "id": "bookoff",
+  "name": "BOOKOFF",
+  "jp": "ブックオフ",
+  "cat": "hobby",
+  "alias": [
+   "ブックオフ",
+   "bookoff",
+   "book off"
+  ],
+  "nocoupon": "這家店沒有外國旅客專屬優惠券，只能享受免稅 10%。結帳時記得出示護照辦理免稅。BOOKOFF 官方 App 會員每月 29 日有 ¥150 折價券，但需註冊日本 App 會員。"
+ },
+ {
+  "id": "loft",
+  "name": "LOFT",
+  "jp": "ロフト",
+  "cat": "lifestyle",
+  "alias": [
+   "loft",
+   "ロフト"
+  ],
+  "nocoupon": "這家店沒有外國旅客專屬優惠券，只能享受免稅 10%。結帳時記得出示護照辦理免稅。網路上流傳的 LOFT 5% 優惠券並非官方。"
+ },
+ {
+  "id": "hands",
+  "name": "Hands",
+  "jp": "ハンズ",
+  "cat": "lifestyle",
+  "alias": [
+   "ハンズ",
+   "tokyu hands",
+   "東急ハンズ",
+   "hands"
+  ],
+  "nocoupon": "這家店沒有外國旅客專屬優惠券，只能享受免稅 10%。結帳時記得出示護照辦理免稅。"
+ },
+ {
+  "id": "nitori",
+  "name": "宜得利",
+  "jp": "ニトリ",
+  "cat": "lifestyle",
+  "alias": [
+   "ニトリ",
+   "nitori",
+   "宜得利"
+  ],
+  "nocoupon": "這家店沒有外國旅客專屬優惠券，只能享受免稅 10%。結帳時記得出示護照辦理免稅。"
+ },
+ {
+  "id": "3coins",
+  "name": "3COINS",
+  "jp": "スリーコインズ",
+  "cat": "lifestyle",
+  "alias": [
+   "3coins",
+   "スリーコインズ"
+  ],
+  "nocoupon": "這家店沒有外國旅客專屬優惠券，只能享受免稅 10%。結帳時記得出示護照辦理免稅。"
+ },
+ {
+  "id": "zoff",
+  "name": "Zoff",
+  "jp": "ゾフ",
+  "cat": "eyewear",
+  "alias": [
+   "zoff",
+   "ゾフ"
+  ]
+ },
+ {
+  "id": "owndays",
+  "name": "OWNDAYS",
+  "jp": "オンデーズ",
+  "cat": "eyewear",
+  "alias": [
+   "owndays",
+   "オンデーズ"
+  ],
+  "nocoupon": "這家店沒有外國旅客專屬優惠券，只能享受免稅 10%。結帳時記得出示護照辦理免稅。"
+ },
+ {
+  "id": "ainz",
+  "name": "AINZ&TULPE",
+  "jp": "アインズ&トルペ",
+  "cat": "beauty",
+  "alias": [
+   "ainz",
+   "アインズ",
+   "アインズ&トルペ"
+  ],
+  "nocoupon": "這家店沒有外國旅客專屬優惠券，只能享受免稅 10%。結帳時記得出示護照辦理免稅。"
+ },
+ {
+  "id": "cosme",
+  "name": "@cosme TOKYO",
+  "jp": "@cosme TOKYO",
+  "cat": "beauty",
+  "alias": [
+   "@cosme",
+   "cosme tokyo",
+   "アットコスメ",
+   "@cosme TOKYO"
+  ],
+  "nocoupon": "這家店沒有外國旅客專屬優惠券，只能享受免稅 10%。結帳時記得出示護照辦理免稅。"
+ },
+ {
   "id": "biccamera",
   "name": "Bic Camera",
   "jp": "ビックカメラ",
@@ -10,7 +761,11 @@
    "ビックカメラ",
    "必酷",
    "kojima",
-   "コジマ"
+   "コジマ",
+   "sofmap",
+   "ソフマップ",
+   "air bic",
+   "エアービック"
   ]
  },
  {
@@ -21,8 +776,10 @@
   "alias": [
    "yodobashi",
    "友都八喜",
-   "淀橋"
-  ]
+   "淀橋",
+   "ヨドバシカメラ"
+  ],
+  "nocoupon": "Yodobashi 沒有外國旅客優惠券，改以約 10% 點數回饋為主。結帳時記得出示護照辦理免稅。"
  },
  {
   "id": "edion",
@@ -31,7 +788,8 @@
   "cat": "electronics",
   "alias": [
    "edion",
-   "愛電王"
+   "愛電王",
+   "エディオン"
   ]
  },
  {
@@ -42,7 +800,8 @@
   "alias": [
    "yamada",
    "山田",
-   "labi"
+   "labi",
+   "ヤマダデンキ"
   ]
  },
  {
@@ -52,7 +811,8 @@
   "cat": "electronics",
   "alias": [
    "joshin",
-   "上新"
+   "上新",
+   "ジョーシン"
   ]
  },
  {
@@ -78,7 +838,8 @@
    "matsumoto",
    "kiyoshi",
    "マツキヨ",
-   "松本清"
+   "松本清",
+   "マツモトキヨシ"
   ]
  },
  {
@@ -89,7 +850,8 @@
   "alias": [
    "daikoku",
    "大國",
-   "大国"
+   "大国",
+   "ダイコクドラッグ"
   ]
  },
  {
@@ -99,7 +861,8 @@
   "cat": "drugstore",
   "alias": [
    "cocokara",
-   "ココカラ"
+   "ココカラ",
+   "ココカラファイン"
   ]
  },
  {
@@ -110,7 +873,8 @@
   "alias": [
    "tsuruha",
    "鶴羽",
-   "ツルハ"
+   "ツルハ",
+   "ツルハドラッグ"
   ]
  },
  {
@@ -184,17 +948,19 @@
   "id": "muji",
   "name": "無印良品",
   "jp": "無印良品",
-  "cat": "apparel",
+  "cat": "lifestyle",
   "alias": [
    "muji",
-   "無印"
-  ]
+   "無印",
+   "無印良品"
+  ],
+  "nocoupon": "這家店沒有外國旅客專屬優惠券，只能享受免稅 10%。結帳時記得出示護照辦理免稅。會員 9 折與免稅只能二選一，旅客選免稅較划算。"
  },
  {
   "id": "montbell",
   "name": "mont-bell",
   "jp": "モンベル",
-  "cat": "apparel",
+  "cat": "sports",
   "alias": [
    "montbell",
    "モンベル"
@@ -204,21 +970,30 @@
   "id": "alpen",
   "name": "Alpen",
   "jp": "アルペン",
-  "cat": "apparel",
+  "cat": "sports",
   "alias": [
    "alpen",
-   "アルペン"
+   "アルペン",
+   "alpen golf",
+   "アルペンゴルフ",
+   "alpen tokyo"
   ]
  },
  {
   "id": "mitsuioutlet",
-  "name": "三井 Outlet Park",
+  "name": "三井 Outlet・LaLaport",
   "jp": "三井アウトレットパーク",
   "cat": "outlet",
   "alias": [
    "mitsui outlet",
    "三井アウトレット",
-   "三井outlet"
+   "三井outlet",
+   "ららぽーと",
+   "lalaport",
+   "diver city",
+   "ダイバーシティ",
+   "三井ショッピングパーク",
+   "三井アウトレットパーク"
   ]
  },
  {
@@ -231,7 +1006,8 @@
    "711",
    "seven",
    "セブン",
-   "小七"
+   "小七",
+   "セブン-イレブン"
   ],
   "smartnews": true
  },
@@ -302,7 +1078,8 @@
   "cat": "department",
   "alias": [
    "東武百貨店",
-   "tobu department"
+   "tobu department",
+   "東武百貨店 池袋"
   ]
  },
  {
@@ -312,7 +1089,8 @@
   "cat": "department",
   "alias": [
    "京王百貨店",
-   "keio department"
+   "keio department",
+   "京王百貨店 新宿"
   ]
  },
  {
@@ -322,17 +1100,19 @@
   "cat": "department",
   "alias": [
    "小田急百貨店",
-   "odakyu department"
+   "odakyu department",
+   "小田急百貨店 新宿"
   ]
  },
  {
   "id": "anaduty",
-  "name": "ANA 機場免稅店（成田／羽田）",
+  "name": "ANA 機場免稅店（成田・羽田）",
   "jp": "ANA DUTY FREE SHOP",
   "cat": "dutyfree",
   "alias": [
    "ana duty free",
-   "ana免稅"
+   "ana免稅",
+   "ANA DUTY FREE SHOP"
   ]
  },
  {
@@ -343,7 +1123,8 @@
   "alias": [
    "disney",
    "迪士尼",
-   "ディズニー"
+   "ディズニー",
+   "東京ディズニーリゾート"
   ]
  },
  {
@@ -355,7 +1136,8 @@
    "usj",
    "universal",
    "環球影城",
-   "ユニバ"
+   "ユニバ",
+   "ユニバーサル・スタジオ・ジャパン"
   ]
  },
  {
@@ -365,7 +1147,8 @@
   "cat": "themepark",
   "alias": [
    "huis ten bosch",
-   "豪斯登堡"
+   "豪斯登堡",
+   "ハウステンボス"
   ]
  },
  {
@@ -375,7 +1158,8 @@
   "cat": "themepark",
   "alias": [
    "harry potter",
-   "哈利波特"
+   "哈利波特",
+   "ワーナー ブラザース スタジオツアー東京"
   ]
  },
  {
@@ -385,7 +1169,8 @@
   "cat": "themepark",
   "alias": [
    "lego",
-   "樂高"
+   "樂高",
+   "レゴランド"
   ]
  },
  {
@@ -490,7 +1275,8 @@
   "cat": "restaurant",
   "alias": [
    "今半",
-   "imahan"
+   "imahan",
+   "人形町今半"
   ]
  },
  {
@@ -501,7 +1287,8 @@
   "alias": [
    "doutor",
    "羅多倫",
-   "ドトール"
+   "ドトール",
+   "ドトールコーヒー"
   ]
  },
  {
@@ -510,7 +1297,8 @@
   "jp": "シェイク シャック",
   "cat": "restaurant",
   "alias": [
-   "shake shack"
+   "shake shack",
+   "シェイク シャック"
   ]
  },
  {
@@ -524,7 +1312,8 @@
    "icoca",
    "西瓜卡",
    "交通卡",
-   "儲值"
+   "儲值",
+   "交通系ICカード チャージ"
   ]
  },
  {
@@ -584,7 +1373,8 @@
    "kfc",
    "kentucky",
    "ケンタッキー",
-   "肯德基"
+   "肯德基",
+   "ケンタッキーフライドチキン"
   ],
   "smartnews": true
  },

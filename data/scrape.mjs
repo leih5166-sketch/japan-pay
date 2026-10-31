@@ -151,14 +151,14 @@ export function parseCouponSections(html, keywords) {
     const end = chunk.indexOf('】');
     if (end < 0 || end > 80) continue;
     const title = htmlToText(chunk.slice(0, end)).trim();
-    const id = Object.keys(keywords).find(k => keywords[k].some(w => title.toLowerCase().includes(w.toLowerCase())));
-    if (!id) continue;
+    const ids = matchIds(title, keywords);
+    if (!ids.length) continue;
     // 只取到這家店段落的結尾（分隔線或下一個標題）為止
     const body = chunk.slice(end + 1).split(/<hr|<h[1-4][\s>]/i)[0];
     const text = htmlToText(body);
     const periodLine = (text.match(/活動期間[：:]?\s*([^\n■]*)/) || [])[1] || '';
     const until = /無期限/.test(periodLine) ? null : parseDate(periodLine);
-    out[id] = out[id] || [];           // 來源有這家店：即使已到期也記錄，讓舊資料被清掉
+    ids.forEach(id => { out[id] = out[id] || []; });   // 來源有這家店：即使已到期也記錄，讓舊資料被清掉
     if (until && !alive(until)) continue;
     let detail = (text.match(/優惠內容[^：:]*[：:]\s*([\s\S]*?)(?:■|>>|\* \* \*|$)/) || [])[1] || '';
     detail = detail.replace(/<[^>]*$/, '').replace(/\s*\/\s*/g, ' ').replace(/\s+/g, ' ').replace(/\\/g, '').trim();
@@ -182,7 +182,56 @@ export function parseCouponSections(html, keywords) {
     if (how.length > 120) how = how.slice(0, 120) + '…';
     // 用句號串接，網站不用修改就能正常顯示
     const d = (rest && how && !/[。！!]$/.test(rest) ? rest + '。' : rest) + (how ? `使用方式：${how}` : '');
-    out[id].push({t, d, until, url, source: null, ...(embedded ? {embedded} : {})});
+    ids.forEach(id => out[id].push({t, d, until, url, source: null, ...(embedded ? {embedded} : {})}));
+  }
+  return out;
+}
+
+// 依關鍵字找出標題對應的所有店家（例如「SEIBU SOGO」同時對應西武與 SOGO）
+export function matchIds(text, keywords) {
+  const t = String(text || '').toLowerCase();
+  return Object.keys(keywords).filter(k => (keywords[k] || []).some(w => w && t.includes(w.toLowerCase())));
+}
+
+// ---------- TAXFREESHOPS.JP（官方合作優惠券，每家店一頁） ----------
+export function discoverTieups(html) {
+  return [...new Set([...html.matchAll(/\/tieup\/(\d{1,3})(?![\w])/g)].map(m => +m[1]))].sort((a, b) => a - b);
+}
+export function parseTieup(html, keywords) {
+  const title = htmlToText((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || '');
+  const name = title.split('|')[0].replace(/優惠券|減稅免費店|TAXFREESHOPS\.JP/gi, '').trim();
+  const h1 = (html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i) || [])[1] || '';
+  const h1text = htmlToText(h1).replace(/\s+/g, ' ').trim();
+  const alt = ((h1.match(/alt="([^"]+)"/) || [])[1] || '').trim();
+  // 優惠文字：優先用 h1 後面第一行含 % 的短句，其次 h1 文字或圖片說明
+  const afterLines = htmlToText(html.split(/<\/h1>/i)[1] || '').split('\n').map(x => x.replace(/\s+/g, ' ').trim());
+  const after = afterLines.find(x => /[%％]/.test(x) && x.length <= 40);
+  // 從一段文字中挑出含有百分比的那一句，例如「…優惠券。免稅10% + 高達 5% 折扣。」→「免稅10% + 高達 5% 折扣」
+  const pickPct = x => (x.split(/[。！!]|\s\/\s/).map(y => y.trim()).find(y => /[%％]/.test(y) && y.length <= 40) || '');
+  let offer = after || pickPct(h1text) || pickPct(alt);
+  offer = offer.replace(/^[#\s]+/, '').trim();
+  const ids = matchIds(name, keywords);
+  return {name, ids: ids.length ? ids : matchIds(h1text + ' ' + alt, keywords),
+    coupon: {t: offer || '免稅＋折扣優惠券（詳見頁面）', d: '官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。', until: null}};
+}
+
+// ---------- FlyAsia（一張表格列出所有優惠券） ----------
+export function parseFlyasia(html, keywords) {
+  const out = {};
+  for (const row of html.split(/<tr[\s>]/i).slice(1)) {
+    const cells = [...row.matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi)].map(m => m[1]);
+    if (cells.length < 4) continue;
+    const name = htmlToText(cells[0]).replace(/\s+/g, ' ').trim();
+    const disc = htmlToText(cells[1]).replace(/\s+/g, ' ').trim();
+    if (!/[%％]|折|JPY|¥|円/i.test(disc)) continue;
+    const until = parseDate(htmlToText(cells[2]));
+    const href = (cells.slice(3).join(' ').match(/href="([^"]+)"/) || [])[1];
+    const ids = matchIds(name, keywords);
+    for (const id of ids) {
+      out[id] = out[id] || [];
+      if (until && !alive(until)) continue;
+      out[id].push({t: disc, d: `適用：${name}`, until, url: href && /^https?:/.test(href) ? href.replace(/&amp;/g, '&') : null, source: null});
+    }
   }
   return out;
 }
@@ -239,31 +288,79 @@ async function main() {
     } catch (e) { note('error', `${src.name} 失敗：${e.message}，刷卡資料沿用舊值`); }
   }
 
-  // 2. 優惠券
+  // 2. 優惠券：三個來源，依優先順序合併（官方 > 卡優 > FlyAsia）
+  const kw = sources.coupon_store_keywords;
+  const fallback = sources.coupon_url_fallback || {};
+  const results = {};   // 來源名稱 → {店家id: [優惠券]}
+  const finish = (srcKey, srcUrl, got) => {
+    for (const [id, list] of Object.entries(got)) list.forEach((c, i) => {
+      c.source = c.source || srcUrl;
+      if (c.embedded) { c.url = saveEmbedded(id, i, c.embedded); delete c.embedded; }
+      if (!c.url && fallback[id]) c.url = fallback[id];
+      if (!c.url) note('warn', `${id} 找不到優惠券連結`);
+    });
+    results[srcKey] = got;
+  };
+
+  // 2a. TAXFREESHOPS.JP
+  if (sources.taxfreeshops) {
+    const T = sources.taxfreeshops;
+    try {
+      const first = await getPage(T.start, 'tfs-2.html');
+      const ids = discoverTieups(first);
+      if (ids.length < 5) throw new Error(`只找到 ${ids.length} 個合作店家，可能網頁改版`);
+      const got = {}; let pages = 0;
+      for (const n of ids) {
+        const url = T.page.replace('{id}', n);
+        try {
+          const html = n === 2 ? first : await getPage(url, `tfs-${n}.html`);
+          const r = parseTieup(html, kw);
+          if (!r.ids.length) { note('info', `TAXFREESHOPS 第 ${n} 頁（${r.name || '未知'}）不在店家清單中，略過`); continue; }
+          r.ids.forEach(id => { (got[id] = got[id] || []).push({...r.coupon, url, source: url}); });
+          pages++;
+          if (!FIXTURE) await new Promise(res => setTimeout(res, 800));   // 放慢速度，避免造成對方負擔
+        } catch (e) { note('warn', `TAXFREESHOPS 第 ${n} 頁讀取失敗：${e.message}`); }
+      }
+      if (pages < 5) throw new Error(`只解析到 ${pages} 頁`);
+      finish('taxfreeshops', T.start, got);
+      note('ok', `${T.name}：解析 ${pages} 家合作店的優惠券`); ok++;
+    } catch (e) { note('error', `${T.name} 失敗：${e.message}`); }
+  }
+
+  // 2b. 卡優新聞網
   for (const src of sources.coupons) {
     try {
       const html = await getPage(src.url, 'coupons.html');
-      const got = parseCouponSections(html, sources.coupon_store_keywords);
+      const got = parseCouponSections(html, kw);
+      delete got.donki;   // 唐吉訶德的整理文章資料較舊，改用官方來源
       const n = Object.values(got).filter(l => l.length).length;
       if (n < 5) throw new Error(`只解析到 ${n} 家店，可能網頁改版`);
-      const fallback = sources.coupon_url_fallback || {};
-      for (const [id, list] of Object.entries(got)) {
-        if (id === 'donki') continue;   // 唐吉訶德改由下方官方合作頁或備用資料處理
-        list.forEach((c, i) => {
-          c.source = src.url;
-          if (c.embedded) {                       // 還原嵌入的優惠券圖片並存檔
-            c.url = saveEmbedded(id, i, c.embedded);
-            delete c.embedded;
-          }
-          if (!c.url && fallback[id]) c.url = fallback[id];
-          if (!c.url) note('warn', `${id} 找不到優惠券連結`);
-        });
-        if (JSON.stringify(out.coupons[id]?.map(c => [c.t, c.until])) !== JSON.stringify(list.map(c => [c.t, c.until]))) note('change', `${id} 優惠券已更新`);
-        out.coupons[id] = list;
-      }
-      note('ok', `${src.name}：解析 ${n} 家店的優惠券`);
-      ok++; break;
-    } catch (e) { note('error', `${src.name} 失敗：${e.message}，優惠券沿用舊值`); }
+      finish('cardu', src.url, got);
+      note('ok', `${src.name}：解析 ${n} 家店的優惠券`); ok++; break;
+    } catch (e) { note('error', `${src.name} 失敗：${e.message}`); }
+  }
+
+  // 2c. FlyAsia
+  for (const src of (sources.flyasia || [])) {
+    try {
+      const got = parseFlyasia(await getPage(src.url, 'flyasia.html'), kw);
+      const n = Object.values(got).filter(l => l.length).length;
+      if (n < 5) throw new Error(`只解析到 ${n} 家店，可能網頁改版`);
+      finish('flyasia', src.url, got);
+      note('ok', `${src.name}：解析 ${n} 家店的優惠券`); ok++; break;
+    } catch (e) { note('error', `${src.name} 失敗：${e.message}`); }
+  }
+
+  // 2d. 合併：每家店採用優先順序最高、且有有效優惠券的來源
+  const PRIORITY = ['taxfreeshops', 'cardu', 'flyasia'];
+  const seen = new Set(PRIORITY.flatMap(k => Object.keys(results[k] || {})));
+  for (const id of seen) {
+    let chosen = null;
+    for (const k of PRIORITY) { const l = results[k]?.[id]; if (l && l.length) { chosen = l; break; } }
+    if (!chosen) chosen = [];   // 來源有列出這家店，但優惠券都已到期
+    const before = JSON.stringify((out.coupons[id] || []).filter(c => !c.static).map(c => [c.t, c.until]));
+    if (before !== JSON.stringify(chosen.map(c => [c.t, c.until]))) note('change', `${id} 優惠券已更新`);
+    out.coupons[id] = chosen;
   }
 
   // 3. 唐吉訶德官方頁（比整理文章更準）
@@ -279,12 +376,20 @@ async function main() {
     } catch (e) { note('warn', `${src.name} 暫時無法連線（${e.message}）`); }
   }
   if (!donkiOk) {
-    const prevFromOfficial = (prev.coupons?.donki || []).some(c => (c.source || '').includes('livejapan'));
+    const prevFromOfficial = (out.coupons?.donki || []).some(c => /livejapan|taxfreeshops/.test(c.source || ''));
     if (prevFromOfficial) note('info', '唐吉訶德沿用前次從官方頁取得的優惠券');
     else if (sources.donki_fallback) { out.coupons.donki = sources.donki_fallback; note('info', '唐吉訶德使用 sources.json 中的備用資料'); }
   }
 
-  // 4. 清掉已到期的項目
+  // 4. 常設優惠與信用卡專屬優惠（sources.json 的 static_coupons），每次重新套用
+  for (const k of Object.keys(out.coupons)) out.coupons[k] = (out.coupons[k] || []).filter(c => !c.static);
+  for (const [id, list] of Object.entries(sources.static_coupons || {})) {
+    const cur = out.coupons[id] || [];
+    for (const c of list) if (!cur.some(x => x.t === c.t)) cur.push({until: null, source: null, ...c, static: true});
+    out.coupons[id] = cur;
+  }
+
+  // 5. 清掉已到期的項目
   for (const k of Object.keys(out.coupons)) out.coupons[k] = (out.coupons[k] || []).filter(c => alive(c.until));
   out.promos = (out.promos || []).filter(p => alive(p.until));
 

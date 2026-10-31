@@ -21,7 +21,9 @@
   "biccamera": [
    "BIC CAMERA",
    "Bic Camera",
-   "ビックカメラ"
+   "BicCamera",
+   "ビックカメラ",
+   "必酷"
   ],
   "tsuruha": [
    "TSURUHA",
@@ -38,45 +40,163 @@
   ],
   "yamada": [
    "YAMADA",
-   "山田電機"
+   "山田電機",
+   "Yamada"
   ],
   "anaduty": [
+   "ANA Duty Free",
    "ANA免稅",
    "ANA 免稅"
   ],
   "donki": [
    "唐吉訶德",
-   "唐吉軻德"
+   "唐吉軻德",
+   "Donki",
+   "Don Quijote",
+   "ドン・キホーテ"
   ],
   "sapporodrug": [
    "札幌藥妝",
-   "札榥藥妝"
+   "札榥藥妝",
+   "Satudora",
+   "SATUDORA"
   ],
   "daikoku": [
    "大國藥妝"
   ],
   "sundrug": [
    "Sundrug",
-   "SUNDRUG"
+   "SUNDRUG",
+   "尚都樂客"
   ],
   "matsukiyo": [
-   "松本清"
+   "松本清",
+   "Matsumoto"
   ],
   "keio": [
+   "Keio",
+   "KEIO",
    "京王百貨"
   ],
   "tobu": [
+   "TOBU",
    "東武百貨"
   ],
   "joshin": [
+   "Joshin",
    "上新電機"
   ],
   "cocokara": [
-   "cocokara",
-   "ココカラ"
+   "Cocokara",
+   "COCOKARA",
+   "cocokara"
   ],
   "sugi": [
-   "杉藥局"
+   "杉藥局",
+   "SUGI 藥局",
+   "SUGI藥局"
+  ],
+  "kokumin": [
+   "KoKuMiN",
+   "KOKUMIN",
+   "Kokumin",
+   "國民藥妝"
+  ],
+  "ohga": [
+   "OHGA",
+   "大賀藥局"
+  ],
+  "welcia": [
+   "welcia",
+   "Welcia",
+   "WELCIA",
+   "ウエルシア"
+  ],
+  "seibu": [
+   "SEIBU",
+   "西武"
+  ],
+  "sogo": [
+   "SOGO",
+   "そごう"
+  ],
+  "kintetsu": [
+   "Kintesu",
+   "Kintetsu",
+   "KINTETSU",
+   "近鐵百貨"
+  ],
+  "daimaru": [
+   "Daimaru",
+   "DAIMARU",
+   "大丸"
+  ],
+  "matsuzakaya": [
+   "松坂屋",
+   "Matsuzakaya",
+   "DAIMARU",
+   "Daimaru"
+  ],
+  "laox": [
+   "LAOX",
+   "Laox"
+  ],
+  "lotte": [
+   "LOTTE",
+   "樂天免稅店"
+  ],
+  "fasola": [
+   "Fa-So-La",
+   "FaSoLa"
+  ],
+  "jdf": [
+   "JAPAN DUTY FREE",
+   "Japan Duty Free"
+  ],
+  "victoria": [
+   "Victoria",
+   "VICTORIA"
+  ],
+  "aoyama": [
+   "洋服の青山",
+   "AOYAMA"
+  ],
+  "jungle": [
+   "JUNGLE"
+  ],
+  "snowpeak": [
+   "Snow Peak",
+   "snow peak",
+   "Snowpeak"
+  ],
+  "parismiki": [
+   "Paris Miki"
+  ],
+  "alpen": [
+   "Alpen"
+  ],
+  "golfpartner": [
+   "Golf Partner",
+   "GolfPartner",
+   "GOLF PARTNER"
+  ],
+  "ysroad": [
+   "Y's Road",
+   "Ys Road",
+   "Y’s Road"
+  ],
+  "trial": [
+   "TRIAL"
+  ],
+  "jins": [
+   "JINS"
+  ],
+  "jrrentacar": [
+   "JR rent",
+   "JRrentacar",
+   "駅レンタカー",
+   "JR 租車",
+   "JR租車"
   ]
  },
  "donki_fallback": [
@@ -90,7 +210,7 @@
  ],
  "coupon_url_fallback": {
   "biccamera": "https://s.beurlife.com/bic",
-  "tsuruha": "https://s.beurlife.com/tsu",
+  "tsuruha": "https://livejapan.com/public/operation/coupon/tsuruhadrug/zh-tw.html",
   "edion": "https://s.beurlife.com/edion",
   "yamada": "https://s.beurlife.com/yamada",
   "joshin": "https://s.beurlife.com/joshin",
@@ -103,6 +223,334 @@
   "odakyu": "https://www.beurlife.com/wp-content/uploads/2026/10/odakyu_coupon_beurlife_2028Mar.png",
   "anaduty": "https://www.beurlife.com/wp-content/uploads/2026/03/ANA_Duty_free_shop_NRT-2027Mar.jpg",
   "sapporodrug": "https://global-satudora.com/zh-tw/blogs/promotion/%E6%97%A5%E6%9C%AC%E6%9C%AD%E5%B9%8C%E8%97%A5%E5%A6%9D%E5%85%8D%E7%A8%85%E5%84%AA%E6%83%A0%E5%88%B8%E4%BE%86%E5%95%A6",
-  "sundrug": "https://imgcloud.cardu.com.tw/201910/20260322/Cardu_69bff1b6c5359.png"
+  "sundrug": "https://livejapan.com/public/operation/coupon/sundrug/zh-tw.html",
+  "laox": "https://livejapan.com/public/operation/coupon/laox/zh-tw.html",
+  "lotte": "https://livejapan.com/public/operation/coupon/lotte/zh-tw.html",
+  "jdf": "https://livejapan.com/public/operation/coupon/japandutyfree/zh-tw.html",
+  "kokumin": "https://matcha-jp.com/tw/coupon/123"
+ },
+ "taxfreeshops": {
+  "name": "TAXFREESHOPS.JP（官方合作優惠券）",
+  "start": "https://www.taxfreeshops.jp/zhtw/tieup/2",
+  "page": "https://www.taxfreeshops.jp/zhtw/tieup/{id}"
+ },
+ "flyasia": [
+  {
+   "name": "FlyAsia：日本優惠券懶人包",
+   "url": "https://www.flyasia.co/2026/japan-coupon/"
+  }
+ ],
+ "static_coupons": {
+  "mitsuioutlet": [
+   {
+    "t": "外國旅客優惠券冊：最高 10% OFF＋贈品",
+    "d": "使用方式：至外國旅客服務中心出示護照，掃描 QR Code 領取優惠券冊。全日本 22 家三井 Outlet、LaLaport 適用。",
+    "url": "https://livejapan.com/public/operation/coupon/mitsui/en.html",
+    "btn": "查看領取方式"
+   },
+   {
+    "t": "【刷 JCB 卡】最高 20% 事後現金回饋",
+    "d": "Now on JAPAN 活動，需刷 JCB 卡並依活動頁登錄。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/mitsuioutlet/93838/"
+   }
+  ],
+  "premiumoutlets": [
+   {
+    "t": "外國旅客電子優惠券：最高 10% OFF",
+    "d": "使用方式：在 KKday 免費預訂後，到各 Premium Outlets 服務中心出示，換取優惠券 QR Code。御殿場、臨空、佐野、酒酒井等 10 家適用。",
+    "url": "https://www.kkday.com/en-us/product/583193",
+    "btn": "查看領取方式"
+   }
+  ],
+  "aeonmall": [
+   {
+    "t": "外國旅客專屬：¥500 折價券或贈品（擇一）",
+    "d": "另有各館店家優惠券，從頁面選擇你要去的 AEON Mall。",
+    "url": "https://tw.aeonmall.global/coupons"
+   }
+  ],
+  "hankyu": [
+   {
+    "t": "外國旅客 5% 來賓優惠券",
+    "d": "使用方式：出示護照至海外顧客櫃台、服務中心或免稅櫃台領取，發行日起 7 天內可無限次使用。未稅 ¥1,000 以下商品、特價品、餐廳等除外。",
+    "url": "https://livejapan.com/public/operation/coupon/hankyuhanshindepartmentstore/zh-tw.html",
+    "btn": "查看優惠"
+   },
+   {
+    "t": "【玉山世界卡】博多阪急 7% 優惠",
+    "d": "需事前預約，出示玉山世界卡＋護照。",
+    "until": "2026-12-31",
+    "url": "https://event.esunbank.com.tw/credit/travel/jp_koa.html"
+   }
+  ],
+  "hanshin": [
+   {
+    "t": "外國旅客 5% 來賓優惠券",
+    "d": "使用方式：出示護照至服務台領取，與阪急百貨同一優惠。",
+    "url": "https://livejapan.com/public/operation/coupon/hankyuhanshindepartmentstore/zh-tw.html",
+    "btn": "查看優惠"
+   }
+  ],
+  "takashimaya": [
+   {
+    "t": "外國旅客優待卡：約 5% OFF",
+    "d": "單筆未稅 ¥3,000 起適用，鐘錶、珠寶、名牌等除外。",
+    "url": "https://www.takashimaya.co.jp/store/special/shopperscard/index_en.html",
+    "btn": "查看優待卡"
+   }
+  ],
+  "mitsukoshi": [
+   {
+    "t": "MITSUKOSHI ISETAN JAPAN 外國旅客 App",
+    "d": "下載三越伊勢丹官方外國旅客 App 享優惠，部分商品不適用。",
+    "url": "https://cp.mistore.jp/content/cpmistore/global/zh_hant/app.html",
+    "btn": "查看 App"
+   },
+   {
+    "t": "【刷 JCB 卡】最高 20% 事後現金回饋",
+    "d": "Now on JAPAN 活動，需刷 JCB 卡並依活動頁登錄。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/mitsukoshiisetan/93855/"
+   }
+  ],
+  "matsuyaginza": [
+   {
+    "t": "【刷 JCB 卡】95 折",
+    "d": "出示活動頁優惠券並刷 JCB 卡。食品、特價品、餐廳、部分品牌（如 LV）除外。",
+    "until": "2027-03-31",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/matsuya/84149"
+   }
+  ],
+  "kintetsu": [
+   {
+    "t": "GUEST COUPON 5% OFF",
+    "d": "結帳及辦理免稅時出示此優惠券。",
+    "url": "https://livejapan.com/public/operation/coupon/kintetsudepartmentstore/zh-tw.html"
+   }
+  ],
+  "odakyu": [
+   {
+    "t": "小田急百貨 6% 優惠券",
+    "d": "含稅滿 ¥1,000 起，食品、特價品、餐廳及咖啡廳除外。",
+    "url": "https://livejapan.com/zh-tw/in-tokyo/in-pref-tokyo/in-shinjuku/spot-lj0115826/coupon/?c=333628"
+   }
+  ],
+  "takeya": [
+   {
+    "t": "免稅＋最高再 7% OFF",
+    "d": "LIVE JAPAN 官方優惠券。",
+    "url": "https://livejapan.com/public/operation/coupon/takeya/en.html"
+   },
+   {
+    "t": "【刷 JCB 卡】9 折",
+    "d": "使用海外發行 JCB 卡單筆滿 ¥5,000，優惠上限 ¥10,000。",
+    "until": "2027-04-30",
+    "url": "https://www.cardu.com.tw/travel/detail.php?40490"
+   }
+  ],
+  "lotte": [
+   {
+    "t": "滿 ¥10,000 折 ¥1,000、滿 ¥20,000 折 ¥2,000",
+    "d": "LIVE JAPAN 官方優惠券，結帳時出示優惠券、電子機票與護照。",
+    "url": "https://livejapan.com/public/operation/coupon/lotte/en.html"
+   }
+  ],
+  "snowpeak": [
+   {
+    "t": "免稅＋最高再 7% OFF",
+    "d": "LIVE JAPAN 官方優惠券，全日本 15 家店適用（含木更津、臨空 Outlet）。",
+    "url": "https://livejapan.com/public/operation/coupon/snowpeak/en.html"
+   }
+  ],
+  "aoki": [
+   {
+    "t": "外國旅客優惠券",
+    "d": "LIVE JAPAN 官方優惠券。",
+    "url": "https://livejapan.com/public/operation/coupon/aoki/en.html"
+   }
+  ],
+  "orihica": [
+   {
+    "t": "外國旅客優惠券",
+    "d": "LIVE JAPAN 官方優惠券。",
+    "url": "https://livejapan.com/public/operation/coupon/orihica/en.html"
+   }
+  ],
+  "nipponrentacar": [
+   {
+    "t": "租車 9 折（6 天以上 85 折）",
+    "d": "LIVE JAPAN 官方優惠券。",
+    "url": "https://livejapan.com/public/operation/coupon/nipponrentacar/zh-tw.html"
+   }
+  ],
+  "ninjawifi": [
+   {
+    "t": "NINJA WiFi 優惠",
+    "d": "LIVE JAPAN 官方優惠券。",
+    "url": "https://livejapan.com/public/operation/coupon/ninjawifi/zh-tw.html"
+   }
+  ],
+  "nakagawa": [
+   {
+    "t": "最高 15% OFF",
+    "d": "在 MATCHA 優惠券頁面中找到「中川政七商店」。",
+    "url": "https://matcha-jp.com/tw/coupon"
+   }
+  ],
+  "tomods": [
+   {
+    "t": "免稅＋最高再 8% OFF",
+    "d": "MATCHA 優惠券。",
+    "url": "https://matcha-jp.com/tw/coupon/148"
+   }
+  ],
+  "fukutaro": [
+   {
+    "t": "滿 ¥10,000 折 3%、¥30,000 折 5%、¥50,000 折 8%",
+    "d": "MATCHA 優惠券。",
+    "url": "https://matcha-jp.com/tw/coupon/143"
+   }
+  ],
+  "nikigolf": [
+   {
+    "t": "免稅後再 9 折",
+    "d": "上野阿美橫本店及全日本免稅分店適用。",
+    "url": "https://reurl.cc/G5AjNv"
+   }
+  ],
+  "negishi": [
+   {
+    "t": "一組客人贈送一盤迷你牛舌",
+    "d": "出示優惠券畫面即可，全日本根岸牛舌適用。",
+    "until": "2027-04-30",
+    "url": "https://reurl.cc/LWrWOa"
+   }
+  ],
+  "fukuokaairport": [
+   {
+    "t": "【刷玉山卡】不限金額再 5% OFF",
+    "d": "結帳前出示專屬優惠券並刷玉山信用卡。",
+    "until": "2027-03-31",
+    "url": "https://www.esunbank.com/zh-tw/personal/credit-card/discount/shopInfo?sno=3125"
+   }
+  ],
+  "biccamera": [
+   {
+    "t": "【玉山 Mastercard】單筆滿 ¥30,000 送 ¥2,000",
+    "d": "需先註冊與啟用玉山指定 Mastercard 專屬優惠。",
+    "until": "2026-12-31",
+    "url": "https://event.esunbank.com.tw/credit/travel/jp_koa.html"
+   }
+  ],
+  "usj": [
+   {
+    "t": "【刷 JCB 卡】最高 20% 事後現金回饋",
+    "d": "Now on JAPAN 活動，需刷 JCB 卡並依活動頁登錄。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/usj/93849/"
+   }
+  ],
+  "grandfront": [
+   {
+    "t": "梅田 7 大商城通用：含稅滿 ¥5,000 折 ¥500",
+    "d": "使用方式：先填寫線上問卷，再到 GRAND FRONT 大阪服務台、阪急三番街或 HEP FIVE 免稅櫃台出示畫面與護照，領取紙本優惠券。每人每天限領 1 次，每日數量有限。",
+    "url": "https://umeda-sc.jp/zh-hant/coupons",
+    "btn": "查看領取方式"
+   }
+  ],
+  "grandgreen": [
+   {
+    "t": "梅田 7 大商城通用：含稅滿 ¥5,000 折 ¥500",
+    "d": "使用方式：先填寫線上問卷，再到 GRAND FRONT 大阪服務台、阪急三番街或 HEP FIVE 免稅櫃台出示畫面與護照，領取紙本優惠券。每人每天限領 1 次，每日數量有限。",
+    "url": "https://umeda-sc.jp/zh-hant/coupons",
+    "btn": "查看領取方式"
+   }
+  ],
+  "hankyusanbangai": [
+   {
+    "t": "梅田 7 大商城通用：含稅滿 ¥5,000 折 ¥500",
+    "d": "使用方式：先填寫線上問卷，再到 GRAND FRONT 大阪服務台、阪急三番街或 HEP FIVE 免稅櫃台出示畫面與護照，領取紙本優惠券。每人每天限領 1 次，每日數量有限。",
+    "url": "https://umeda-sc.jp/zh-hant/coupons",
+    "btn": "查看領取方式"
+   }
+  ],
+  "hepfive": [
+   {
+    "t": "梅田 7 大商城通用：含稅滿 ¥5,000 折 ¥500",
+    "d": "使用方式：先填寫線上問卷，再到 GRAND FRONT 大阪服務台、阪急三番街或 HEP FIVE 免稅櫃台出示畫面與護照，領取紙本優惠券。每人每天限領 1 次，每日數量有限。",
+    "url": "https://umeda-sc.jp/zh-hant/coupons",
+    "btn": "查看領取方式"
+   }
+  ],
+  "diamor": [
+   {
+    "t": "梅田 7 大商城通用：含稅滿 ¥5,000 折 ¥500",
+    "d": "使用方式：先填寫線上問卷，再到 GRAND FRONT 大阪服務台、阪急三番街或 HEP FIVE 免稅櫃台出示畫面與護照，領取紙本優惠券。每人每天限領 1 次，每日數量有限。",
+    "url": "https://umeda-sc.jp/zh-hant/coupons",
+    "btn": "查看領取方式"
+   }
+  ],
+  "umie": [
+   {
+    "t": "外國旅客專屬：¥500 折價券或贈品（擇一）",
+    "d": "AEON Mall 集團的外國旅客優惠，到服務台出示護照領取。",
+    "url": "https://tw.umie.global/coupons?couponid=22&mall=mall53",
+    "btn": "查看領取方式"
+   }
+  ],
+  "kixdutyfree": [
+   {
+    "t": "線上預訂再享 3% 折扣券",
+    "d": "新會員限定：出發前 25 天至出發當天在官網預訂免稅品，出境後到專用櫃台取貨，不用排隊。",
+    "url": "https://www.kixdutyfree.jp/tw/promo-sale-allproduct-newcustomer.html"
+   }
+  ],
+  "akakabe": [
+   {
+    "t": "滿 ¥10,000 免稅再 3% OFF 起",
+    "d": "滿 ¥10,000 再 3% OFF、滿 ¥30,000 再 5% OFF。大阪心齋橋、道頓堀一帶分店最多。",
+    "url": "https://reurl.cc/jyoO9L"
+   }
+  ],
+  "tanabe": [
+   {
+    "t": "免稅 10%＋5% OFF",
+    "d": "滑雪用具專門店，關西地區。",
+    "url": "https://www.bubu-jp.com/archives/39713"
+   }
+  ],
+  "sanrio": [
+   {
+    "t": "外國旅客專屬折扣",
+    "d": "步步日本整理的 Sanrio 外國旅客優惠。",
+    "url": "https://www.bubu-jp.com/archives/36015"
+   }
+  ],
+  "joysound": [
+   {
+    "t": "外國旅客優惠",
+    "d": "步步日本整理的 JOYSOUND 外國旅客優惠。",
+    "url": "https://www.bubu-jp.com/archives/45733"
+   }
+  ],
+  "briefing": [
+   {
+    "t": "免稅 10%＋再 10% OFF",
+    "d": "日本軍事風包包品牌。",
+    "url": "https://ksk.tw/briefing/"
+   }
+  ],
+  "allu": [
+   {
+    "t": "免稅＋¥10,000 折扣",
+    "d": "中古名牌店。",
+    "url": "https://ksk.tw/allu-jp-coupon/"
+   }
+  ],
+  "zoff": [
+   {
+    "t": "外國旅客購物優惠",
+    "d": "步步日本整理的 Zoff 外國旅客優惠。",
+    "url": "https://www.bubu-jp.com/archives/45382"
+   }
+  ]
  }
 }
