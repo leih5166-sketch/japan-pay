@@ -1,4 +1,4 @@
-// 版本：2026-10-31 v4（MATCHA 店名診斷）
+// 版本：2026-10-31 v5（MATCHA 店名：排除網站名稱、改用列表頁）
 // 免費爬蟲：每天抓取固定的比較網頁，用規則擷取優惠券與刷卡回饋，更新 data/data.json
 // 不需要任何 API 金鑰。只有在確定解析成功時才覆蓋數值；解析失敗就保留舊資料，並寫入紀錄。
 // 執行：node scripts/scrape.mjs        測試：node scripts/scrape.mjs --fixture 資料夾
@@ -273,6 +273,16 @@ export function badStoreName(n) {
 }
 
 // ---------- MATCHA 優惠券（列表頁＋每張券一頁） ----------
+// 列表頁每張卡片的文字片段（卡片上通常會寫店名），依優惠券編號整理
+export function parseMatchaListNames(html) {
+  const out = {};
+  for (const m of html.matchAll(/<a[^>]+href="[^"]*\/tw\/coupon\/(\d{1,4})"[^>]*>([\s\S]*?)<\/a>/gi)) {
+    const segs = m[2].split(/<[^>]+>/).map(x => x.replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim())
+      .filter(x => x.length >= 2 && x.length <= 30 && !/優惠|折扣|折價|OFF|[%％]|免稅|coupon/i.test(x));
+    (out[m[1]] = out[m[1]] || []).push(...segs);
+  }
+  return out;
+}
 export function discoverMatcha(html) {
   return [...new Set([...html.matchAll(/\/tw\/coupon\/(\d{1,4})(?![\w])/g)].map(m => +m[1]))].sort((a, b) => a - b);
 }
@@ -469,7 +479,9 @@ async function main() {
   if (sources.matcha) {
     const M = sources.matcha;
     try {
-      const ids = discoverMatcha(await getPage(M.list, 'matcha-list.html'));
+      const listHtml = await getPage(M.list, 'matcha-list.html');
+      const ids = discoverMatcha(listHtml);
+      const listNames = parseMatchaListNames(listHtml);
       if (ids.length < 10) throw new Error(`只找到 ${ids.length} 張優惠券，可能網頁改版`);
       const skip = new RegExp(M.skip_keywords.join('|'), 'i');
       const got = {}; let n = 0;
@@ -481,8 +493,10 @@ async function main() {
           if (skip.test(r.name + ' ' + r.sub + ' ' + r.title)) continue;
           if (r.until && !alive(r.until)) continue;
           // 大標題是通用文字（例如「日本免稅店優惠券和遊客專屬折扣」）時，改用網頁標題或副標題當店名
-          const pick = [r.name, r.title, r.og, r.tw, r.ld, r.sub].find(x => x && (matchIds(x, kwAll).length || !badStoreName(cleanStoreName(x))));
-          if (!pick) { note('info', `MATCHA 第 ${id} 張找不到店名（爬蟲讀到：${r.debug}）`); continue; }
+          const isSite = x => /^matcha|matcha優惠券|日本觀光媒體/i.test(String(x || '').trim());
+          const cands = [r.name, r.title, r.og, r.tw, ...(listNames[id] || []), r.ld, r.sub].filter(x => x && !isSite(x));
+          const pick = cands.find(x => matchIds(x, kwAll).length || !badStoreName(cleanStoreName(x)));
+          if (!pick) { note('info', `MATCHA 第 ${id} 張找不到店名（爬蟲讀到：${r.debug}｜列表=${(listNames[id] || []).join('/')}）`.slice(0, 220)); continue; }
           const sids = ensureStore(pick, r.offer);
           sids.forEach(sid => { (got[sid] = got[sid] || []).push({t: r.offer ? `免稅＋${r.offer}` : '免稅＋折扣優惠券（詳見頁面）', d: r.cond ? `使用條件：${r.cond}` : 'MATCHA 優惠券，結帳時出示頁面。', until: r.until, url, source: url}); });
           if (sids.length) n++;
