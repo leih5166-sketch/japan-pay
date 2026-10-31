@@ -389,6 +389,19 @@ async function main() {
     out.coupons[id] = cur;
   }
 
+  // 4b. 檢查 LIVE JAPAN 是否在維修：維修中就在相關優惠券加上提示，恢復後提示自動消失
+  const LJ_NOTE = '（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）';
+  let ljDown = false;
+  try {
+    const html = await getPage('https://livejapan.com/public/operation/coupon/top/zh-tw.html', 'livejapan-top.html');
+    ljDown = /down for maintenance|メンテナンス/i.test(html);
+  } catch (e) { ljDown = true; }
+  for (const list of Object.values(out.coupons)) for (const c of list || []) {
+    c.d = (c.d || '').replace(LJ_NOTE, '');
+    if (ljDown && /livejapan\.com/.test(c.url || '')) c.d += LJ_NOTE;
+  }
+  note(ljDown ? 'warn' : 'ok', ljDown ? 'LIVE JAPAN 維修中或無法連線，相關優惠券已加上提示' : 'LIVE JAPAN 正常');
+
   // 5. 清掉已到期的項目
   for (const k of Object.keys(out.coupons)) out.coupons[k] = (out.coupons[k] || []).filter(c => alive(c.until));
   out.promos = (out.promos || []).filter(p => alive(p.until));
