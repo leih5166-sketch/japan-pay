@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-31T09:19:19.375Z",
- "note": "部分來源暫時無法更新（1 項），已沿用前次資料",
+ "updated_at": "2026-10-31T21:22:41.135Z",
+ "note": "本次更新 3 項",
  "payments": [
   {
    "id": "uniopen",
@@ -698,13 +698,6 @@
   ],
   "joshin": [
    {
-    "t": "模型／玩具 8% 折扣",
-    "d": "大阪、京都上新電機適用。",
-    "until": "2026-10-31",
-    "url": "https://s.beurlife.com/joshin",
-    "source": null
-   },
-   {
     "t": "【刷 JCB 卡】在上新電機（Joshin）刷JCB卡可享5%折扣！",
     "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
     "until": null,
@@ -899,18 +892,6 @@
     "d": "結帳及辦理免稅時出示此優惠券。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/kintetsudepartmentstore/zh-tw.html",
     "static": true
-   },
-   {
-    "t": "【刷 JCB 卡】快來近鐵百貨阿倍野海闊天空總店領取VIP休息室預約卡",
-    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
-    "until": null,
-    "url": "https://www.specialoffers.jcb/zh-tw/campaign/detail/kintetsu_lounge/95525/",
-    "source": [
-     "https://www.specialoffers.jcb/zh-tw/",
-     "https://www.specialoffers.jcb/zh-tw/campaign/"
-    ],
-    "dyn": "jcb",
-    "kind": "card"
    }
   ],
   "victoria": [
@@ -1038,18 +1019,6 @@
     "url": "https://www.starlux-airlines.com/flights/zh-tw/mitsui-outlet",
     "btn": "查看兌換方式",
     "static": true
-   },
-   {
-    "t": "【刷 JCB 卡】在MITSUI OUTLET PARK・LaLaport刷JCB享最高20%事後現金回饋",
-    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
-    "until": null,
-    "url": "https://www.specialoffers.jcb/zh-tw/campaign/detail/mitsuioutlet/93838/",
-    "source": [
-     "https://www.specialoffers.jcb/zh-tw/",
-     "https://www.specialoffers.jcb/zh-tw/campaign/"
-    ],
-    "dyn": "jcb",
-    "kind": "card"
    }
   ],
   "premiumoutlets": [
@@ -1697,50 +1666,6 @@
     "d": "飛驒高山的清酒品酒體驗。",
     "url": "https://chubu.letsgojp.com/archives/803649/",
     "static": true
-   }
-  ],
-  "auto-11hqla4": [
-   {
-    "t": "免稅＋最高17%折扣",
-    "d": "MATCHA 優惠券，結帳時出示頁面。",
-    "until": null,
-    "url": "https://matcha-jp.com/tw/coupon/88",
-    "source": "https://matcha-jp.com/tw/coupon/88"
-   },
-   {
-    "t": "免稅＋最高17%折扣",
-    "d": "MATCHA 優惠券，結帳時出示頁面。",
-    "until": null,
-    "url": "https://matcha-jp.com/tw/coupon/100",
-    "source": "https://matcha-jp.com/tw/coupon/100"
-   },
-   {
-    "t": "免稅＋最高17%折扣",
-    "d": "MATCHA 優惠券，結帳時出示頁面。",
-    "until": null,
-    "url": "https://matcha-jp.com/tw/coupon/105",
-    "source": "https://matcha-jp.com/tw/coupon/105"
-   },
-   {
-    "t": "免稅＋最高17%折扣",
-    "d": "MATCHA 優惠券，結帳時出示頁面。",
-    "until": null,
-    "url": "https://matcha-jp.com/tw/coupon/118",
-    "source": "https://matcha-jp.com/tw/coupon/118"
-   },
-   {
-    "t": "免稅＋最高17%折扣",
-    "d": "MATCHA 優惠券，結帳時出示頁面。",
-    "until": null,
-    "url": "https://matcha-jp.com/tw/coupon/146",
-    "source": "https://matcha-jp.com/tw/coupon/146"
-   },
-   {
-    "t": "免稅＋最高17%折扣",
-    "d": "MATCHA 優惠券，結帳時出示頁面。",
-    "until": null,
-    "url": "https://matcha-jp.com/tw/coupon/147",
-    "source": "https://matcha-jp.com/tw/coupon/147"
    }
   ]
  }
