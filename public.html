@@ -152,6 +152,18 @@ section.block h2{font-size:17px;font-weight:900;margin:0 0 8px}
 .coupon a.offer-btn{background:transparent;color:var(--pay);border:1.5px solid var(--pay)}
 .sub-h{font-size:15px!important;margin:16px 0 2px!important}
 .sub-note{font-size:12px;color:var(--muted);margin:0 0 8px}
+.cp-acts{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.cp-acts a,.cp-acts .cp-open{margin-top:0!important}
+.coupon .cp-open{font:inherit;font-weight:700;font-size:14px;border:0;cursor:pointer;background:var(--gold);color:var(--gold-ink);padding:6px 12px;border-radius:8px}
+.cp-acts .src{margin:0!important;font-size:12px;color:var(--muted);text-decoration:underline;background:none!important;padding:0!important}
+.viewer{position:fixed;inset:0;z-index:50;background:#000;color:#fff;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.viewer-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;font-size:15px}
+.viewer-bar .btn-s{background:#fff;color:#000;border:0}
+.viewer-body{flex:1;overflow:auto;display:flex;align-items:center;justify-content:center;background:#fff}
+.viewer-body img{max-width:100%;max-height:100%;object-fit:contain}
+.viewer-body p{color:#333;padding:20px;text-align:center}
+.viewer-foot{padding:10px 14px;text-align:center;font-size:13px;line-height:1.6}
+.viewer-foot a{color:#9fc1ff}
 [hidden]{display:none!important}
 @media (prefers-reduced-motion: no-preference){
   .sign{animation:drop .35s ease-out}
@@ -190,6 +202,12 @@ section.block h2{font-size:17px;font-weight:900;margin:0 0 8px}
   </div>
 
   <div id="result" hidden></div>
+
+  <div id="viewer" class="viewer" hidden role="dialog" aria-modal="true" aria-label="優惠券">
+    <div class="viewer-bar"><strong id="vTitle"></strong><button type="button" id="vClose" class="btn-s">關閉</button></div>
+    <div class="viewer-body"><img id="vImg" alt="優惠券" referrerpolicy="no-referrer"><p id="vErr" hidden>優惠券圖片暫時無法顯示，請點下方來源連結查看。</p></div>
+    <div class="viewer-foot">結帳前出示此畫面給店員<br><a id="vSrc" target="_blank" rel="noopener"></a></div>
+  </div>
 
   <div class="foot">
     <p id="freshness">資料載入中…</p>
@@ -400,6 +418,22 @@ function renderHotpepper() {
   const more = $('#hpMore'); if (more) more.onclick = () => { more.disabled = true; more.textContent = '載入中…'; loadHotpepper(hpState.lat, hpState.lon, hpState.next); };
 }
 
+
+// ---------- 全螢幕顯示優惠券 ----------
+function openCoupon(img, src, title){
+  const v = $('#viewer'), im = $('#vImg');
+  $('#vTitle').textContent = title || '優惠券';
+  $('#vErr').hidden = true; im.hidden = false;
+  im.onerror = () => { im.hidden = true; $('#vErr').hidden = false; };
+  im.src = img;
+  const a = $('#vSrc');
+  if (src) { a.href = src; a.textContent = '來源：' + srcName(src) + '（查看原始頁面）'; a.hidden = false; } else a.hidden = true;
+  v.hidden = false; document.body.style.overflow = 'hidden';
+}
+function closeCoupon(){ $('#viewer').hidden = true; document.body.style.overflow = ''; $('#vImg').src = ''; }
+$('#vClose').onclick = closeCoupon;
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#viewer').hidden) closeCoupon(); });
+
 // ---------- 排名計算 ----------
 let current = null, currentMeta = null, noPayPay = false, showAll = false;
 function optionsFor(store, amountTWD, fx){
@@ -432,10 +466,20 @@ function capLine(o){
   if (o.base && o.usable.some(b => b.cap)) parts.push('超過上限後仍有 ' + fmtPct(o.base) + '%');
   return parts.join('；');
 }
+const SRC_NAMES = [
+  [/taxfreeshops\.jp/, 'TAXFREESHOPS.JP（官方）'], [/matcha-jp\.com/, 'MATCHA'], [/livejapan\.com/, 'LIVE JAPAN'],
+  [/cardu\.com\.tw/, '卡優新聞網'], [/bubu-jp\.com/, '步步日本'], [/ksk\.tw/, 'KSK 日本旅遊'], [/linshibi\.com|reurl\.cc/, '林氏璧日本旅遊'],
+  [/letsgojp\.com/, '樂吃購！日本'], [/flyasia\.co/, 'FlyAsia'], [/beurlife\.com/, '這就是人生'], [/specialoffers\.jcb/, 'JCB 官方'],
+  [/hotpepper\.jp/, 'Hot Pepper'], [/esunbank/, '玉山銀行'], [/taishinbank/, '台新銀行'], [/cathay-cube|cathaybk/, '國泰世華'],
+  [/kkday\.com/, 'KKday'], [/github\.io/, '本站整理'], [/apple\.com|google\.com/, 'App 商店']
+];
+function srcName(u){ const h = hostOf(u); const f = SRC_NAMES.find(([re]) => re.test(u || '')); return f ? f[1] : h; }
 function srcHtml(u){
   const s = safeUrl(u); if (!s) return '';
-  return '<a class="src" href="'+esc(s)+'" target="_blank" rel="noopener">來源：'+esc(hostOf(s))+'</a>';
+  return '<a class="src" href="'+esc(s)+'" target="_blank" rel="noopener">來源：'+esc(srcName(s))+'</a>';
 }
+const isImageUrl = u => /\.(jpe?g|png|webp|gif)(\?|$)/i.test(u || '') || /imgcloud\.cardu|\/wp-content\/uploads\/|\/data\/coupons\//i.test(u || '');
+
 
 // ---------- 畫面 ----------
 function amountTWD(){
@@ -474,7 +518,12 @@ function render(){
   if (coupons.length){
     coupons.forEach(c => {
       const u = safeUrl(c.url);
-      h += '<div class="coupon"><h3>'+esc(c.t)+'</h3>'+(c.d?'<p>'+esc(c.d)+'</p>':'')+(c.btn ? '' : '<p class="meta">'+(c.until ? '有效至 '+fmtDate(c.until) : '未標示期限')+'</p>')+(u?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(c.btn||'打開優惠券')+'</a>':'')+srcHtml(c.source)+'</div>';
+      const srcU = safeUrl(c.source) || u;
+      let btn = '';
+      if (u && isImageUrl(u)) btn = '<button type="button" class="cp-open" data-img="'+esc(u)+'" data-src="'+esc(srcU || '')+'" data-t="'+esc(c.t)+'">打開優惠券</button>';
+      else if (u && c.direct === false) btn = '<a href="'+esc(u)+'" target="_blank" rel="noopener">查看優惠券（在來源文章中）</a>';
+      else if (u) btn = '<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(c.btn||'打開優惠券')+'</a>';
+      h += '<div class="coupon"><h3>'+esc(c.t)+'</h3>'+(c.d?'<p>'+esc(c.d)+'</p>':'')+(c.btn ? '' : '<p class="meta">'+(c.until ? '有效至 '+fmtDate(c.until) : '未標示期限')+'</p>')+'<div class="cp-acts">'+btn+srcHtml(srcU)+'</div></div>';
     });
   } else {
     h += '<div class="empty">' + (store.nocoupon ? esc(store.nocoupon) : '目前沒有找到這家店給外國旅客的優惠券。可以問店員「クーポンはありますか？」') + '</div>';
@@ -515,6 +564,7 @@ function render(){
   }
   h += '</section>';
   el.innerHTML = h;
+  el.querySelectorAll('.cp-open').forEach(b => b.onclick = () => openCoupon(b.dataset.img, b.dataset.src, b.dataset.t));
   const mb = $('#moreBtn'); if (mb) mb.onclick = () => { showAll = true; render(); };
   const np = $('#noPP'); if (np) np.onchange = e => { noPayPay = e.target.checked; render(); };
 }
