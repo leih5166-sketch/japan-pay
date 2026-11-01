@@ -424,18 +424,10 @@
   "nikigolf": [
    {
     "t": "免稅後再 9 折",
-    "d": "上野阿美橫本店及全日本免稅分店適用。",
+    "d": "上野阿美橫本店及全日本免稅分店適用。（優惠券存放在林氏璧的雲端硬碟，點開即可出示）",
     "url": "https://reurl.cc/G5AjNv",
-    "source": "https://reurl.cc/G5AjNv"
-   }
-  ],
-  "negishi": [
-   {
-    "t": "一組客人贈送一盤迷你牛舌",
-    "d": "出示優惠券畫面即可，全日本根岸牛舌適用。",
-    "until": "2027-04-30",
-    "url": "https://reurl.cc/LWrWOa",
-    "source": "https://reurl.cc/LWrWOa"
+    "source": "https://reurl.cc/G5AjNv",
+    "link_is_coupon": true
    }
   ],
   "fukuokaairport": [
@@ -512,9 +504,10 @@
   "akakabe": [
    {
     "t": "滿 ¥10,000 免稅再 3% OFF 起",
-    "d": "滿 ¥10,000 再 3% OFF、滿 ¥30,000 再 5% OFF。大阪心齋橋、道頓堀一帶分店最多。",
+    "d": "滿 ¥10,000 再 3% OFF、滿 ¥30,000 再 5% OFF。大阪心齋橋、道頓堀一帶分店最多。（優惠券存放在林氏璧的雲端硬碟，點開即可出示）",
     "url": "https://reurl.cc/jyoO9L",
-    "source": "https://reurl.cc/jyoO9L"
+    "source": "https://reurl.cc/jyoO9L",
+    "link_is_coupon": true
    }
   ],
   "tanabe": [
@@ -539,14 +532,6 @@
     "d": "步步日本整理的 JOYSOUND 外國旅客優惠。",
     "url": "https://www.bubu-jp.com/archives/45733",
     "source": "https://www.bubu-jp.com/archives/45733"
-   }
-  ],
-  "briefing": [
-   {
-    "t": "免稅 10%＋再 10% OFF",
-    "d": "日本軍事風包包品牌。",
-    "url": "https://ksk.tw/briefing/",
-    "source": "https://ksk.tw/briefing/"
    }
   ],
   "allu": [
@@ -633,8 +618,9 @@
     "t": "出示文章領取紙本優惠券",
     "d": "沖繩唯一的 Outlet，距那霸機場約 15 分鐘。到服務台出示文章即可領取。",
     "url": "https://linshibi.com/?p=42399",
-    "btn": "查看領取方式",
-    "source": "https://linshibi.com/?p=42399"
+    "btn": "打開文章（出示給店員）",
+    "source": "https://linshibi.com/?p=42399",
+    "link_is_coupon": true
    }
   ],
   "sinseido": [

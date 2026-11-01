@@ -1,4 +1,4 @@
-// 版本：2026-11-01 v8（優惠券圖片診斷）
+// 版本：2026-11-01 v9（短網址優惠券、縮圖修正）
 // 免費爬蟲：每天抓取固定的比較網頁，用規則擷取優惠券與刷卡回饋，更新 data/data.json
 // 不需要任何 API 金鑰。只有在確定解析成功時才覆蓋數值；解析失敗就保留舊資料，並寫入紀錄。
 // 執行：node scripts/scrape.mjs        測試：node scripts/scrape.mjs --fixture 資料夾
@@ -354,11 +354,20 @@ export function extractCouponFromArticle(html) {
     if (/coupon|クーポン|優惠券|折價券|折扣券|barcode|_cp|cp_|tax.?free/i.test(src + ' ' + alt)) score += 5;
     if (head && head.coupon) score += 3;
     if (/logo|icon|avatar|gravatar|emoji|share|facebook|threads|line\.me|[\/_\-.]ads?[_\-\/.]|banner_ad|profile/i.test(src.replace(/\/wp-content\/uploads\//i, '/'))) score -= 10;
-    if (/-\d{2,3}x\d{2,3}\.(jpe?g|png|webp)/i.test(src)) score -= 1;   // 縮圖
+    src = src.replace(/-\d{2,4}x\d{2,4}(?=\.(jpe?g|png|webp|gif)(\?|$))/i, '');   // WordPress 縮圖 → 原尺寸圖片
     cands.push({src: src.replace(/&amp;/g, '&'), score, i: m.index});
   }
   cands.sort((a, b) => b.score - a.score || a.i - b.i);
-  const best = cands.find(c => c.score >= 3);
+  let best = cands.find(c => c.score >= 3);
+  // 短網址的轉址頁：網頁標題、分享圖片或自動轉址的目標，本身就是優惠券圖片
+  if (!best) {
+    const imgRe = /https?:\/\/[^\s"'<>]+\.(?:jpe?g|png|webp|gif)(?:\?[^\s"'<>]*)?/i;
+    const title = ((html.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [])[1] || '').trim();
+    const og = (html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)/i) || [])[1] || '';
+    const refresh = (html.match(/http-equiv=["']refresh["'][^>]+url=([^"'>\s]+)/i) || [])[1] || '';
+    const hit = [title, refresh, og].map(x => (x.match(imgRe) || [])[0]).find(Boolean);
+    if (hit && html.length < 20000) best = {src: hit.replace(/&amp;/g, '&')};
+  }
   const text = htmlToText(body);
   const exp = text.match(/(有效期限|有效期至|有效期間|使用期限|活動期間|期限)[^0-9\n]{0,20}(?:即日起\s*[~～\-至]\s*)?(20\d\d\s*[年\/.\-]\s*\d{1,2}\s*[月\/.\-]\s*\d{1,2})/);
   return {image: best ? best.src : null, until: exp ? parseDate(exp[2]) : null};
@@ -620,7 +629,7 @@ async function main() {
   for (const [sid, list] of Object.entries(out.coupons)) {
     for (const c of [...(list || [])]) {
       const art = c.source && BLOG_HOSTS.test(c.source) ? c.source : (BLOG_HOSTS.test(c.url || '') ? c.url : null);
-      if (!art || c.kind === 'card') continue;
+      if (!art || c.kind === 'card' || c.link_is_coupon) continue;   // 連結本身就是優惠券（例如雲端硬碟圖片、出示文章）
       c.source = art;
       try {
         if (!articleCache[art]) {
