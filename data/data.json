@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-01T04:07:16.030Z",
+ "updated_at": "2026-11-01T04:45:08.876Z",
  "note": "本次更新 2 項",
  "payments": [
   {
@@ -1249,21 +1249,23 @@
   "nikigolf": [
    {
     "until": null,
-    "source": null,
+    "source": "https://reurl.cc/G5AjNv",
     "t": "免稅後再 9 折",
     "d": "上野阿美橫本店及全日本免稅分店適用。",
     "url": "https://reurl.cc/G5AjNv",
-    "static": true
+    "static": true,
+    "direct": false
    }
   ],
   "negishi": [
    {
     "until": "2027-04-30",
-    "source": null,
+    "source": "https://reurl.cc/LWrWOa",
     "t": "一組客人贈送一盤迷你牛舌",
     "d": "出示優惠券畫面即可，全日本根岸牛舌適用。",
     "url": "https://reurl.cc/LWrWOa",
-    "static": true
+    "static": true,
+    "direct": false
    }
   ],
   "fukuokaairport": [
@@ -1356,11 +1358,12 @@
   "akakabe": [
    {
     "until": null,
-    "source": null,
+    "source": "https://reurl.cc/jyoO9L",
     "t": "滿 ¥10,000 免稅再 3% OFF 起",
     "d": "滿 ¥10,000 再 3% OFF、滿 ¥30,000 再 5% OFF。大阪心齋橋、道頓堀一帶分店最多。",
     "url": "https://reurl.cc/jyoO9L",
-    "static": true
+    "static": true,
+    "direct": false
    }
   ],
   "tanabe": [
@@ -1372,32 +1375,35 @@
     "source": "https://matcha-jp.com/tw/coupon/109"
    },
    {
-    "until": null,
-    "source": null,
+    "until": "2027-05-31",
+    "source": "https://www.bubu-jp.com/archives/39713",
     "t": "免稅 10%＋5% OFF",
     "d": "滑雪用具專門店，關西地區。",
-    "url": "https://www.bubu-jp.com/archives/39713",
-    "static": true
+    "url": "https://www.bubu-jp.com/wp-content/uploads/2025/05/37bddc78235f2bbf68476ced4bdc450a.jpeg",
+    "static": true,
+    "direct": true
    }
   ],
   "sanrio": [
    {
     "until": null,
-    "source": null,
+    "source": "https://www.bubu-jp.com/archives/36015",
     "t": "外國旅客專屬折扣",
     "d": "步步日本整理的 Sanrio 外國旅客優惠。",
-    "url": "https://www.bubu-jp.com/archives/36015",
-    "static": true
+    "url": "https://www.bubu-jp.com/wp-content/uploads/2025/03/IMG_7528.jpg",
+    "static": true,
+    "direct": true
    }
   ],
   "joysound": [
    {
     "until": null,
-    "source": null,
+    "source": "https://www.bubu-jp.com/archives/45733",
     "t": "外國旅客優惠",
     "d": "步步日本整理的 JOYSOUND 外國旅客優惠。",
-    "url": "https://www.bubu-jp.com/archives/45733",
-    "static": true
+    "url": "https://www.bubu-jp.com/wp-content/uploads/2025/08/JOYSOUND9.jpeg",
+    "static": true,
+    "direct": true
    }
   ],
   "briefing": [
@@ -1410,31 +1416,34 @@
    },
    {
     "until": null,
-    "source": null,
+    "source": "https://ksk.tw/briefing/",
     "t": "免稅 10%＋再 10% OFF",
     "d": "日本軍事風包包品牌。",
     "url": "https://ksk.tw/briefing/",
-    "static": true
+    "static": true,
+    "direct": false
    }
   ],
   "allu": [
    {
     "until": null,
-    "source": null,
+    "source": "https://ksk.tw/allu-jp-coupon/",
     "t": "免稅＋¥10,000 折扣",
     "d": "中古名牌店。",
     "url": "https://ksk.tw/allu-jp-coupon/",
-    "static": true
+    "static": true,
+    "direct": false
    }
   ],
   "zoff": [
    {
     "until": null,
-    "source": null,
+    "source": "https://www.bubu-jp.com/archives/45382",
     "t": "外國旅客購物優惠",
     "d": "步步日本整理的 Zoff 外國旅客優惠。",
-    "url": "https://www.bubu-jp.com/archives/45382",
-    "static": true
+    "url": "https://www.bubu-jp.com/wp-content/uploads/2026/10/202610_coupon_banner_TW_1023___.jpg",
+    "static": true,
+    "direct": true
    }
   ],
   "jdf": [
@@ -1450,21 +1459,23 @@
   "aoyama": [
    {
     "until": "2027-06-30",
-    "source": null,
+    "source": "https://go.flyasia.co/aoyama/blog",
     "t": "最高 20% OFF",
     "d": "FlyAsia 整理的洋服の青山優惠券。",
     "url": "https://go.flyasia.co/aoyama/blog",
-    "static": true
+    "static": true,
+    "direct": false
    }
   ],
   "jungle": [
    {
     "until": "2026-12-31",
-    "source": null,
+    "source": "https://go.flyasia.co/jungle/blog",
     "t": "最高 15% OFF",
     "d": "秋葉原等地的 JUNGLE 玩具、模型店。",
     "url": "https://go.flyasia.co/jungle/blog",
-    "static": true
+    "static": true,
+    "direct": false
    }
   ],
   "parismiki": [
@@ -1477,21 +1488,23 @@
    },
    {
     "until": "2026-12-31",
-    "source": null,
+    "source": "https://go.flyasia.co/parismiki/blog",
     "t": "再 3% OFF",
     "d": "FlyAsia 整理的 Paris Miki 眼鏡優惠券。",
     "url": "https://go.flyasia.co/parismiki/blog",
-    "static": true
+    "static": true,
+    "direct": false
    }
   ],
   "ohga": [
    {
     "until": "2028-12-31",
-    "source": null,
+    "source": "https://go.flyasia.co/ohga-pharmacy/blog",
     "t": "免稅＋折 ¥500",
     "d": "九州（福岡天神等）的大賀藥局。",
     "url": "https://go.flyasia.co/ohga-pharmacy/blog",
-    "static": true
+    "static": true,
+    "direct": false
    }
   ],
   "auto-1d7adb7": [
@@ -1564,14 +1577,6 @@
     "until": "2027-08-31",
     "url": "https://matcha-jp.com/tw/coupon/110",
     "source": "https://matcha-jp.com/tw/coupon/110"
-   },
-   {
-    "until": null,
-    "source": null,
-    "t": "外國旅客專屬折扣",
-    "d": "步步日本整理的 Theory 外國旅客優惠。",
-    "url": "https://www.bubu-jp.com/archives/40248",
-    "static": true
    }
   ],
   "kyorindo": [
@@ -1584,11 +1589,12 @@
    },
    {
     "until": null,
-    "source": null,
+    "source": "https://ksk.tw/kyorindo-coupon/",
     "t": "外國旅客免稅優惠券",
     "d": "靜岡地區的杏林堂藥局。",
     "url": "https://ksk.tw/kyorindo-coupon/",
-    "static": true
+    "static": true,
+    "direct": false
    }
   ],
   "daimarufukuoka": [
@@ -1620,52 +1626,47 @@
   "ashibinaa": [
    {
     "until": null,
-    "source": null,
+    "source": "https://linshibi.com/?p=42399",
     "t": "出示文章領取紙本優惠券",
     "d": "沖繩唯一的 Outlet，距那霸機場約 15 分鐘。到服務台出示文章即可領取。",
     "url": "https://linshibi.com/?p=42399",
     "btn": "查看領取方式",
-    "static": true
+    "static": true,
+    "direct": false
    }
   ],
   "sinseido": [
    {
     "until": null,
-    "source": null,
+    "source": "https://ksk.tw/sinseido-drug/",
     "t": "免稅＋5% OFF（不限金額）",
     "d": "九州新生堂藥局，限 7 家指定分店（含福岡天神南店）。",
     "url": "https://ksk.tw/sinseido-drug/",
-    "static": true
+    "static": true,
+    "direct": false
    }
   ],
-  "barneys": [
-   {
-    "until": "2027-06-30",
-    "source": null,
-    "t": "免稅＋5% OFF",
-    "d": "BARNEYS NEW YORK 外國旅客優惠。",
-    "url": "https://www.bubu-jp.com/archives/35860",
-    "static": true
-   }
-  ],
+  "barneys": [],
   "miyageya": [
    {
     "until": null,
-    "source": null,
+    "source": "https://okinawa.letsgojp.com/archives/877794/",
     "t": "最高 12% OFF",
     "d": "那霸國際通的沖繩名產店，可全試吃。",
     "url": "https://okinawa.letsgojp.com/archives/877794/",
-    "static": true
+    "static": true,
+    "direct": false
    }
   ],
   "funasaka": [
    {
     "until": null,
-    "source": null,
+    "source": "https://chubu.letsgojp.com/archives/803649/",
     "t": "出示優惠券免費送品酒代幣",
     "d": "飛驒高山的清酒品酒體驗。",
     "url": "https://chubu.letsgojp.com/archives/803649/",
-    "static": true
+    "static": true,
+    "direct": false
    }
   ]
  }
