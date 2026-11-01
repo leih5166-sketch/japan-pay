@@ -1,4 +1,4 @@
-// 版本：2026-11-01 v6（MATCHA 已下架優惠券自動略過）
+// 版本：2026-11-01 v7（直接顯示優惠券圖片＋註明來源）
 // 免費爬蟲：每天抓取固定的比較網頁，用規則擷取優惠券與刷卡回饋，更新 data/data.json
 // 不需要任何 API 金鑰。只有在確定解析成功時才覆蓋數值；解析失敗就保留舊資料，並寫入紀錄。
 // 執行：node scripts/scrape.mjs        測試：node scripts/scrape.mjs --fixture 資料夾
@@ -326,6 +326,41 @@ export function parseJcbList(html) {
   return out;
 }
 
+
+// ---------- 從部落格文章中找出優惠券圖片與有效期限 ----------
+export const BLOG_HOSTS = /bubu-jp\.com|ksk\.tw|linshibi\.com|reurl\.cc|letsgojp\.com|flyasia\.co/i;
+export function extractCouponFromArticle(html) {
+  // 文章結尾的「延伸閱讀、最新文章」之後的圖片不算
+  const cut = html.search(/延伸閱讀|最新文章|推薦文章|相關文章|精選推薦|其他推薦/);
+  const body = cut > 0 ? html.slice(0, cut) : html;
+  const cands = [];
+  const tagRe = /<(img|a)\b[^>]*>/gi; let m;
+  let inCouponSection = false;
+  const headRe = /<h[2-4][^>]*>([\s\S]*?)<\/h[2-4]>/gi;
+  const heads = [...body.matchAll(headRe)].map(h => ({i: h.index, coupon: /優惠券|折價券|折扣券|coupon|クーポン|使用方法|使用方式/i.test(h[1].replace(/<[^>]+>/g, ''))}));
+  while ((m = tagRe.exec(body))) {
+    const tag = m[0];
+    const attr = n => ((tag.match(new RegExp(n + '="([^"]+)"', 'i')) || [])[1] || '');
+    let src = m[1].toLowerCase() === 'img'
+      ? (attr('data-lazy-src') || attr('data-src') || attr('data-original') || (attr('srcset') || '').split(/\s+/)[0] || attr('src'))
+      : attr('href');
+    if (!/^https?:\/\/[^"]+\.(jpe?g|png|webp|gif)(\?[^"]*)?$/i.test(src)) continue;
+    const alt = attr('alt') + ' ' + attr('title');
+    const head = heads.filter(h => h.i < m.index).pop();
+    let score = 0;
+    if (/coupon|クーポン|優惠券|折價券|折扣券|barcode|_cp|cp_|tax.?free/i.test(src + ' ' + alt)) score += 5;
+    if (head && head.coupon) score += 3;
+    if (/logo|icon|avatar|gravatar|emoji|share|facebook|threads|line\.me|[\/_\-.]ads?[_\-\/.]|banner_ad|profile/i.test(src.replace(/\/wp-content\/uploads\//i, '/'))) score -= 10;
+    if (/-\d{2,3}x\d{2,3}\.(jpe?g|png|webp)/i.test(src)) score -= 1;   // 縮圖
+    cands.push({src: src.replace(/&amp;/g, '&'), score, i: m.index});
+  }
+  cands.sort((a, b) => b.score - a.score || a.i - b.i);
+  const best = cands.find(c => c.score >= 3);
+  const text = htmlToText(body);
+  const exp = text.match(/(有效期限|有效期至|有效期間|使用期限|活動期間|期限)[^0-9\n]{0,20}(?:即日起\s*[~～\-至]\s*)?(20\d\d\s*[年\/.\-]\s*\d{1,2}\s*[月\/.\-]\s*\d{1,2})/);
+  return {image: best ? best.src : null, until: exp ? parseDate(exp[2]) : null};
+}
+
 // ---------- 唐吉訶德（LIVE JAPAN 官方合作頁） ----------
 export function parseDonki(html) {
   const text = htmlToText(html);
@@ -574,6 +609,33 @@ async function main() {
       note('ok', `${sources.jcb.name}：比對到 ${n} 個店家活動`); ok++;
     } catch (e) { note('warn', `${sources.jcb.name} 暫時讀不到（${e.message}），改用備用的 JCB 活動資料`); }
   }
+
+  // 4c. 來自部落格文章的優惠券：每天進入文章找出最新的優惠券圖片與有效期限
+  const articleCache = {};
+  let directOk = 0, directFail = 0;
+  for (const [sid, list] of Object.entries(out.coupons)) {
+    for (const c of [...(list || [])]) {
+      const art = c.source && BLOG_HOSTS.test(c.source) ? c.source : (BLOG_HOSTS.test(c.url || '') ? c.url : null);
+      if (!art || c.kind === 'card') continue;
+      c.source = art;
+      try {
+        if (!articleCache[art]) {
+          articleCache[art] = extractCouponFromArticle(await getPage(art, 'article-' + art.replace(/[^a-z0-9]/gi, '_').slice(-40) + '.html'));
+          if (!FIXTURE) await new Promise(res => setTimeout(res, 800));
+        }
+        const r = articleCache[art];
+        if (r.until && !alive(r.until)) {
+          out.coupons[sid] = out.coupons[sid].filter(x => x !== c);
+          note('info', `${sid} 的優惠券已於 ${r.until} 到期（依來源文章），自動移除`);
+          continue;
+        }
+        if (r.until && !c.until) c.until = r.until;
+        if (r.image) { c.url = r.image; c.direct = true; directOk++; }
+        else { c.url = art; c.direct = false; directFail++; }
+      } catch (e) { c.url = art; c.direct = false; directFail++; }
+    }
+  }
+  if (directOk + directFail) note(directFail ? 'warn' : 'ok', `部落格優惠券：${directOk} 張找到優惠券圖片` + (directFail ? `，${directFail} 張找不到（改連到來源文章）` : ''));
 
   // 4b. 檢查 LIVE JAPAN 是否在維修：維修中就在相關優惠券加上提示，恢復後提示自動消失
   const LJ_NOTE = '（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）';
