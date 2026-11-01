@@ -1,4 +1,4 @@
-// 版本：2026-10-31 v5（MATCHA 店名：排除網站名稱、改用列表頁）
+// 版本：2026-11-01 v6（MATCHA 已下架優惠券自動略過）
 // 免費爬蟲：每天抓取固定的比較網頁，用規則擷取優惠券與刷卡回饋，更新 data/data.json
 // 不需要任何 API 金鑰。只有在確定解析成功時才覆蓋數值；解析失敗就保留舊資料，並寫入紀錄。
 // 執行：node scripts/scrape.mjs        測試：node scripts/scrape.mjs --fixture 資料夾
@@ -484,7 +484,7 @@ async function main() {
       const listNames = parseMatchaListNames(listHtml);
       if (ids.length < 10) throw new Error(`只找到 ${ids.length} 張優惠券，可能網頁改版`);
       const skip = new RegExp(M.skip_keywords.join('|'), 'i');
-      const got = {}; let n = 0;
+      const got = {}; let n = 0, expired = 0;
       for (const id of ids) {
         const url = M.page.replace('{id}', id);
         try {
@@ -496,7 +496,11 @@ async function main() {
           const isSite = x => /^matcha|matcha優惠券|日本觀光媒體/i.test(String(x || '').trim());
           const cands = [r.name, r.title, r.og, r.tw, ...(listNames[id] || []), r.ld, r.sub].filter(x => x && !isSite(x));
           const pick = cands.find(x => matchIds(x, kwAll).length || !badStoreName(cleanStoreName(x)));
-          if (!pick) { note('info', `MATCHA 第 ${id} 張找不到店名（爬蟲讀到：${r.debug}｜列表=${(listNames[id] || []).join('/')}）`.slice(0, 220)); continue; }
+          if (!pick) {
+            // MATCHA 對已到期或下架的優惠券會改顯示通用首頁，標題只剩網站名稱，這種就直接略過
+            if (/日本免稅店優惠券和遊客專屬折扣|免稅・折扣資訊/.test(r.title + r.og + r.name)) { expired++; continue; }
+            note('info', `MATCHA 第 ${id} 張找不到店名（爬蟲讀到：${r.debug}）`.slice(0, 200)); continue;
+          }
           const sids = ensureStore(pick, r.offer);
           sids.forEach(sid => { (got[sid] = got[sid] || []).push({t: r.offer ? `免稅＋${r.offer}` : '免稅＋折扣優惠券（詳見頁面）', d: r.cond ? `使用條件：${r.cond}` : 'MATCHA 優惠券，結帳時出示頁面。', until: r.until, url, source: url}); });
           if (sids.length) n++;
@@ -505,7 +509,7 @@ async function main() {
       }
       if (n < 5) throw new Error(`只解析到 ${n} 張`);
       finish('matcha', M.list, got);
-      note('ok', `${M.name}：解析 ${n} 張優惠券`); ok++;
+      note('ok', `${M.name}：解析 ${n} 張優惠券` + (expired ? `（另有 ${expired} 張已到期或下架，略過）` : '')); ok++;
     } catch (e) { note('error', `${M.name} 失敗：${e.message}`); }
   }
 
