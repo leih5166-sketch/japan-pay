@@ -1,5 +1,5 @@
 {
- "at": "2026-11-01T04:45:08.876Z",
+ "at": "2026-11-01T04:54:45.963Z",
  "log": [
   {
    "level": "ok",
@@ -59,7 +59,67 @@
   },
   {
    "level": "warn",
-   "msg": "部落格優惠券：6 張找到優惠券圖片，14 張找不到（改連到來源文章）"
+   "msg": "部落格優惠券：5 張找到優惠券圖片，15 張找不到（改連到來源文章）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：nikigolf（reurl.cc：文章中找不到優惠券圖片）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：negishi（reurl.cc：文章中找不到優惠券圖片）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：akakabe（reurl.cc：文章中找不到優惠券圖片）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：joysound（bubu-jp.com：文章中找不到優惠券圖片）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：briefing（ksk.tw：HTTP 403）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：allu（ksk.tw：HTTP 403）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：aoyama（go.flyasia.co：文章中找不到優惠券圖片）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：jungle（go.flyasia.co：文章中找不到優惠券圖片）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：parismiki（go.flyasia.co：文章中找不到優惠券圖片）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：ohga（go.flyasia.co：文章中找不到優惠券圖片）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：kyorindo（ksk.tw：HTTP 403）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：ashibinaa（linshibi.com：文章中找不到優惠券圖片）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：sinseido（ksk.tw：HTTP 403）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：miyageya（okinawa.letsgojp.com：HTTP 403）"
+  },
+  {
+   "level": "info",
+   "msg": "找不到優惠券圖片：funasaka（chubu.letsgojp.com：HTTP 403）"
   },
   {
    "level": "warn",

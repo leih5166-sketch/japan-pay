@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-01T04:45:08.876Z",
+ "updated_at": "2026-11-01T04:54:45.963Z",
  "note": "本次更新 2 項",
  "payments": [
   {
@@ -1379,7 +1379,7 @@
     "source": "https://www.bubu-jp.com/archives/39713",
     "t": "免稅 10%＋5% OFF",
     "d": "滑雪用具專門店，關西地區。",
-    "url": "https://www.bubu-jp.com/wp-content/uploads/2025/05/37bddc78235f2bbf68476ced4bdc450a.jpeg",
+    "url": "https://www.bubu-jp.com/wp-content/uploads/2025/05/37bddc78235f2bbf68476ced4bdc450a-548x1024.jpeg",
     "static": true,
     "direct": true
    }
@@ -1390,7 +1390,7 @@
     "source": "https://www.bubu-jp.com/archives/36015",
     "t": "外國旅客專屬折扣",
     "d": "步步日本整理的 Sanrio 外國旅客優惠。",
-    "url": "https://www.bubu-jp.com/wp-content/uploads/2025/03/IMG_7528.jpg",
+    "url": "https://www.bubu-jp.com/wp-content/uploads/2025/03/IMG_7528-1182x2048.jpg",
     "static": true,
     "direct": true
    }
@@ -1401,9 +1401,9 @@
     "source": "https://www.bubu-jp.com/archives/45733",
     "t": "外國旅客優惠",
     "d": "步步日本整理的 JOYSOUND 外國旅客優惠。",
-    "url": "https://www.bubu-jp.com/wp-content/uploads/2025/08/JOYSOUND9.jpeg",
+    "url": "https://www.bubu-jp.com/archives/45733",
     "static": true,
-    "direct": true
+    "direct": false
    }
   ],
   "briefing": [
