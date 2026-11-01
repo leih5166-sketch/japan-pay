@@ -1,4 +1,4 @@
-// 版本：2026-11-01 v7（直接顯示優惠券圖片＋註明來源）
+// 版本：2026-11-01 v8（優惠券圖片診斷）
 // 免費爬蟲：每天抓取固定的比較網頁，用規則擷取優惠券與刷卡回饋，更新 data/data.json
 // 不需要任何 API 金鑰。只有在確定解析成功時才覆蓋數值；解析失敗就保留舊資料，並寫入紀錄。
 // 執行：node scripts/scrape.mjs        測試：node scripts/scrape.mjs --fixture 資料夾
@@ -334,17 +334,20 @@ export function extractCouponFromArticle(html) {
   const cut = html.search(/延伸閱讀|最新文章|推薦文章|相關文章|精選推薦|其他推薦/);
   const body = cut > 0 ? html.slice(0, cut) : html;
   const cands = [];
-  const tagRe = /<(img|a)\b[^>]*>/gi; let m;
+  const tagRe = /<(img|a|source)\b[^>]*>/gi; let m;
   let inCouponSection = false;
   const headRe = /<h[2-4][^>]*>([\s\S]*?)<\/h[2-4]>/gi;
   const heads = [...body.matchAll(headRe)].map(h => ({i: h.index, coupon: /優惠券|折價券|折扣券|coupon|クーポン|使用方法|使用方式/i.test(h[1].replace(/<[^>]+>/g, ''))}));
   while ((m = tagRe.exec(body))) {
     const tag = m[0];
     const attr = n => ((tag.match(new RegExp(n + '="([^"]+)"', 'i')) || [])[1] || '');
-    let src = m[1].toLowerCase() === 'img'
-      ? (attr('data-lazy-src') || attr('data-src') || attr('data-original') || (attr('srcset') || '').split(/\s+/)[0] || attr('src'))
-      : attr('href');
-    if (!/^https?:\/\/[^"]+\.(jpe?g|png|webp|gif)(\?[^"]*)?$/i.test(src)) continue;
+    const first = x => (x || '').split(',').pop().trim().split(/\s+/)[0];   // srcset 取最大的那張
+    const t = m[1].toLowerCase();
+    let src = t === 'a' ? attr('href')
+      : (attr('data-lazy-src') || attr('data-src') || attr('data-original') || attr('data-orig-file') || attr('data-large-file')
+         || first(attr('data-lazy-srcset')) || first(attr('data-srcset')) || first(attr('srcset')) || attr('src'));
+    if (src.startsWith('//')) src = 'https:' + src;
+    if (!/^https?:\/\/[^"\s]+\.(jpe?g|png|webp|gif)(\?[^"\s]*)?$/i.test(src)) continue;
     const alt = attr('alt') + ' ' + attr('title');
     const head = heads.filter(h => h.i < m.index).pop();
     let score = 0;
@@ -612,7 +615,8 @@ async function main() {
 
   // 4c. 來自部落格文章的優惠券：每天進入文章找出最新的優惠券圖片與有效期限
   const articleCache = {};
-  let directOk = 0, directFail = 0;
+  let directOk = 0, directFail = 0; const failList = [];
+  const hostOf = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return u; } };
   for (const [sid, list] of Object.entries(out.coupons)) {
     for (const c of [...(list || [])]) {
       const art = c.source && BLOG_HOSTS.test(c.source) ? c.source : (BLOG_HOSTS.test(c.url || '') ? c.url : null);
@@ -631,11 +635,12 @@ async function main() {
         }
         if (r.until && !c.until) c.until = r.until;
         if (r.image) { c.url = r.image; c.direct = true; directOk++; }
-        else { c.url = art; c.direct = false; directFail++; }
-      } catch (e) { c.url = art; c.direct = false; directFail++; }
+        else { c.url = art; c.direct = false; directFail++; failList.push(`${sid}（${hostOf(art)}：文章中找不到優惠券圖片）`); }
+      } catch (e) { c.url = art; c.direct = false; directFail++; failList.push(`${sid}（${hostOf(art)}：${e.message}）`); }
     }
   }
   if (directOk + directFail) note(directFail ? 'warn' : 'ok', `部落格優惠券：${directOk} 張找到優惠券圖片` + (directFail ? `，${directFail} 張找不到（改連到來源文章）` : ''));
+  for (const f of failList) note('info', `找不到優惠券圖片：${f}`);
 
   // 4b. 檢查 LIVE JAPAN 是否在維修：維修中就在相關優惠券加上提示，恢復後提示自動消失
   const LJ_NOTE = '（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）';
