@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-01T21:23:38.620Z",
+ "updated_at": "2026-11-02T21:29:52.967Z",
  "note": "本次更新 2 項",
  "payments": [
   {
@@ -892,6 +892,18 @@
     "d": "結帳及辦理免稅時出示此優惠券。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/kintetsudepartmentstore/zh-tw.html",
     "static": true
+   },
+   {
+    "t": "【刷 JCB 卡】快來近鐵百貨阿倍野海闊天空總店領取VIP休息室預約卡",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "until": null,
+    "url": "https://www.specialoffers.jcb/zh-tw/campaign/detail/kintetsu_lounge/95525/",
+    "source": [
+     "https://www.specialoffers.jcb/zh-tw/",
+     "https://www.specialoffers.jcb/zh-tw/campaign/"
+    ],
+    "dyn": "jcb",
+    "kind": "card"
    }
   ],
   "victoria": [
@@ -1545,7 +1557,7 @@
   "auto-1ab2d3": [
    {
     "t": "免稅＋5%折扣",
-    "d": "使用條件：※本優惠券可享店頭價格95折 ※不可與其他優惠券併用 ※結帳前請務必出示條碼，未出示者恕無法享受折扣 ※僅限於指定店舖使用，其他店舖無效 ※有效期限至2027年7月31日 創立超過40年，擁有遍布全日本據點的機車用品與零件專業連鎖店 「2R…",
+    "d": "MATCHA 優惠券，結帳時出示頁面。",
     "until": "2027-07-31",
     "url": "https://matcha-jp.com/tw/coupon/151",
     "source": "https://matcha-jp.com/tw/coupon/151"
