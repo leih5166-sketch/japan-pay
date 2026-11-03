@@ -1,5 +1,5 @@
 {
- "at": "2026-11-02T21:29:52.967Z",
+ "at": "2026-11-03T21:29:21.342Z",
  "log": [
   {
    "level": "ok",
@@ -32,6 +32,10 @@
   {
    "level": "change",
    "msg": "yamada 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "kintetsu 優惠券已更新"
   },
   {
    "level": "warn",
