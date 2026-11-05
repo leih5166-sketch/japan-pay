@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-04T21:37:49.928Z",
- "note": "本次更新 4 項",
+ "updated_at": "2026-11-05T21:31:26.940Z",
+ "note": "本次更新 3 項",
  "payments": [
   {
    "id": "uniopen",
@@ -892,18 +892,6 @@
     "d": "結帳及辦理免稅時出示此優惠券。（LIVE JAPAN 網站目前維修中，連結暫時打不開，請稍後再試）",
     "url": "https://livejapan.com/public/operation/coupon/kintetsudepartmentstore/zh-tw.html",
     "static": true
-   },
-   {
-    "t": "【刷 JCB 卡】快來近鐵百貨阿倍野海闊天空總店領取VIP休息室預約卡",
-    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
-    "until": null,
-    "url": "https://www.specialoffers.jcb/zh-tw/campaign/detail/kintetsu_lounge/95525/",
-    "source": [
-     "https://www.specialoffers.jcb/zh-tw/",
-     "https://www.specialoffers.jcb/zh-tw/campaign/"
-    ],
-    "dyn": "jcb",
-    "kind": "card"
    }
   ],
   "victoria": [
