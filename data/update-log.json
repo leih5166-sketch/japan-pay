@@ -1,5 +1,5 @@
 {
- "at": "2026-11-08T21:24:08.826Z",
+ "at": "2026-11-09T21:37:46.272Z",
  "log": [
   {
    "level": "ok",
@@ -34,12 +34,36 @@
    "msg": "yamada 優惠券已更新"
   },
   {
-   "level": "warn",
-   "msg": "LIVE JAPAN：唐吉訶德優惠券 暫時無法連線（HTTP 503）"
+   "level": "change",
+   "msg": "kintetsu 優惠券已更新"
   },
   {
-   "level": "info",
-   "msg": "唐吉訶德沿用前次從官方頁取得的優惠券"
+   "level": "change",
+   "msg": "victoria 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "ysroad 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "seibu 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "sogo 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "kokumin 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "welcia 優惠券已更新"
+  },
+  {
+   "level": "ok",
+   "msg": "LIVE JAPAN：唐吉訶德優惠券：含稅滿 ¥11,000 折 5%、含稅滿 ¥33,000 折 7%、含稅滿 ¥11,000 折 7%、含稅滿 ¥11,000 折 5%、含稅滿 ¥33,000 折 7%、含稅滿 ¥11,000 折 5%、含稅滿 ¥33,000 折 7%"
   },
   {
    "level": "info",
@@ -52,10 +76,6 @@
   {
    "level": "info",
    "msg": "JCB 活動找不到對應店家：檳城雙威醫療中心健康禮遇方案！"
-  },
-  {
-   "level": "info",
-   "msg": "JCB 活動找不到對應店家：【僅限御尊卡、臻寶卡、尊榮卡、極緻卡持卡人！】 消費滿100"
   },
   {
    "level": "ok",
@@ -86,8 +106,8 @@
    "msg": "找不到優惠券圖片：funasaka（chubu.letsgojp.com：HTTP 403）"
   },
   {
-   "level": "warn",
-   "msg": "LIVE JAPAN 維修中或無法連線，相關優惠券已加上提示"
+   "level": "ok",
+   "msg": "LIVE JAPAN 正常"
   }
  ]
 }
