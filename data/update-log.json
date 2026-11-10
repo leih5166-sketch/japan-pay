@@ -1,5 +1,5 @@
 {
- "at": "2026-11-09T21:37:46.272Z",
+ "at": "2026-11-10T21:28:02.955Z",
  "log": [
   {
    "level": "ok",
@@ -23,7 +23,11 @@
   },
   {
    "level": "ok",
-   "msg": "MATCHA 優惠券：解析 44 張優惠券（另有 6 張已到期或下架，略過）"
+   "msg": "MATCHA 優惠券：解析 45 張優惠券（另有 6 張已到期或下架，略過）"
+  },
+  {
+   "level": "change",
+   "msg": "donki 優惠券已更新"
   },
   {
    "level": "change",
@@ -32,34 +36,6 @@
   {
    "level": "change",
    "msg": "yamada 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "kintetsu 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "victoria 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "ysroad 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "seibu 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "sogo 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "kokumin 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "welcia 優惠券已更新"
   },
   {
    "level": "ok",
