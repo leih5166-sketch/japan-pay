@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-12T21:34:18.858Z",
+ "updated_at": "2026-11-13T21:35:14.283Z",
  "note": "本次更新 3 項",
  "payments": [
   {
@@ -696,20 +696,7 @@
     "kind": "card"
    }
   ],
-  "joshin": [
-   {
-    "t": "【刷 JCB 卡】在上新電機（Joshin）刷JCB卡可享5%折扣！",
-    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
-    "until": null,
-    "url": "https://www.specialoffers.jcb/zh-tw/campaign/detail/joshin_tsunenyutai/95736/",
-    "source": [
-     "https://www.specialoffers.jcb/zh-tw/",
-     "https://www.specialoffers.jcb/zh-tw/campaign/"
-    ],
-    "dyn": "jcb",
-    "kind": "card"
-   }
-  ],
+  "joshin": [],
   "cocokara": [
    {
     "t": "免稅＋最高 7%折扣",
