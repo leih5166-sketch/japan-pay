@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T21:37:48.052Z",
+ "updated_at": "2026-11-17T21:39:25.776Z",
  "note": "本次更新 3 項",
  "payments": [
   {
@@ -661,18 +661,6 @@
     "until": null,
     "url": "https://www.taxfreeshops.jp/zhtw/tieup/6",
     "source": "https://www.taxfreeshops.jp/zhtw/tieup/6"
-   },
-   {
-    "t": "【刷 JCB 卡】在愛電王（EDION）刷JCB卡可享5%折扣！",
-    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
-    "until": null,
-    "url": "https://www.specialoffers.jcb/zh-tw/campaign/detail/edion_tsunenyutai/95743/",
-    "source": [
-     "https://www.specialoffers.jcb/zh-tw/",
-     "https://www.specialoffers.jcb/zh-tw/campaign/"
-    ],
-    "dyn": "jcb",
-    "kind": "card"
    }
   ],
   "yamada": [
