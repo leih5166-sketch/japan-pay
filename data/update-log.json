@@ -1,5 +1,5 @@
 {
- "at": "2026-11-17T21:39:25.776Z",
+ "at": "2026-11-18T21:40:48.123Z",
  "log": [
   {
    "level": "ok",
@@ -28,10 +28,6 @@
   {
    "level": "change",
    "msg": "donki 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "edion 優惠券已更新"
   },
   {
    "level": "change",
