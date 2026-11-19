@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T21:40:48.123Z",
+ "updated_at": "2026-11-19T21:38:54.703Z",
  "note": "本次更新 2 項",
  "payments": [
   {
@@ -670,18 +670,6 @@
     "until": null,
     "url": "https://www.taxfreeshops.jp/zhtw/tieup/12",
     "source": "https://www.taxfreeshops.jp/zhtw/tieup/12"
-   },
-   {
-    "t": "【刷 JCB 卡】在YAMADA電機刷JCB卡可享5%折扣！",
-    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
-    "until": null,
-    "url": "https://www.specialoffers.jcb/zh-tw/campaign/detail/yamadadenki_tsunenyutai/95870/",
-    "source": [
-     "https://www.specialoffers.jcb/zh-tw/",
-     "https://www.specialoffers.jcb/zh-tw/campaign/"
-    ],
-    "dyn": "jcb",
-    "kind": "card"
    }
   ],
   "joshin": [],
@@ -728,6 +716,16 @@
     "until": null,
     "url": "https://global-satudora.com/zh-tw/blogs/promotion/%E6%97%A5%E6%9C%AC%E6%9C%AD%E5%B9%8C%E8%97%A5%E5%A6%9D%E5%85%8D%E7%A8%85%E5%84%AA%E6%83%A0%E5%88%B8%E4%BE%86%E5%95%A6",
     "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+   },
+   {
+    "until": null,
+    "source": null,
+    "t": "【刷 JCB 卡】札幌藥妝最高 7% OFF",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/satudora/89680/",
+    "jcb_fallback": true,
+    "kind": "card",
+    "static": true
    }
   ],
   "tobu": [
@@ -815,6 +813,16 @@
     "until": null,
     "url": "https://www.taxfreeshops.jp/zhtw/tieup/7",
     "source": "https://www.taxfreeshops.jp/zhtw/tieup/7"
+   },
+   {
+    "until": null,
+    "source": null,
+    "t": "【刷 JCB 卡】大丸松坂屋刷 JCB 享 5% OFF 與美食券",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/daimaru_matsuzakaya/88819/",
+    "jcb_fallback": true,
+    "kind": "card",
+    "static": true
    }
   ],
   "matsuzakaya": [
@@ -824,6 +832,16 @@
     "until": null,
     "url": "https://www.taxfreeshops.jp/zhtw/tieup/7",
     "source": "https://www.taxfreeshops.jp/zhtw/tieup/7"
+   },
+   {
+    "until": null,
+    "source": null,
+    "t": "【刷 JCB 卡】大丸松坂屋刷 JCB 享 5% OFF 與美食券",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/daimaru_matsuzakaya/88819/",
+    "jcb_fallback": true,
+    "kind": "card",
+    "static": true
    }
   ],
   "lotte": [
@@ -866,6 +884,16 @@
     "t": "GUEST COUPON 5% OFF",
     "d": "結帳及辦理免稅時出示此優惠券。",
     "url": "https://livejapan.com/public/operation/coupon/kintetsudepartmentstore/zh-tw.html",
+    "static": true
+   },
+   {
+    "until": null,
+    "source": null,
+    "t": "【刷 JCB 卡】近鐵百貨領取 VIP 卡最高 7% 優惠",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/kintetsu/56845/",
+    "jcb_fallback": true,
+    "kind": "card",
     "static": true
    }
   ],
@@ -994,6 +1022,16 @@
     "url": "https://www.starlux-airlines.com/flights/zh-tw/mitsui-outlet",
     "btn": "查看兌換方式",
     "static": true
+   },
+   {
+    "until": null,
+    "source": null,
+    "t": "【刷 JCB 卡】MITSUI OUTLET PARK・LaLaport 最高 20% 事後現金回饋",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/mitsuioutlet/93838/",
+    "jcb_fallback": true,
+    "kind": "card",
+    "static": true
    }
   ],
   "premiumoutlets": [
@@ -1077,15 +1115,6 @@
   ],
   "mitsukoshi": [
    {
-    "until": null,
-    "source": null,
-    "t": "MITSUKOSHI ISETAN JAPAN 外國旅客 App",
-    "d": "下載三越伊勢丹官方外國旅客 App 享優惠，部分商品不適用。",
-    "url": "https://cp.mistore.jp/content/cpmistore/global/zh_hant/app.html",
-    "btn": "查看 App",
-    "static": true
-   },
-   {
     "t": "【刷 JCB 卡】在三越伊勢丹百貨刷JCB享最高20%事後現金回饋",
     "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
     "until": null,
@@ -1096,9 +1125,39 @@
     ],
     "dyn": "jcb",
     "kind": "card"
+   },
+   {
+    "until": null,
+    "source": null,
+    "t": "MITSUKOSHI ISETAN JAPAN 外國旅客 App",
+    "d": "下載三越伊勢丹官方外國旅客 App 享優惠，部分商品不適用。",
+    "url": "https://cp.mistore.jp/content/cpmistore/global/zh_hant/app.html",
+    "btn": "查看 App",
+    "static": true
+   },
+   {
+    "until": null,
+    "source": null,
+    "t": "【刷 JCB 卡】三越伊勢丹最高 20% 事後現金回饋",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/mitsukoshiisetan/93855/",
+    "jcb_fallback": true,
+    "kind": "card",
+    "static": true
    }
   ],
-  "matsuyaginza": [],
+  "matsuyaginza": [
+   {
+    "until": null,
+    "source": null,
+    "t": "【刷 JCB 卡】松屋銀座 95 折",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/matsuya/84149",
+    "jcb_fallback": true,
+    "kind": "card",
+    "static": true
+   }
+  ],
   "takeya": [
    {
     "t": "在多慶屋使用海外發行JCB信用卡",
@@ -1243,7 +1302,18 @@
     "static": true
    }
   ],
-  "usj": [],
+  "usj": [
+   {
+    "until": null,
+    "source": null,
+    "t": "【刷 JCB 卡】日本環球影城最高 20% 事後現金回饋",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "url": "http://www.specialoffers.jcb/zh-tw/campaign/detail/usj/93849/",
+    "jcb_fallback": true,
+    "kind": "card",
+    "static": true
+   }
+  ],
   "grandfront": [
    {
     "until": null,
