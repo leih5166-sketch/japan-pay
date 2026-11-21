@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-20T21:35:42.084Z",
- "note": "本次更新 1 項",
+ "updated_at": "2026-11-21T21:26:45.389Z",
+ "note": "部分來源暫時無法更新（1 項），已沿用前次資料",
  "payments": [
   {
    "id": "uniopen",
@@ -647,11 +647,11 @@
   ],
   "matsukiyo": [
    {
-    "t": "消費10,000日圓享3\b%折扣 起",
-    "d": "1. 消費10,000日圓享3\b%折扣；2. 消費30,000日圓享5\b%折扣；3. 消費50,000日圓享7%折扣。使用方式：結帳時出示二維碼",
+    "t": "免稅＋最高 7%折扣",
+    "d": "使用條件：購買店內商品滿1萬日圓至未滿3萬日圓，可享店內商品3% OFF 購買店內商品滿3萬日圓至未滿5萬日圓，可享店內商品5% OFF 購買店內商品滿5萬日圓，可享店內商品7% OFF 有效期限：2027 3 31 店内商品1万円以上3万円未満のお…",
     "until": "2027-03-31",
-    "url": "https://imgcloud.cardu.com.tw/201910/20260322/Cardu_69bff27e3250a.webp",
-    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+    "url": "https://matcha-jp.com/tw/coupon/72",
+    "source": "https://matcha-jp.com/tw/coupon/72"
    }
   ],
   "edion": [
@@ -723,11 +723,11 @@
   ],
   "sapporodrug": [
    {
-    "t": "只要消費滿5,000日圓以上即享免稅再95折～加總約15％off",
-    "d": "滿38,888日圓以上免稅再93折～加總約17％off！使用方式：結帳時直接以手機出示此優惠券畫面給店員掃描、並需出示護照辦理免稅。",
-    "until": null,
-    "url": "https://global-satudora.com/zh-tw/blogs/promotion/%E6%97%A5%E6%9C%AC%E6%9C%AD%E5%B9%8C%E8%97%A5%E5%A6%9D%E5%85%8D%E7%A8%85%E5%84%AA%E6%83%A0%E5%88%B8%E4%BE%86%E5%95%A6",
-    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+    "t": "免稅＋最高 17%折扣",
+    "d": "使用條件：使用時請於結帳櫃檯提示護照與此優惠券。 請於付款時提示，付款後無法提供折扣。 某些產品不符合折扣條件。 如有任何問題請諮詢工作人員。 無法與其他優惠券併用。 本優惠券適用店鋪一覽 北海道店舖： 狸小路5丁目店、狸小路大王大樓店、moyuk …",
+    "until": "2029-12-31",
+    "url": "https://matcha-jp.com/tw/coupon/22",
+    "source": "https://matcha-jp.com/tw/coupon/22"
    }
   ],
   "tobu": [
@@ -767,18 +767,25 @@
   ],
   "anaduty": [
    {
-    "t": "煙、酒、化妝品享5%折扣",
-    "d": "",
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：1. 一部分商品不享受優惠，以店內告知為准。 2. 不能與其他折扣優惠同時使用。 3. 結算結束後，不能因客人主觀原因退款或退貨，望您知悉。 適用門店 TIAT DUTY FREE SHOP SOUTH LIQUOR&TOBACCO 營業時…",
     "until": "2027-03-31",
-    "url": "https://imgcloud.cardu.com.tw/201910/20260323/Cardu_69c0b9ac79280.png",
-    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+    "url": "https://matcha-jp.com/tw/coupon/125",
+    "source": "https://matcha-jp.com/tw/coupon/125"
    },
    {
-    "t": "煙、酒、化妝品享5%折扣 *提前預約後才能購買使用",
-    "d": "",
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：1. 一部分商品不享受優惠，以店內告知為准。 2. 不能與其他折扣優惠同時使用。 3. 結算結束後，不能因客人主觀原因退款或退貨，望您知悉。 適用門店 TIAT DUTY FREE SOUVENIR 營業時間 06:35-翌日01:00 每…",
     "until": "2027-03-31",
-    "url": "https://imgcloud.cardu.com.tw/201910/20260323/Cardu_69c0bb4c56ab9.png",
-    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+    "url": "https://matcha-jp.com/tw/coupon/126",
+    "source": "https://matcha-jp.com/tw/coupon/126"
+   },
+   {
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：1. 白い戀人以及獺祭等，一部分商品不享受優惠。以店內告知為准。 2. 不能與其他折扣優惠同時使用。 3. 結算結束後，不能因客人主觀原因退款或退貨，望您知悉。 適用門店 ANA DUTY & TAX FREE SHOP 營業時間 08:0…",
+    "until": "2027-03-31",
+    "url": "https://matcha-jp.com/tw/coupon/127",
+    "source": "https://matcha-jp.com/tw/coupon/127"
    }
   ],
   "daikoku": [
@@ -952,11 +959,11 @@
   ],
   "snowpeak": [
    {
-    "t": "滿&yen;10,000~29,999(未稅)：退稅10%+贈送精美贈品 起",
-    "d": "1. 滿&yen;10,000~29,999(未稅)：退稅10%+贈送精美贈品；2. 滿&yen;30,000~49,999(未稅)：退稅10%+5\b%折扣；3. 滿&yen;50,000以上(未稅)：退稅10%+7%折扣。使用方式：結帳時手機出示以下優惠券畫面即可 *特價商品與折扣套裝不適用",
+    "t": "免稅＋最高 7%折扣",
+    "d": "使用條件：● 購買商品結帳時，請出示下方條碼即可享受折扣。 ● 請出示本人護照正本。 ● 僅限本人使用，不可轉讓他人使用。 ● 免稅適用金額須達 5,000 日圓以上（未稅）。 ● 優惠不得併用。（例：購買滿 30,000 日圓時，僅適用 5% OF…",
     "until": "2027-03-31",
-    "url": "https://imgcloud.cardu.com.tw/201910/20260323/Cardu_69c0be1e3304a.jpg",
-    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+    "url": "https://matcha-jp.com/tw/coupon/153",
+    "source": "https://matcha-jp.com/tw/coupon/153"
    },
    {
     "until": null,
@@ -969,11 +976,11 @@
   ],
   "laox": [
    {
-    "t": "在活動指定店鋪",
-    "d": "購買5,000日圓以上的顧客、可享8%折扣再加免10%*的消費稅。(*輕減稅率對象商品為8%)。使用方式：結帳時直接手機出示優惠券給店員",
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：免稅条件:在活動指定門店，購買5000日圓以上的顧客，在享受5%折扣的同時，還可以享受免除10%的消費稅。 此優惠券適用於Laox指定門市 此優惠券不能與其他折扣優惠一併使用。 此優惠券不適用於部分商品（遊戲、APPLE產品、名牌手袋、非日…",
     "until": "2026-12-31",
-    "url": "https://imgcloud.cardu.com.tw/201910/20260322/Cardu_69bff94816410.webp",
-    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+    "url": "https://matcha-jp.com/tw/coupon/21",
+    "source": "https://matcha-jp.com/tw/coupon/21"
    }
   ],
   "mitsuioutlet": [
@@ -1101,11 +1108,11 @@
   "matsuyaginza": [],
   "takeya": [
    {
-    "t": "在多慶屋使用海外發行JCB信用卡",
-    "d": "單筆消費滿5,000日元，享受9折優惠！單筆優惠金額上限10,000日元。",
+    "t": "免稅＋最高 17%折扣",
+    "d": "使用條件：■適用商品：多慶屋全樓層（部分商品除外） ■使用規定 請在結帳前出示 不可與其他優惠活動同時使用 僅適用於購物金額 5,000 日圓以上的顧客 每次購物的最高折扣金額為 10,000 日圓 根據日本消費稅法，部分商品可享受8%的免稅優惠 多…",
     "until": "2027-04-30",
     "url": "https://matcha-jp.com/tw/coupon/111",
-    "source": "https://www.cardu.com.tw/travel/detail.php?40490"
+    "source": "https://matcha-jp.com/tw/coupon/111"
    },
    {
     "until": null,
