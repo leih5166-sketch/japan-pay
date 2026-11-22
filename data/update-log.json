@@ -1,5 +1,5 @@
 {
- "at": "2026-11-21T21:26:45.389Z",
+ "at": "2026-11-22T21:29:51.828Z",
  "log": [
   {
    "level": "ok",
@@ -14,8 +14,12 @@
    "msg": "TAXFREESHOPS.JP（官方合作優惠券）：解析 21 家合作店的優惠券"
   },
   {
-   "level": "error",
-   "msg": "卡優新聞網：日本優惠券整理 失敗：只解析到 0 家店，可能網頁改版"
+   "level": "ok",
+   "msg": "daikoku 的優惠券圖片已從網頁中還原（138 KB）"
+  },
+  {
+   "level": "ok",
+   "msg": "卡優新聞網：日本優惠券整理：解析 18 家店的優惠券"
   },
   {
    "level": "ok",
@@ -31,7 +35,11 @@
   },
   {
    "level": "change",
-   "msg": "laox 優惠券已更新"
+   "msg": "anaduty 優惠券已更新"
+  },
+  {
+   "level": "change",
+   "msg": "snowpeak 優惠券已更新"
   },
   {
    "level": "change",
@@ -47,11 +55,7 @@
   },
   {
    "level": "change",
-   "msg": "anaduty 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "snowpeak 優惠券已更新"
+   "msg": "laox 優惠券已更新"
   },
   {
    "level": "ok",
