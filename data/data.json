@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-11-24T21:43:47.304Z",
- "note": "本次更新 9 項",
+ "updated_at": "2026-11-25T21:45:19.787Z",
+ "note": "本次更新 4 項",
  "payments": [
   {
    "id": "uniopen",
@@ -661,6 +661,18 @@
     "until": null,
     "url": "https://www.taxfreeshops.jp/zhtw/tieup/6",
     "source": "https://www.taxfreeshops.jp/zhtw/tieup/6"
+   },
+   {
+    "t": "【刷 JCB 卡】在愛電王（EDION）刷JCB卡可享5%折扣！",
+    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
+    "until": null,
+    "url": "https://www.specialoffers.jcb/zh-tw/campaign/detail/edion_tsunenyutai/95743/",
+    "source": [
+     "https://www.specialoffers.jcb/zh-tw/",
+     "https://www.specialoffers.jcb/zh-tw/campaign/"
+    ],
+    "dyn": "jcb",
+    "kind": "card"
    }
   ],
   "yamada": [
@@ -730,7 +742,15 @@
     "source": "https://www.cardu.com.tw/travel/detail.php?40490"
    }
   ],
-  "tobu": [],
+  "tobu": [
+   {
+    "t": "免稅＋5%折扣",
+    "d": "使用條件：這是可在東武百貨店池袋店利用的5%折扣券的兌換券 只限在留資格為短期滯在的人 將本券與護照帶至2樓一番地的旅行諮詢處，將可以兌換5%優惠券※1人限1張 １張收據1000日圓（含稅）以上的商品為對象 不可和其他優待和折扣制度併用 支付限現金、…",
+    "until": "2027-09-30",
+    "url": "https://matcha-jp.com/tw/coupon/64",
+    "source": "https://matcha-jp.com/tw/coupon/64"
+   }
+  ],
   "keio": [
    {
     "t": "免稅＋折扣優惠券（詳見頁面）",
@@ -922,6 +942,13 @@
     "until": null,
     "url": "https://www.taxfreeshops.jp/zhtw/tieup/19",
     "source": "https://www.taxfreeshops.jp/zhtw/tieup/19"
+   },
+   {
+    "t": "/ 最高可享10%免稅優惠 + 5% off，讓您在日本購物更加划算！ /",
+    "d": "官方合作優惠券（TAXFREESHOPS.JP），結帳前出示此頁面與護照。",
+    "until": null,
+    "url": "https://www.taxfreeshops.jp/zhtw/tieup/23",
+    "source": "https://www.taxfreeshops.jp/zhtw/tieup/23"
    }
   ],
   "golfpartner": [
@@ -1076,18 +1103,6 @@
     "url": "https://cp.mistore.jp/content/cpmistore/global/zh_hant/app.html",
     "btn": "查看 App",
     "static": true
-   },
-   {
-    "t": "【刷 JCB 卡】在三越伊勢丹百貨刷JCB享最高20%事後現金回饋",
-    "d": "需刷 JCB 卡，並依活動頁的規定登錄或出示。",
-    "until": null,
-    "url": "https://www.specialoffers.jcb/zh-tw/campaign/detail/mitsukoshiisetan/93855/",
-    "source": [
-     "https://www.specialoffers.jcb/zh-tw/",
-     "https://www.specialoffers.jcb/zh-tw/campaign/"
-    ],
-    "dyn": "jcb",
-    "kind": "card"
    }
   ],
   "matsuyaginza": [],

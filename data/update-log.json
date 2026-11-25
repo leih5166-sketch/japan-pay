@@ -1,5 +1,5 @@
 {
- "at": "2026-11-24T21:43:47.304Z",
+ "at": "2026-11-25T21:45:19.787Z",
  "log": [
   {
    "level": "ok",
@@ -11,7 +11,7 @@
   },
   {
    "level": "ok",
-   "msg": "TAXFREESHOPS.JP（官方合作優惠券）：解析 21 家合作店的優惠券"
+   "msg": "TAXFREESHOPS.JP（官方合作優惠券）：解析 22 家合作店的優惠券"
   },
   {
    "level": "ok",
@@ -22,28 +22,8 @@
    "msg": "卡優新聞網：日本優惠券整理：解析 18 家店的優惠券"
   },
   {
-   "level": "warn",
-   "msg": "MATCHA 第 9 張讀取失敗：HTTP 502"
-  },
-  {
-   "level": "warn",
-   "msg": "MATCHA 第 17 張讀取失敗：HTTP 502"
-  },
-  {
-   "level": "warn",
-   "msg": "MATCHA 第 21 張讀取失敗：HTTP 502"
-  },
-  {
-   "level": "warn",
-   "msg": "MATCHA 第 49 張讀取失敗：HTTP 502"
-  },
-  {
-   "level": "warn",
-   "msg": "MATCHA 第 64 張讀取失敗：HTTP 502"
-  },
-  {
    "level": "ok",
-   "msg": "MATCHA 優惠券：解析 43 張優惠券（另有 6 張已到期或下架，略過）"
+   "msg": "MATCHA 優惠券：解析 45 張優惠券（另有 6 張已到期或下架，略過）"
   },
   {
    "level": "change",
@@ -55,31 +35,11 @@
   },
   {
    "level": "change",
-   "msg": "anaduty 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "snowpeak 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "sapporodrug 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "matsukiyo 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "takeya 優惠券已更新"
+   "msg": "trial 優惠券已更新"
   },
   {
    "level": "change",
    "msg": "tobu 優惠券已更新"
-  },
-  {
-   "level": "change",
-   "msg": "laox 優惠券已更新"
   },
   {
    "level": "ok",
